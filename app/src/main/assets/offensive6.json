@@ -1,0 +1,122 @@
+[
+    {
+        "radius": "10.6",
+        "aura_cold_damage": "2-6",
+        "cold_damage_added_to_player": "10-15",
+        "ememies_slowed": "30"
+    },
+    {
+        "radius": "12",
+        "aura_cold_damage": "3-8",
+        "cold_damage_added_to_player": "15-20",
+        "ememies_slowed": "34"
+    },
+    {
+        "radius": "13.3",
+        "aura_cold_damage": "4-10",
+        "cold_damage_added_to_player": "20-25",
+        "ememies_slowed": "37"
+    },
+    {
+        "radius": "14.6",
+        "aura_cold_damage": "5-12",
+        "cold_damage_added_to_player": "25-30",
+        "ememies_slowed": "40"
+    },
+    {
+        "radius": "16",
+        "aura_cold_damage": "6-14",
+        "cold_damage_added_to_player": "30-35",
+        "ememies_slowed": "42"
+    },
+    {
+        "radius": "17.3",
+        "aura_cold_damage": "7-16",
+        "cold_damage_added_to_player": "35-40",
+        "ememies_slowed": "44"
+    },
+    {
+        "radius": "18.6",
+        "aura_cold_damage": "8-18",
+        "cold_damage_added_to_player": "40-45",
+        "ememies_slowed": "45"
+    },
+    {
+        "radius": "20",
+        "aura_cold_damage": "9-20",
+        "cold_damage_added_to_player": "45-50",
+        "ememies_slowed": "46"
+    },
+    {
+        "radius": "21.3",
+        "aura_cold_damage": "11-24",
+        "cold_damage_added_to_player": "55-60",
+        "ememies_slowed": "48"
+    },
+    {
+        "radius": "22.6",
+        "aura_cold_damage": "13-25",
+        "cold_damage_added_to_player": "65-70",
+        "ememies_slowed": "48"
+    },
+    {
+        "radius": "24",
+        "aura_cold_damage": "15-32",
+        "cold_damage_added_to_player": "75-80",
+        "ememies_slowed": "49"
+    },
+    {
+        "radius": "25.3",
+        "aura_cold_damage": "17-36",
+        "cold_damage_added_to_player": "85-90",
+        "ememies_slowed": "50"
+    },
+    {
+        "radius": "26.6",
+        "aura_cold_damage": "19-40",
+        "cold_damage_added_to_player": "95-100",
+        "ememies_slowed": "51"
+    },
+    {
+        "radius": "28",
+        "aura_cold_damage": "21-44",
+        "cold_damage_added_to_player": "105-110",
+        "ememies_slowed": "51"
+    },
+    {
+        "radius": "29.3",
+        "aura_cold_damage": "23-48",
+        "cold_damage_added_to_player": "115-120",
+        "ememies_slowed": "52"
+    },
+    {
+        "radius": "30.6",
+        "aura_cold_damage": "25-52",
+        "cold_damage_added_to_player": "125-130",
+        "ememies_slowed": "53"
+    },
+    {
+        "radius": "32",
+        "aura_cold_damage": "28-58",
+        "cold_damage_added_to_player": "140-145",
+        "ememies_slowed": "53"
+    },
+    {
+        "radius": "33.3",
+        "aura_cold_damage": "31-64",
+        "cold_damage_added_to_player": "155-160",
+        "ememies_slowed": "53"
+    },
+    {
+        "radius": "34.6",
+        "aura_cold_damage": "34-70",
+        "cold_damage_added_to_player": "170-175",
+        "ememies_slowed": "54"
+    },
+    {
+        "radius": "36",
+        "aura_cold_damage": "37-76",
+        "cold_damage_added_to_player": "185-190",
+        "ememies_slowed": "54"
+    }
+]

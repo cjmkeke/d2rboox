@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "789991158132",
+    "firebase_url": "https://diablorune-4ade9-default-rtdb.firebaseio.com",
+    "project_id": "diablorune-4ade9",
+    "storage_bucket": "diablorune-4ade9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789991158132:android:7be80825fdb5b9772dfc21",
+        "android_client_info": {
+          "package_name": "com.cjmkeke.diablorune"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789991158132-ao6osbdfub7glsmp9vbqafc7dl95kkm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwf26YrQnqmuXRjWh3waHcrqRkRyj5h4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789991158132-ao6osbdfub7glsmp9vbqafc7dl95kkm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+/* styles.css */
+.dw_main_title {
+    font-size: 12px;
+    height: 45px; /* 높이를 지정 */
+    line-height: 40px; /* 높이와 동일하게 설정 */
+    display: flex; /* 플렉스박스 활성화 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    color: #D4C491;
+    border: 1px solid #BD880B;
+    background-color: #231D1D;
+}
+
+.dw_main_title2 {
+    font-size: 12px;
+    height: 40px; /* 높이를 지정 */
+    line-height: 40px; /* 높이와 동일하게 설정 */
+    display: flex; /* 플렉스박스 활성화 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    color: #D4C491;
+    border: 1px solid #BD880B;
+    background-color: #7E1D1D;
+}
+
+.greenDW {
+    height: 20px; /* 고정된 높이 */
+    display: flex; /* 플렉스박스 사용 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    padding: 10px;
+    color: #D4C491;
+    border: 1px solid #BD880B;
+    background-color: #101010;
+    margin-left: 5px;
+    text-align: center; /* 가로 정렬 */
+
+}
+
+
+.cubing_title{
+    height: 20px;
+    display: flex; /* 플렉스박스 사용 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    padding: 10px;
+    color: #D4C491;
+    border: 1px solid #BD880B;
+    background-color: #178129;
+    flex-grow: 1; /* 남은 공간을 차지 */
+}
+
+
+.yellowDW{
+    height: 20px; /* 고정된 높이 */
+    display: flex; /* 플렉스박스 사용 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    padding: 10px;
+    color: #D4C491;
+    border: 1px solid #BD880B;
+    background-color: #101010;
+    flex-grow: 1;
+}
+
+.greenDW img {
+    margin-left: 8px; /* +와 이미지 사이에 간격 추가 */
+    margin-right: 8px;
+}
+
+.container {
+    padding-top: 5px;
+    font-size: 12px;
+    display: flex; /* 가로 배치 */
+    justify-content: space-between; /* 양쪽 정렬 */
+}
+
+
+.container2 {
+    font-size: 12px;
+
+}
+
+.yellowDW2 {
+    display: flex; /* 플렉스박스 사용 */
+    align-items: center; /* 세로로 중앙 정렬 */
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+    /* padding-bottom: 5px; */
+    padding: 10px;
+    color: #D4C491;
+
+    margin-top: 5px;
+    border: 1px solid #BD880B;
+    background-color: #101010;
+    flex-grow: 1; /* 남은 공간을 차지 */
+
+}
+
+
+.fontStyle{
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    color: #D4C491;
+    font-family: 'Kodia', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'Kodia';
+    src: url('../font/kodia.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

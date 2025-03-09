@@ -1,0 +1,222 @@
+[
+    {
+        "level": "1",
+        "radius": "10.6",
+        "cold_resist": "52",
+        "activate": "1",
+        "lasting_effect": "0.5",
+        "next_cold_resist": "66",
+        "next_activate": "2",
+        "next_lasting_effect": "1",
+        "next_radius": "12"
+    },
+    {
+        "level": "2",
+        "radius": "12",
+        "cold_resist": "66",
+        "activate": "2",
+        "lasting_effect": "1",
+        "next_cold_resist": "76",
+        "next_activate": "3",
+        "next_lasting_effect": "1.5",
+        "next_radius": "13.3"
+    },
+    {
+        "level": "3",
+        "radius": "13.3",
+        "cold_resist": "76",
+        "activate": "3",
+        "lasting_effect": "1.5",
+        "next_cold_resist": "85",
+        "next_activate": "4",
+        "next_lasting_effect": "2",
+        "next_radius": "14.6"
+    },
+    {
+        "level": "4",
+        "radius": "14.6",
+        "cold_resist": "85",
+        "activate": "4",
+        "lasting_effect": "2",
+        "next_cold_resist": "92",
+        "next_activate": "5",
+        "next_lasting_effect": "2.5",
+        "next_radius": "16"
+    },
+    {
+        "level": "5",
+        "radius": "16",
+        "cold_resist": "92",
+        "activate": "5",
+        "lasting_effect": "2.5",
+        "next_cold_resist": "98",
+        "next_activate": "6",
+        "next_lasting_effect": "3",
+        "next_radius": "17.3"
+    },
+    {
+        "level": "6",
+        "radius": "17.3",
+        "cold_resist": "98",
+        "activate": "6",
+        "lasting_effect": "3",
+        "next_cold_resist": "102",
+        "next_activate": "7",
+        "next_lasting_effect": "3.5",
+        "next_radius": "18.6"
+    },
+    {
+        "level": "7",
+        "radius": "18.6",
+        "cold_resist": "102",
+        "activate": "7",
+        "lasting_effect": "3.5",
+        "next_cold_resist": "106",
+        "next_activate": "8",
+        "next_lasting_effect": "4",
+        "next_radius": "20"
+    },
+    {
+        "level": "8",
+        "radius": "20",
+        "cold_resist": "106",
+        "activate": "8",
+        "lasting_effect": "4",
+        "next_cold_resist": "110",
+        "next_activate": "9",
+        "next_lasting_effect": "4.5",
+        "next_radius": "21.3"
+    },
+    {
+        "level": "9",
+        "radius": "21.3",
+        "cold_resist": "110",
+        "activate": "9",
+        "lasting_effect": "4.5",
+        "next_cold_resist": "113",
+        "next_activate": "10",
+        "next_lasting_effect": "5",
+        "next_radius": "22.6"
+    },
+    {
+        "level": "10",
+        "radius": "22.6",
+        "cold_resist": "113",
+        "activate": "10",
+        "lasting_effect": "5",
+        "next_cold_resist": "116",
+        "next_activate": "11",
+        "next_lasting_effect": "5.5",
+        "next_radius": "24"
+    },
+    {
+        "level": "11",
+        "radius": "24",
+        "cold_resist": "116",
+        "activate": "11",
+        "lasting_effect": "5.5",
+        "next_cold_resist": "118",
+        "next_activate": "12",
+        "next_lasting_effect": "6",
+        "next_radius": "25.3"
+    },
+    {
+        "level": "12",
+        "radius": "25.3",
+        "cold_resist": "118",
+        "activate": "12",
+        "lasting_effect": "6",
+        "next_cold_resist": "121",
+        "next_activate": "13",
+        "next_lasting_effect": "6.5",
+        "next_radius": "26.6"
+    },
+    {
+        "level": "13",
+        "radius": "26.6",
+        "cold_resist": "121",
+        "activate": "13",
+        "lasting_effect": "6.5",
+        "next_cold_resist": "123",
+        "next_activate": "14",
+        "next_lasting_effect": "7",
+        "next_radius": "28"
+    },
+    {
+        "level": "14",
+        "radius": "28",
+        "cold_resist": "123",
+        "activate": "14",
+        "lasting_effect": "7",
+        "next_cold_resist": "124",
+        "next_activate": "15",
+        "next_lasting_effect": "7.5",
+        "next_radius": "29.3"
+    },
+    {
+        "level": "15",
+        "radius": "29.3",
+        "cold_resist": "124",
+        "activate": "15",
+        "lasting_effect": "7.5",
+        "next_cold_resist": "127",
+        "next_activate": "16",
+        "next_lasting_effect": "8",
+        "next_radius": "30.6"
+    },
+    {
+        "level": "16",
+        "radius": "30.6",
+        "cold_resist": "127",
+        "activate": "16",
+        "lasting_effect": "8",
+        "next_cold_resist": "128",
+        "next_activate": "17",
+        "next_lasting_effect": "8.5",
+        "next_radius": "32"
+    },
+    {
+        "level": "17",
+        "radius": "32",
+        "cold_resist": "128",
+        "activate": "17",
+        "lasting_effect": "8.5",
+        "next_cold_resist": "129",
+        "next_activate": "18",
+        "next_lasting_effect": "9",
+        "next_radius": "33.3"
+    },
+    {
+        "level": "18",
+        "radius": "33.3",
+        "cold_resist": "129",
+        "activate": "18",
+        "lasting_effect": "9",
+        "next_cold_resist": "130",
+        "next_activate": "19",
+        "next_lasting_effect": "9.5",
+        "next_radius": "34.6"
+    },
+    {
+        "level": "19",
+        "radius": "34.6",
+        "cold_resist": "130",
+        "activate": "19",
+        "lasting_effect": "9.5",
+        "next_cold_resist": "131",
+        "next_activate": "20",
+        "next_lasting_effect": "10",
+        "next_radius": "36"
+    },
+    {
+        "level": "20",
+        "radius": "36",
+        "cold_resist": "131",
+        "activate": "20",
+        "lasting_effect": "10",
+        "next_cold_resist": "",
+        "next_activate": "",
+        "next_lasting_effect": "",
+        "next_radius": ""
+    }
+]

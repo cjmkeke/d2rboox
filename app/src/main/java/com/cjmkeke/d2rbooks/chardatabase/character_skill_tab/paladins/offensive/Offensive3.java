@@ -1,0 +1,63 @@
+package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive;
+
+import android.content.Context;
+import android.text.Html;
+import android.text.Spanned;
+import android.widget.TextView;
+
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
+public class Offensive3 {
+
+    public static void skillUpdate(int value, TextView textView, Context context){
+        Type listType = new TypeToken<List<Offensive3.OffensiveModel3>>() {}.getType();
+        List<Offensive3.OffensiveModel3> skill = JsonUtil.loadJSONFromAsset(context, "offensive3.json", listType);
+        Spanned spanned;
+        if (skill != null){
+            if (value == 20) {
+                spanned = Html.fromHtml(SkillOffensive.offensiveSkill3_end, Html.FROM_HTML_MODE_LEGACY);
+                textView.setText(spanned);
+            } else if (value >= 1 && value < 21) {
+                // Loop through values 0 to 19
+                for (int i = 0; i < 21; i++) {
+                    if (value == i) {
+                        spanned = Html.fromHtml(OffensiveUpdate.offensiveSkill3(
+                                        String.valueOf(i),
+                                        skill.get(i - 1).getDamage1(),
+                                        skill.get(i - 1).getDamage2(),
+                                        skill.get(i - 1).getRadius(),
+                                        skill.get(i).getDamage1(),
+                                        skill.get(i).getDamage2(),
+                                        skill.get(i).getRadius()),
+                                Html.FROM_HTML_MODE_LEGACY);
+                        textView.setText(spanned);
+                        break;  // Exit loop after handling the correct value.
+                    }
+                }
+            }
+        }
+    }
+
+    public class OffensiveModel3{
+        private String radius;
+        private String damage1;
+        private String damage2;
+
+        public String getRadius() {
+            return radius;
+        }
+
+        public String getDamage1() {
+            return damage1;
+        }
+
+        public String getDamage2() {
+            return damage2;
+        }
+    }
+
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "radius": "10.6",
+        "damage1": "60"
+    },
+    {
+        "radius": "12",
+        "damage1": "75"
+    },
+    {
+        "radius": "13.3",
+        "damage1": "90"
+    },
+    {
+        "radius": "14.6",
+        "damage1": "105"
+    },
+    {
+        "radius": "16",
+        "damage1": "120"
+    },
+    {
+        "radius": "17.3",
+        "damage1": "135"
+    },
+    {
+        "radius": "18.6",
+        "damage1": "150"
+    },
+    {
+        "radius": "20",
+        "damage1": "165"
+    },
+    {
+        "radius": "21.3",
+        "damage1": "180"
+    },
+    {
+        "radius": "22.6",
+        "damage1": "195"
+    },
+    {
+        "radius": "24",
+        "damage1": "210"
+    },
+    {
+        "radius": "25.3",
+        "damage1": "225"
+    },
+    {
+        "radius": "26.6",
+        "damage1": "240"
+    },
+    {
+        "radius": "28",
+        "damage1": "255"
+    },
+    {
+        "radius": "29.3",
+        "damage1": "270"
+    },
+    {
+        "radius": "30.6",
+        "damage1": "285"
+    },
+    {
+        "radius": "32",
+        "damage1": "300"
+    },
+    {
+        "radius": "33.3",
+        "damage1": "315"
+    },
+    {
+        "radius": "34.6",
+        "damage1": "330"
+    },
+    {
+        "radius": "36",
+        "damage1": "345"
+    }
+]

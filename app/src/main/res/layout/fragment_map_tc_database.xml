@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".itemdatabase.information.MapTcDatabase">
+
+    <FrameLayout
+        android:id="@+id/fl_map_tc_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background_act1">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_tab_normal"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="보통(노말)\nNormal"-->
+<!--                android:background="@drawable/dw_message"-->
+<!--                android:textColor="@color/dia_color"-->
+<!--                android:paddingBottom="2dp"-->
+<!--                android:paddingTop="2dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="13sp"-->
+<!--                android:layout_weight="1"/>-->
+
+
+            <TextView
+                android:id="@+id/tv_tab_nightmare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="악몽 (나이트메어)\nNightmare"
+                android:background="@drawable/dw_uber_title"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/dia_color"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/tv_tab_hell"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="헬 (지옥)\nHell"
+                android:background="@drawable/dw_uber_title"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_act1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1 막"
+                android:background="@drawable/dw_normal"
+                android:textColor="@color/dia_color"
+                android:gravity="center"
+                style="@style/kodia16"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_act2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="2 막"
+                android:background="@drawable/dw_normal"
+                android:textColor="@color/dia_color"
+                android:gravity="center"
+                style="@style/kodia16"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_act3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="3 막"
+                android:background="@drawable/dw_normal"
+                android:textColor="@color/dia_color"
+                android:gravity="center"
+                style="@style/kodia16"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_act4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="4 막"
+                android:background="@drawable/dw_normal"
+                android:textColor="@color/dia_color"
+                android:gravity="center"
+                style="@style/kodia16"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_act5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="5 막"
+                android:background="@drawable/dw_normal"
+                android:textColor="@color/dia_color"
+                android:gravity="center"
+                style="@style/kodia16"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_map_tc_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+<!--            <include-->
+<!--                android:id="@+id/include_layout"-->
+<!--                layout="@layout/map_tc_act1_nightmare"/>-->
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".itemdatabase.information.Uber">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp">
+
+
+        <!-- Background Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_uber" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/gradient_overlay" />
+
+
+        <TextView
+            android:id="@+id/tv_d2emu"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icons_d2emu_size"
+            android:textSize="11sp"
+            android:text="data from d2emu.com"
+            android:gravity="center_vertical"
+            android:textColor="@color/dia_color"
+            android:layout_gravity="bottom|right"/>
+        <!-- Gradient Overlay -->
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/dw_uber_4"
+                android:gravity="center"
+                android:text="새 로 고 침"
+                android:textColor="@color/dia_color"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!--아시아-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="아시아 (Asia) 서버"
+                    android:textColor="#FFFFFFFF"
+                    android:background="@drawable/dw_uber_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dw_main"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_asia_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아시아 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_asia_none_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아시아 None 스탠다드 - 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_asia_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아시아 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_asia_none_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아시아 None 스탠다드 - 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_asia_none_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--아메리카-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="아메리카 (America) 서버"
+                    android:textColor="#FFFFFFFF"
+                    android:background="@drawable/dw_uber_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/dw_main"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/ll_america_ladder_soft_core"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_america_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아메리카 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_america_none_ladder_soft_core"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_america_none_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아메리카 None 스탠다드 - 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_america_ladder_hardcore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_america_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아메리카 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_america_none_ladder_hardcore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_america_none_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="아메리카 None - 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_america_none_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--유럽-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="유럽 (Europe) 서버"
+                    android:textColor="#FFFFFFFF"
+                    android:background="@drawable/dw_uber_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/dw_main"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/ll_europe_ladder_soft_core"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_europe_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="유럽 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_europe_none_ladder_soft_core"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore_none" />
+
+                            <TextView
+                                android:id="@+id/tv_europe_none_ladder_soft_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_set_text"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="유럽 None 스탠다드 - 레더 소프트 코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_soft_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_europe_ladder_hardcore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_europe_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="유럽 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_europe_none_ladder_hardcore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/dw_black"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_ladder_none" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/state_hardcore" />
+
+                            <TextView
+                                android:id="@+id/tv_europe_none_ladder_hardcore_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/dw_message"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="유럽 None - 레더 하드코어 우버 디아 현황"
+                                android:textColor="@color/dia_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_01"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="1 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_02"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="2 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_03"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="3 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_04"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="4 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_05"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="5 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_europe_none_ladder_hardcore_06"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="0.2"
+                                    android:background="@drawable/dw_uber_0"
+                                    android:gravity="center"
+                                    android:text="6 단계"
+                                    android:textColor="@color/dia_color"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

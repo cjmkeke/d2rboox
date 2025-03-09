@@ -1,0 +1,122 @@
+[
+    {
+        "option1": "25",
+        "option2": "40",
+        "option3": "40",
+        "option4": "80"
+    },
+    {
+        "option1": "35",
+        "option2": "45",
+        "option3": "45",
+        "option4": "90"
+    },
+    {
+        "option1": "45",
+        "option2": "50",
+        "option3": "50",
+        "option4": "100"
+    },
+    {
+        "option1": "55",
+        "option2": "55",
+        "option3": "55",
+        "option4": "110"
+    },
+    {
+        "option1": "65",
+        "option2": "60",
+        "option3": "60",
+        "option4": "120"
+    },
+    {
+        "option1": "75",
+        "option2": "65",
+        "option3": "65",
+        "option4": "130"
+    },
+    {
+        "option1": "85",
+        "option2": "70",
+        "option3": "70",
+        "option4": "140"
+    },
+    {
+        "option1": "95",
+        "option2": "75",
+        "option3": "75",
+        "option4": "150"
+    },
+    {
+        "option1": "105",
+        "option2": "80",
+        "option3": "80",
+        "option4": "160"
+    },
+    {
+        "option1": "115",
+        "option2": "85",
+        "option3": "85",
+        "option4": "170"
+    },
+    {
+        "option1": "125",
+        "option2": "90",
+        "option3": "90",
+        "option4": "180"
+    },
+    {
+        "option1": "135",
+        "option2": "95",
+        "option3": "95",
+        "option4": "190"
+    },
+    {
+        "option1": "145",
+        "option2": "100",
+        "option3": "100",
+        "option4": "200"
+    },
+    {
+        "option1": "155",
+        "option2": "105",
+        "option3": "105",
+        "option4": "210"
+    },
+    {
+        "option1": "165",
+        "option2": "110",
+        "option3": "110",
+        "option4": "220"
+    },
+    {
+        "option1": "175",
+        "option2": "115",
+        "option3": "115",
+        "option4": "230"
+    },
+    {
+        "option1": "185",
+        "option2": "120",
+        "option3": "120",
+        "option4": "240"
+    },
+    {
+        "option1": "195",
+        "option2": "125",
+        "option3": "125",
+        "option4": "250"
+    },
+    {
+        "option1": "205",
+        "option2": "130",
+        "option3": "130",
+        "option4": "260"
+    },
+    {
+        "option1": "215",
+        "option2": "135",
+        "option3": "135",
+        "option4": "270"
+    }
+]

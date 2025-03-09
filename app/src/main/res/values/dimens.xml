@@ -1,0 +1,7 @@
+<!-- res/values/dimens.xml -->
+<resources>
+    <dimen name="margin_right">10dp</dimen>
+    <dimen name="font_size_act_title">12sp</dimen>
+    <dimen name="act_title">105dp</dimen>
+    <dimen name="act_sub">35dp</dimen>
+</resources>

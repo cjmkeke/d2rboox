@@ -1,0 +1,122 @@
+[
+    {
+        "option1": "30",
+        "option2": "25",
+        "option3": "14",
+        "option4": "3-6"
+    },
+    {
+        "option1": "55",
+        "option2": "40",
+        "option3": "18",
+        "option4": "5-8"
+    },
+    {
+        "option1": "80",
+        "option2": "55",
+        "option3": "20",
+        "option4": "7-10"
+    },
+    {
+        "option1": "105",
+        "option2": "70",
+        "option3": "23",
+        "option4": "9-12"
+    },
+    {
+        "option1": "130",
+        "option2": "85",
+        "option3": "25",
+        "option4": "11-14"
+    },
+    {
+        "option1": "155",
+        "option2": "100",
+        "option3": "26",
+        "option4": "13-16"
+    },
+    {
+        "option1": "180",
+        "option2": "115",
+        "option3": "27",
+        "option4": "15-18"
+    },
+    {
+        "option1": "205",
+        "option2": "130",
+        "option3": "28",
+        "option4": "17-20"
+    },
+    {
+        "option1": "230",
+        "option2": "145",
+        "option3": "29",
+        "option4": "20-23"
+    },
+    {
+        "option1": "255",
+        "option2": "160",
+        "option3": "30",
+        "option4": "23-26"
+    },
+    {
+        "option1": "280",
+        "option2": "175",
+        "option3": "31",
+        "option4": "26-29"
+    },
+    {
+        "option1": "305",
+        "option2": "190",
+        "option3": "31",
+        "option4": "29-32"
+    },
+    {
+        "option1": "330",
+        "option2": "205",
+        "option3": "32",
+        "option4": "32-35"
+    },
+    {
+        "option1": "355",
+        "option2": "220",
+        "option3": "33",
+        "option4": "35-38"
+    },
+    {
+        "option1": "380",
+        "option2": "235",
+        "option3": "33",
+        "option4": "38-41"
+    },
+    {
+        "option1": "405",
+        "option2": "250",
+        "option3": "34",
+        "option4": "41-44"
+    },
+    {
+        "option1": "430",
+        "option2": "265",
+        "option3": "34",
+        "option4": "45-48"
+    },
+    {
+        "option1": "455",
+        "option2": "280",
+        "option3": "34",
+        "option4": "49-52"
+    },
+    {
+        "option1": "480",
+        "option2": "295",
+        "option3": "34",
+        "option4": "53-56"
+    },
+    {
+        "option1": "505",
+        "option2": "310",
+        "option3": "35",
+        "option4": "57-60"
+    }
+]

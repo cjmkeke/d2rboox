@@ -1,0 +1,771 @@
+Index: BoxCaculator/app/src/main/res/drawable/background.xml
+===================================================================
+diff --git a/BoxCaculator/app/src/main/res/drawable/background.xml b/BoxCaculator/app/src/main/res/drawable/background.xml
+deleted file mode 100644
+--- a/BoxCaculator/app/src/main/res/drawable/background.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-
+-    <corners android:radius="10dp"/>
+-    <solid android:color="#5E35B1"/>
+-
+-</shape>
+\ No newline at end of file
+Index: BoxCaculator/app/src/main/res/drawable/background2.xml
+===================================================================
+diff --git a/BoxCaculator/app/src/main/res/drawable/background2.xml b/BoxCaculator/app/src/main/res/drawable/background2.xml
+deleted file mode 100644
+--- a/BoxCaculator/app/src/main/res/drawable/background2.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-
+-    <corners android:radius="10dp"/>
+-    <solid android:color="#4B1AAF"/>
+-
+-</shape>
+\ No newline at end of file
+Index: MemoRich/editor/.gitignore
+===================================================================
+diff --git a/MemoRich/editor/.gitignore b/MemoRich/editor/.gitignore
+deleted file mode 100644
+--- a/MemoRich/editor/.gitignore	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: MemoRich/editor/build.gradle
+===================================================================
+diff --git a/MemoRich/editor/build.gradle b/MemoRich/editor/build.gradle
+deleted file mode 100644
+--- a/MemoRich/editor/build.gradle	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,40 +0,0 @@
+-plugins {
+-    alias(libs.plugins.android.application)
+-}
+-
+-android {
+-    namespace 'com.example.editor'
+-    compileSdk 34
+-
+-    defaultConfig {
+-        applicationId "com.example.editor"
+-        minSdk 26
+-        targetSdk 34
+-        versionCode 1
+-        versionName "1.0"
+-
+-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+-    }
+-
+-    buildTypes {
+-        release {
+-            minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility JavaVersion.VERSION_1_8
+-        targetCompatibility JavaVersion.VERSION_1_8
+-    }
+-}
+-
+-dependencies {
+-
+-    implementation libs.appcompat
+-    implementation libs.material
+-    implementation libs.activity
+-    implementation libs.constraintlayout
+-    testImplementation libs.junit
+-    androidTestImplementation libs.ext.junit
+-    androidTestImplementation libs.espresso.core
+-}
+\ No newline at end of file
+Index: MemoRich/editor/proguard-rules.pro
+===================================================================
+diff --git a/MemoRich/editor/proguard-rules.pro b/MemoRich/editor/proguard-rules.pro
+deleted file mode 100644
+--- a/MemoRich/editor/proguard-rules.pro	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: MemoRich/editor/src/androidTest/java/com/example/editor/ExampleInstrumentedTest.java
+===================================================================
+diff --git a/MemoRich/editor/src/androidTest/java/com/example/editor/ExampleInstrumentedTest.java b/MemoRich/editor/src/androidTest/java/com/example/editor/ExampleInstrumentedTest.java
+deleted file mode 100644
+--- a/MemoRich/editor/src/androidTest/java/com/example/editor/ExampleInstrumentedTest.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,26 +0,0 @@
+-package com.example.editor;
+-
+-import android.content.Context;
+-
+-import androidx.test.platform.app.InstrumentationRegistry;
+-import androidx.test.ext.junit.runners.AndroidJUnit4;
+-
+-import org.junit.Test;
+-import org.junit.runner.RunWith;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-@RunWith(AndroidJUnit4.class)
+-public class ExampleInstrumentedTest {
+-    @Test
+-    public void useAppContext() {
+-        // Context of the app under test.
+-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+-        assertEquals("com.example.editor", appContext.getPackageName());
+-    }
+-}
+\ No newline at end of file
+Index: MemoRich/editor/src/main/AndroidManifest.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/AndroidManifest.xml b/MemoRich/editor/src/main/AndroidManifest.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/AndroidManifest.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,22 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+-
+-    <application
+-        android:allowBackup="true"
+-        android:icon="@mipmap/ic_launcher"
+-        android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+-        android:supportsRtl="true"
+-        android:theme="@style/Theme.MemoRich">
+-        <activity
+-            android:name=".MainActivity"
+-            android:exported="true">
+-            <intent-filter>
+-                <action android:name="android.intent.action.MAIN" />
+-
+-                <category android:name="android.intent.category.LAUNCHER" />
+-            </intent-filter>
+-        </activity>
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/drawable/ic_launcher_background.xml b/MemoRich/editor/src/main/res/drawable/ic_launcher_background.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/drawable/ic_launcher_background.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: MemoRich/editor/src/main/res/drawable/ic_launcher_foreground.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/drawable/ic_launcher_foreground.xml b/MemoRich/editor/src/main/res/drawable/ic_launcher_foreground.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/drawable/ic_launcher_foreground.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher.xml b/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher_round.xml b/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher_round.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/mipmap-anydpi/ic_launcher_round.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/values-night/themes.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/values-night/themes.xml b/MemoRich/editor/src/main/res/values-night/themes.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/values-night/themes.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,7 +0,0 @@
+-<resources xmlns:tools="http://schemas.android.com/tools">
+-    <!-- Base application theme. -->
+-    <style name="Base.Theme.MemoRich" parent="Theme.Material3.DayNight.NoActionBar">
+-        <!-- Customize your dark theme here. -->
+-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+-    </style>
+-</resources>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/values/colors.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/values/colors.xml b/MemoRich/editor/src/main/res/values/colors.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/values/colors.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="black">#FF000000</color>
+-    <color name="white">#FFFFFFFF</color>
+-</resources>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/values/strings.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/values/strings.xml b/MemoRich/editor/src/main/res/values/strings.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/values/strings.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,3 +0,0 @@
+-<resources>
+-    <string name="app_name">editor</string>
+-</resources>
+\ No newline at end of file
+Index: MemoRich/editor/src/main/res/values/themes.xml
+===================================================================
+diff --git a/MemoRich/editor/src/main/res/values/themes.xml b/MemoRich/editor/src/main/res/values/themes.xml
+deleted file mode 100644
+--- a/MemoRich/editor/src/main/res/values/themes.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,9 +0,0 @@
+-<resources xmlns:tools="http://schemas.android.com/tools">
+-    <!-- Base application theme. -->
+-    <style name="Base.Theme.MemoRich" parent="Theme.Material3.DayNight.NoActionBar">
+-        <!-- Customize your light theme here. -->
+-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+-    </style>
+-
+-    <style name="Theme.MemoRich" parent="Base.Theme.MemoRich" />
+-</resources>
+\ No newline at end of file
+Index: MemoRich/editor/src/test/java/com/example/editor/ExampleUnitTest.java
+===================================================================
+diff --git a/MemoRich/editor/src/test/java/com/example/editor/ExampleUnitTest.java b/MemoRich/editor/src/test/java/com/example/editor/ExampleUnitTest.java
+deleted file mode 100644
+--- a/MemoRich/editor/src/test/java/com/example/editor/ExampleUnitTest.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,17 +0,0 @@
+-package com.example.editor;
+-
+-import org.junit.Test;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-public class ExampleUnitTest {
+-    @Test
+-    public void addition_isCorrect() {
+-        assertEquals(4, 2 + 2);
+-    }
+-}
+\ No newline at end of file
+Index: SimpleCalendar/gradle/wrapper/gradle-wrapper.properties
+===================================================================
+diff --git a/SimpleCalendar/gradle/wrapper/gradle-wrapper.properties b/SimpleCalendar/gradle/wrapper/gradle-wrapper.properties
+deleted file mode 100644
+--- a/SimpleCalendar/gradle/wrapper/gradle-wrapper.properties	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,7 +0,0 @@
+-distributionBase=GRADLE_USER_HOME
+-distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-8.4-bin.zip
+-networkTimeout=10000
+-validateDistributionUrl=true
+-zipStoreBase=GRADLE_USER_HOME
+-zipStorePath=wrapper/dists
+Index: test/mylibrary/.gitignore
+===================================================================
+diff --git a/test/mylibrary/.gitignore b/test/mylibrary/.gitignore
+deleted file mode 100644
+--- a/test/mylibrary/.gitignore	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: test/mylibrary/build.gradle
+===================================================================
+diff --git a/test/mylibrary/build.gradle b/test/mylibrary/build.gradle
+deleted file mode 100644
+--- a/test/mylibrary/build.gradle	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,35 +0,0 @@
+-plugins {
+-    alias(libs.plugins.android.library)
+-}
+-
+-android {
+-    namespace 'com.example.mylibrary'
+-    compileSdk 34
+-
+-    defaultConfig {
+-        minSdk 26
+-
+-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+-        consumerProguardFiles "consumer-rules.pro"
+-    }
+-
+-    buildTypes {
+-        release {
+-            minifyEnabled false
+-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+-        }
+-    }
+-    compileOptions {
+-        sourceCompatibility JavaVersion.VERSION_1_8
+-        targetCompatibility JavaVersion.VERSION_1_8
+-    }
+-}
+-
+-dependencies {
+-
+-    implementation libs.appcompat
+-    implementation libs.material
+-    testImplementation libs.junit
+-    androidTestImplementation libs.ext.junit
+-    androidTestImplementation libs.espresso.core
+-}
+\ No newline at end of file
+Index: test/mylibrary/proguard-rules.pro
+===================================================================
+diff --git a/test/mylibrary/proguard-rules.pro b/test/mylibrary/proguard-rules.pro
+deleted file mode 100644
+--- a/test/mylibrary/proguard-rules.pro	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: test/mylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java
+===================================================================
+diff --git a/test/mylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java b/test/mylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java
+deleted file mode 100644
+--- a/test/mylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,26 +0,0 @@
+-package com.example.mylibrary;
+-
+-import android.content.Context;
+-
+-import androidx.test.platform.app.InstrumentationRegistry;
+-import androidx.test.ext.junit.runners.AndroidJUnit4;
+-
+-import org.junit.Test;
+-import org.junit.runner.RunWith;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-@RunWith(AndroidJUnit4.class)
+-public class ExampleInstrumentedTest {
+-    @Test
+-    public void useAppContext() {
+-        // Context of the app under test.
+-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+-        assertEquals("com.example.mylibrary.test", appContext.getPackageName());
+-    }
+-}
+\ No newline at end of file
+Index: test/mylibrary/src/main/AndroidManifest.xml
+===================================================================
+diff --git a/test/mylibrary/src/main/AndroidManifest.xml b/test/mylibrary/src/main/AndroidManifest.xml
+deleted file mode 100644
+--- a/test/mylibrary/src/main/AndroidManifest.xml	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,4 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+-
+-</manifest>
+\ No newline at end of file
+Index: test/mylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java
+===================================================================
+diff --git a/test/mylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java b/test/mylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java
+deleted file mode 100644
+--- a/test/mylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,17 +0,0 @@
+-package com.example.mylibrary;
+-
+-import org.junit.Test;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-public class ExampleUnitTest {
+-    @Test
+-    public void addition_isCorrect() {
+-        assertEquals(4, 2 + 2);
+-    }
+-}
+\ No newline at end of file
+Index: test3/testm/src/main/java/com/example/testm/Abcd.java
+===================================================================
+diff --git a/test3/testm/src/main/java/com/example/testm/Abcd.java b/test3/testm/src/main/java/com/example/testm/Abcd.java
+deleted file mode 100644
+--- a/test3/testm/src/main/java/com/example/testm/Abcd.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,4 +0,0 @@
+-package com.example.testm;
+-
+-public class Abcd {
+-}
+Index: test3/testm/src/main/java/com/example/testm/Toast.java
+===================================================================
+diff --git a/test3/testm/src/main/java/com/example/testm/Toast.java b/test3/testm/src/main/java/com/example/testm/Toast.java
+deleted file mode 100644
+--- a/test3/testm/src/main/java/com/example/testm/Toast.java	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
++++ /dev/null	(revision 88bbcac19c92e60fff6b9f5670543c8d9f5aa191)
+@@ -1,4 +0,0 @@
+-package com.example.testm;
+-
+-public class Toast {
+-}
+diff --git a/test/mylibrary/consumer-rules.pro b/test/mylibrary/consumer-rules.pro
+deleted file mode 100644
+diff --git a/MemoRich/editor/src/main/res/mipmap-hdpi/ic_launcher.webp b/MemoRich/editor/src/main/res/mipmap-hdpi/ic_launcher.webp
+deleted file mode 100644
+index c209e78ecd372343283f4157dcfd918ec5165bb3..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-hdpi/ic_launcher_round.webp b/MemoRich/editor/src/main/res/mipmap-hdpi/ic_launcher_round.webp
+deleted file mode 100644
+index b2dfe3d1ba5cf3ee31b3ecc1ced89044a1f3b7a9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-mdpi/ic_launcher.webp b/MemoRich/editor/src/main/res/mipmap-mdpi/ic_launcher.webp
+deleted file mode 100644
+index 4f0f1d64e58ba64d180ce43ee13bf9a17835fbca..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-mdpi/ic_launcher_round.webp b/MemoRich/editor/src/main/res/mipmap-mdpi/ic_launcher_round.webp
+deleted file mode 100644
+index 62b611da081676d42f6c3f78a2c91e7bcedddedb..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xhdpi/ic_launcher.webp b/MemoRich/editor/src/main/res/mipmap-xhdpi/ic_launcher.webp
+deleted file mode 100644
+index 948a3070fe34c611c42c0d3ad3013a0dce358be0..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xhdpi/ic_launcher_round.webp b/MemoRich/editor/src/main/res/mipmap-xhdpi/ic_launcher_round.webp
+deleted file mode 100644
+index 1b9a6956b3acdc11f40ce2bb3f6efbd845cc243f..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xxhdpi/ic_launcher.webp b/MemoRich/editor/src/main/res/mipmap-xxhdpi/ic_launcher.webp
+deleted file mode 100644
+index 28d4b77f9f036a47549d47db79c16788749dca10..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp b/MemoRich/editor/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp
+deleted file mode 100644
+index 9287f5083623b375139afb391af71cc533a7dd37..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xxxhdpi/ic_launcher.webp b/MemoRich/editor/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+deleted file mode 100644
+index aa7d6427e6fa1074b79ccd52ef67ac15c5637e85..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/MemoRich/editor/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp b/MemoRich/editor/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+deleted file mode 100644
+index 9126ae37cbc3587421d6889eadd1d91fbf1994d4..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/SimpleCalendar/gradle/wrapper/gradle-wrapper.jar b/SimpleCalendar/gradle/wrapper/gradle-wrapper.jar
+deleted file mode 100644
+index 7f93135c49b765f8051ef9d0a6055ff8e46073d8..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+

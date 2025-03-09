@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_hit_power_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_option1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="left|center"
+                android:textColor="@color/dia_color_craft"
+                android:textSize="14sp"
+                tools:text="보여주는 테스트" />
+
+            <TextView
+                android:id="@+id/tv_option2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/dia_color_craft"
+                android:textSize="14sp"
+                tools:text="보여주는 테스트" />
+
+            <TextView
+                android:id="@+id/tv_option3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/dia_color_craft"
+                android:textSize="14sp"
+                tools:text="보여주는 테스트" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_perfect_jewelry"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="5dp"
+                tools:text="보석" />
+
+            <ImageView
+                android:id="@+id/iv_jewel"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="10dp"
+                tools:text="주얼" />
+
+            <ImageView
+                android:id="@+id/iv_rune"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="10dp"
+                tools:text="룬" />
+
+            <ImageView
+                android:id="@+id/iv_item1"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="10dp"
+                tools:text="아이템 1" />
+
+            <TextView
+                android:id="@+id/tv_equal_sign"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/dia_color"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/iv_horadric_cube"
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="10dp"
+                tools:text="아이템 2" />
+
+            <ImageView
+                android:layout_width="58dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/sell_inventory"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

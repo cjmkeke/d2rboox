@@ -1,0 +1,142 @@
+[
+    {
+        "radius": "7.3",
+        "option1": "25",
+        "option2": "50",
+        "option3": "14",
+        "option4": "40"
+    },
+    {
+        "radius": "8",
+        "option1": "33",
+        "option2": "67",
+        "option3": "18",
+        "option4": "45"
+    },
+    {
+        "radius": "8.6",
+        "option1": "42",
+        "option2": "84",
+        "option3": "20",
+        "option4": "50"
+    },
+    {
+        "radius": "9.3",
+        "option1": "50",
+        "option2": "101",
+        "option3": "23",
+        "option4": "55"
+    },
+    {
+        "radius": "10",
+        "option1": "59",
+        "option2": "118",
+        "option3": "25",
+        "option4": "60"
+    },
+    {
+        "radius": "10.6",
+        "option1": "67",
+        "option2": "135",
+        "option3": "26",
+        "option4": "65"
+    },
+    {
+        "radius": "11.3",
+        "option1": "76",
+        "option2": "152",
+        "option3": "27",
+        "option4": "70"
+    },
+    {
+        "radius": "12",
+        "option1": "84",
+        "option2": "169",
+        "option3": "28",
+        "option4": "75"
+    },
+    {
+        "radius": "12.6",
+        "option1": "93",
+        "option2": "186",
+        "option3": "29",
+        "option4": "80"
+    },
+    {
+        "radius": "13.3",
+        "option1": "101",
+        "option2": "203",
+        "option3": "30",
+        "option4": "85"
+    },
+    {
+        "radius": "14",
+        "option1": "110",
+        "option2": "220",
+        "option3": "31",
+        "option4": "90"
+    },
+    {
+        "radius": "14.6",
+        "option1": "118",
+        "option2": "237",
+        "option3": "31",
+        "option4": "95"
+    },
+    {
+        "radius": "15.3",
+        "option1": "127",
+        "option2": "254",
+        "option3": "32",
+        "option4": "100"
+    },
+    {
+        "radius": "16",
+        "option1": "135",
+        "option2": "271",
+        "option3": "33",
+        "option4": "105"
+    },
+    {
+        "radius": "16.6",
+        "option1": "144",
+        "option2": "288",
+        "option3": "33",
+        "option4": "110"
+    },
+    {
+        "radius": "17.3",
+        "option1": "152",
+        "option2": "305",
+        "option3": "34",
+        "option4": "115"
+    },
+    {
+        "radius": "18",
+        "option1": "161",
+        "option2": "322",
+        "option3": "34",
+        "option4": "120"
+    },
+    {
+        "radius": "18.6",
+        "option1": "169",
+        "option2": "339",
+        "option3": "34",
+        "option4": "125"
+    },
+    {
+        "radius": "19.3",
+        "option1": "178",
+        "option2": "356",
+        "option3": "34",
+        "option4": "130"
+    },
+    {
+        "radius": "20",
+        "option1": "186",
+        "option2": "373",
+        "option3": "35",
+        "option4": "135"
+    }
+]

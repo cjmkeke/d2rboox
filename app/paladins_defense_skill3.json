@@ -1,0 +1,142 @@
+[
+    {
+        "level": "1",
+        "radius": "7.3",
+        "cold_resist": "52",
+        "activate": "1",
+        "lasting_effect": "0.5"
+    },
+    {
+        "level": "2",
+        "radius": "8.6",
+        "cold_resist": "66",
+        "activate": "2",
+        "lasting_effect": "1"
+    },
+    {
+        "level": "3",
+        "radius": "10",
+        "cold_resist": "76",
+        "activate": "3",
+        "lasting_effect": "1.5"
+    },
+    {
+        "level": "4",
+        "radius": "11.3",
+        "cold_resist": "85",
+        "activate": "4",
+        "lasting_effect": "2"
+    },
+    {
+        "level": "5",
+        "radius": "12.6",
+        "cold_resist": "92",
+        "activate": "5",
+        "lasting_effect": "2.5"
+    },
+    {
+        "level": "6",
+        "radius": "14",
+        "cold_resist": "98",
+        "activate": "6",
+        "lasting_effect": "3"
+    },
+    {
+        "level": "7",
+        "radius": "15.3",
+        "cold_resist": "102",
+        "activate": "7",
+        "lasting_effect": "3.5"
+    },
+    {
+        "level": "8",
+        "radius": "16.6",
+        "cold_resist": "106",
+        "activate": "8",
+        "lasting_effect": "4"
+    },
+    {
+        "level": "9",
+        "radius": "18",
+        "cold_resist": "110",
+        "activate": "9",
+        "lasting_effect": "4.5"
+    },
+    {
+        "level": "10",
+        "radius": "19.3",
+        "cold_resist": "113",
+        "activate": "10",
+        "lasting_effect": "5"
+    },
+    {
+        "level": "11",
+        "radius": "20.6",
+        "cold_resist": "116",
+        "activate": "11",
+        "lasting_effect": "5.5"
+    },
+    {
+        "level": "12",
+        "radius": "22",
+        "cold_resist": "118",
+        "activate": "12",
+        "lasting_effect": "6"
+    },
+    {
+        "level": "13",
+        "radius": "23.3",
+        "cold_resist": "121",
+        "activate": "13",
+        "lasting_effect": "6.5"
+    },
+    {
+        "level": "14",
+        "radius": "24.6",
+        "cold_resist": "123",
+        "activate": "14",
+        "lasting_effect": "7"
+    },
+    {
+        "level": "15",
+        "radius": "26",
+        "cold_resist": "124",
+        "activate": "15",
+        "lasting_effect": "7.5"
+    },
+    {
+        "level": "16",
+        "radius": "27.3",
+        "cold_resist": "127",
+        "activate": "16",
+        "lasting_effect": "8"
+    },
+    {
+        "level": "17",
+        "radius": "28.3",
+        "cold_resist": "128",
+        "activate": "17",
+        "lasting_effect": "8.5"
+    },
+    {
+        "level": "18",
+        "radius": "30",
+        "cold_resist": "129",
+        "activate": "18",
+        "lasting_effect": "9"
+    },
+    {
+        "level": "19",
+        "radius": "31.3",
+        "cold_resist": "130",
+        "activate": "19",
+        "lasting_effect": "9.5"
+    },
+    {
+        "level": "20",
+        "radius": "32.6",
+        "cold_resist": "131",
+        "activate": "20",
+        "lasting_effect": "10"
+    }
+]

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#3C3D3D"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_item_rating"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="3dp"
+            android:paddingLeft="3dp"
+            android:background="@drawable/dw_main_ethereal"
+            android:fontFamily="@font/d21"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/dia_color_blue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/dw_type"
+            android:fontFamily="@font/d21"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/dia_color_blue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/nanumextrabold"
+            android:gravity="center_vertical"
+            android:text="테스트"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_char_unique"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/dia_color"
+            android:textSize="14sp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ModifyRuneWord">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textColorHint="@color/dia_color"
+                    android:textColor="@color/dia_color"
+                    android:background="@drawable/dw_main"/>
+
+                <TextView
+                    android:id="@+id/tv_button"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="찾기"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_runeword_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/dia_color"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/dw_main" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 아마존 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/sw_amazon"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 암살자 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swAssassin"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 강령술사 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swNecromancer"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 야만용사 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swBarbarian"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 성기사 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swPaladins"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 원소술사 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swSorceress"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 드루이드 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swDruid"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 용병 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swMercenary"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 초반용에 사용합니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swEarly"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 졸업 아이템입니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swSpecialItem"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 범용입니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swAll"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 룬워드가 래더전용 입니까?"
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/swLadder"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/dia_color_main"
+                    app:sb_button_color="@color/dia_color_none"
+                    app:sb_checked_color="@color/dia_color"
+                    app:sb_checkline_color="@color/black"
+                    app:sb_shadow_color="@color/dia_color_none1"
+                    app:sb_shadow_effect="true"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="true"
+                    app:sb_uncheck_color="@color/dia_color_main"
+                    app:sb_uncheckcircle_color="@color/dia_color_none1"
+                    app:sb_uncheckcircle_radius="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="top"
+                        android:padding="10dp"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/dw_title"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tv_comment_confirm"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:textColor="@color/dia_color"
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:background="@drawable/dw_button"
+                        android:layout_marginLeft="5dp"
+                        android:text="수\n정"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="첫번째 룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="두번째 룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="세번째  룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="네번째 룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="다섯번째 룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="여섯번째 룬 "
+                    android:textColor="@color/dia_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/et_rune6"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/dw_title"/>
+
+                <TextView
+                    android:id="@+id/tv_confirm6"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/select_button"
+                    android:textColor="@color/dia_color"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="수정"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

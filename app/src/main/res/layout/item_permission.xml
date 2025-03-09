@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@drawable/back_text">
+
+
+        <TextView
+            android:id="@+id/tv_permission_main_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="test"
+            android:textColor="@color/dia_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:text="무시하기"
+            android:background="@drawable/small_background"/>
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/dia_color"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:text="설정 화면으로 가기"
+            android:background="@drawable/small_background"/>
+    </LinearLayout>
+
+</LinearLayout>

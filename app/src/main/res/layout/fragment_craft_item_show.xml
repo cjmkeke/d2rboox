@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".itemdatabase.craft_item_information.CraftItemShow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item_show_room_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/dw_craft"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_craft_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/item_change_options_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_craft_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/jewel"
+                    android:layout_marginRight="10dp"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_craft_item"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_marginRight="10dp"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_craft_rune"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_jewels"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="="
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/dia_color"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/kodia"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/horadric_cube"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/sv_show_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginBottom="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="이 크래프트는 선호하지 않는 크래프트 조합입니다"
+                    android:textColor="@color/dia_color"/>
+
+                <ImageView
+                    android:id="@+id/iv_item_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dia_color"
+                android:textSize="14sp"
+                android:text=
+"D2R을 넘어오면서 아이템의 숨은 레벨을 볼수 있는 방법이 없어졌습니다. 현재 숨은 레벨은 D2R이 아닌, 예전 디아블로2 맵핵이 되었을때 기준입니다.
+\n\n크래프트 아이템중 아뮬렛을 만들때는 숨은 레벨이 중요합니다."
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/dia_color_green"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:text="크래프트 아뮬렛(캐스터 아뮬렛) 제작을 위한 필수 레벨"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dia_color_craft"
+                android:textSize="14sp"
+                android:text="93레벨 케릭터로 도박을 하여 얻은 아뮬렛으로 크래프트 제작\n쥬얼은 상관 없습니다.\n벨트 및 반지는 80레벨 부터 해도 상관 없습니다."
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:padding="8dp"> <!-- 패딩을 줄여 공간 확보 -->
+
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/adview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        ads:adSize="MEDIUM_RECTANGLE"-->
+<!--        ads:adUnitId="@string/ads_id" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_close"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@drawable/dw_act_select"-->
+<!--        android:text="앱 종료"-->
+<!--        android:textColor="@android:color/white"/>-->
+</LinearLayout>

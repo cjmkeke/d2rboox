@@ -1,0 +1,122 @@
+[
+    {
+        "option1": "25",
+        "option2": "100",
+        "option3": "200",
+        "option4": "300"
+    },
+    {
+        "option1": "35",
+        "option2": "120",
+        "option3": "240",
+        "option4": "360"
+    },
+    {
+        "option1": "45",
+        "option2": "140",
+        "option3": "280",
+        "option4": "420"
+    },
+    {
+        "option1": "55",
+        "option2": "160",
+        "option3": "320",
+        "option4": "480"
+    },
+    {
+        "option1": "65",
+        "option2": "180",
+        "option3": "360",
+        "option4": "540"
+    },
+    {
+        "option1": "75",
+        "option2": "200",
+        "option3": "400",
+        "option4": "600"
+    },
+    {
+        "option1": "85",
+        "option2": "220",
+        "option3": "440",
+        "option4": "660"
+    },
+    {
+        "option1": "95",
+        "option2": "240",
+        "option3": "480",
+        "option4": "720"
+    },
+    {
+        "option1": "105",
+        "option2": "260",
+        "option3": "520",
+        "option4": "780"
+    },
+    {
+        "option1": "115",
+        "option2": "280",
+        "option3": "560",
+        "option4": "840"
+    },
+    {
+        "option1": "125",
+        "option2": "300",
+        "option3": "600",
+        "option4": "900"
+    },
+    {
+        "option1": "135",
+        "option2": "320",
+        "option3": "640",
+        "option4": "960"
+    },
+    {
+        "option1": "145",
+        "option2": "340",
+        "option3": "680",
+        "option4": "1020"
+    },
+    {
+        "option1": "155",
+        "option2": "360",
+        "option3": "720",
+        "option4": "1080"
+    },
+    {
+        "option1": "165",
+        "option2": "380",
+        "option3": "760",
+        "option4": "1140"
+    },
+    {
+        "option1": "175",
+        "option2": "400",
+        "option3": "800",
+        "option4": "1200"
+    },
+    {
+        "option1": "185",
+        "option2": "420",
+        "option3": "840",
+        "option4": "1260"
+    },
+    {
+        "option1": "195",
+        "option2": "440",
+        "option3": "880",
+        "option4": "1320"
+    },
+    {
+        "option1": "205",
+        "option2": "460",
+        "option3": "920",
+        "option4": "1380"
+    },
+    {
+        "option1": "215",
+        "option2": "480",
+        "option3": "960",
+        "option4": "1440"
+    }
+]

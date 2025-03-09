@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/nanum"
+        tools:targetApi="31">
+        <activity
+            android:name=".dialog.SkillExplanation"
+            android:exported="false" />
+        <activity
+            android:name=".settings.EuropeUberDiabloSettings"
+            android:exported="false" />
+        <activity
+            android:name=".settings.AmericaUberDiabloSettings"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.PriceWrite"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.PriceShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".chardatabase.write.SorceressWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.PaladinsWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.NecromancerWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.DruidWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.BarbarianWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.AssassinWrite"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.AmazoneWrite"
+            android:exported="false" />
+        <activity
+            android:name=".CharacterDevelopmentDrawerLayout"
+            android:exported="false" />
+        <activity
+            android:name=".settings.AsiaUberDiabloSettings"
+            android:exported="false" />
+
+        <receiver
+            android:name=".service.background.TerrorZoneAlarmReceiver"
+            android:exported="true" />
+
+        <service
+            android:name=".service.background.TerrorZone"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
+
+        <receiver
+            android:name=".service.background.UberAlarmReceiver"
+            android:exported="true" />
+
+        <service
+            android:name=".service.background.Uber"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
+
+        <activity
+            android:name=".settings.QDialog"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".settings.TerrorZoneSettings"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.HelmItemShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.ShieldItemShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".settings.UpdateDialog"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.SetItemShow"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.UniqueItemShow"
+            android:exported="false" />
+        <activity
+            android:name=".settings.LoginPage"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.AttackerItemShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.ArmorItemShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".dialog.CraftItemShow"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" /> <!-- LauncherActivity -->
+        <activity
+            android:name=".ModifyRuneWord"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.ShowRune"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" /> <!-- LauncherActivity -->
+        <activity
+            android:name=".LauncherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dialog.SetItemShowIndividual"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".ItemDatabaseDrawerLayout"
+            android:exported="false" />
+        <activity
+            android:name=".dialog.ShowRuneWordDialog"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" /> <!-- LauncherActivity -->
+        <activity
+            android:name=".MixtureRune"
+            android:exported="false" />
+        <activity
+            android:name=".chardatabase.write.Skill"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Dialog" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSpinnerItem"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/dia_color"
+        android:background="#0D340F"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="1dp"
+        tools:text="aweawe"
+        android:textSize="12sp" />
+
+</LinearLayout>

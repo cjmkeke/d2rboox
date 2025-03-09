@@ -1,0 +1,82 @@
+[
+    {
+        "radius": "10.6",
+        "mana_recovery": "300"
+    },
+    {
+        "radius": "12",
+        "mana_recovery": "325"
+    },
+    {
+        "radius": "13.3",
+        "mana_recovery": "350"
+    },
+    {
+        "radius": "14.6",
+        "mana_recovery": "375"
+    },
+    {
+        "radius": "16",
+        "mana_recovery": "400"
+    },
+    {
+        "radius": "17.3",
+        "mana_recovery": "425"
+    },
+    {
+        "radius": "18.6",
+        "mana_recovery": "450"
+    },
+    {
+        "radius": "20",
+        "mana_recovery": "475"
+    },
+    {
+        "radius": "21.3",
+        "mana_recovery": "500"
+    },
+    {
+        "radius": "22.6",
+        "mana_recovery": "525"
+    },
+    {
+        "radius": "24",
+        "mana_recovery": "550"
+    },
+    {
+        "radius": "25.3",
+        "mana_recovery": "575"
+    },
+    {
+        "radius": "26.6",
+        "mana_recovery": "600"
+    },
+    {
+        "radius": "28",
+        "mana_recovery": "625"
+    },
+    {
+        "radius": "29.3",
+        "mana_recovery": "650"
+    },
+    {
+        "radius": "30.6",
+        "mana_recovery": "675"
+    },
+    {
+        "radius": "32",
+        "mana_recovery": "700"
+    },
+    {
+        "radius": "33.3",
+        "mana_recovery": "725"
+    },
+    {
+        "radius": "34.6",
+        "mana_recovery": "750"
+    },
+    {
+        "radius": "36",
+        "mana_recovery": "775"
+    }
+]

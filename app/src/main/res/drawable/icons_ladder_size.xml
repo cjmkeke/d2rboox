@@ -1,0 +1,7 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ladder"
+        android:width="25dp" android:height="30dp" android:gravity="center"
+        android:right="10dp"
+        android:top="10dp"
+        android:bottom="10dp"/>
+</layer-list>

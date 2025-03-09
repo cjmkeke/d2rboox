@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 바깥쪽 테두리 -->
+    <item>
+        <shape>
+            <solid android:color="#785858" />
+            <stroke
+                android:color="#BD880B"
+                android:width="2dp" />
+        </shape>
+    </item>
+
+    <!-- 안쪽 테두리 -->
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape>
+            <solid android:color="#453030" />
+            <stroke
+                android:color="#000000"
+                android:width="1dp" />
+        </shape>
+    </item>
+
+</layer-list>

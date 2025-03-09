@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".dialog.PriceWrite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/dw_normal"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_price_ladder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/dia_color"
+                android:layout_weight="1"
+                android:text="래더"/>
+
+            <CheckBox
+                android:id="@+id/cb_price_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/dia_color"
+                android:layout_weight="1"
+                android:text="스탠"/>
+
+            <CheckBox
+                android:id="@+id/cb_price_jah"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/dia_color"
+                android:layout_weight="1"
+                android:text="자룬"/>
+
+            <CheckBox
+                android:id="@+id/cb_price_ber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/dia_color"
+                android:layout_weight="1"
+                android:text="베르룬"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/et_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/dia_color"
+                    android:textSize="14sp"
+                    android:textColorHint="#5C5C5C"
+                    android:hint="년도와 월을 입력해주세요. (예 : 202501)"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/dw_type"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/et_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/dia_color"
+                    android:textSize="14sp"
+                    android:textColorHint="#5C5C5C"
+                    android:hint="날짜를 입력해주세요."
+                    android:gravity="center_vertical"
+                    android:background="@drawable/dw_type"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/et_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/dia_color"
+                    android:textSize="14sp"
+                    android:textColorHint="#5C5C5C"
+                    android:hint="시세를 입력해주세요"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/dw_type"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/dia_color"
+                    android:textSize="14sp"
+                    android:text="확인"
+                    android:gravity="center"
+                    android:background="@drawable/dw_button"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

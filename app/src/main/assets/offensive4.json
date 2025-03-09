@@ -1,0 +1,102 @@
+[
+    {
+        "radius": "10.6",
+        "attack_rating1": "75",
+        "attack_rating2": "5"
+    },
+    {
+        "radius": "12",
+        "attack_rating1": "90",
+        "attack_rating2": "10"
+    },
+    {
+        "radius": "13.3",
+        "attack_rating1": "105",
+        "attack_rating2": "15"
+    },
+    {
+        "radius": "14.6",
+        "attack_rating1": "120",
+        "attack_rating2": "20"
+    },
+    {
+        "radius": "16",
+        "attack_rating1": "135",
+        "attack_rating2": "25"
+    },
+    {
+        "radius": "17.3",
+        "attack_rating1": "150",
+        "attack_rating2": "30"
+    },
+    {
+        "radius": "18.6",
+        "attack_rating1": "165",
+        "attack_rating2": "35"
+    },
+    {
+        "radius": "20",
+        "attack_rating1": "180",
+        "attack_rating2": "40"
+    },
+    {
+        "radius": "21.3",
+        "attack_rating1": "195",
+        "attack_rating2": "45"
+    },
+    {
+        "radius": "22.6",
+        "attack_rating1": "210",
+        "attack_rating2": "50"
+    },
+    {
+        "radius": "24",
+        "attack_rating1": "225",
+        "attack_rating2": "55"
+    },
+    {
+        "radius": "25.3",
+        "attack_rating1": "240",
+        "attack_rating2": "60"
+    },
+    {
+        "radius": "26.6",
+        "attack_rating1": "255",
+        "attack_rating2": "65"
+    },
+    {
+        "radius": "28",
+        "attack_rating1": "270",
+        "attack_rating2": "70"
+    },
+    {
+        "radius": "29.3",
+        "attack_rating1": "285",
+        "attack_rating2": "75"
+    },
+    {
+        "radius": "30.6",
+        "attack_rating1": "300",
+        "attack_rating2": "80"
+    },
+    {
+        "radius": "32",
+        "attack_rating1": "315",
+        "attack_rating2": "85"
+    },
+    {
+        "radius": "33.3",
+        "attack_rating1": "330",
+        "attack_rating2": "90"
+    },
+    {
+        "radius": "34.6",
+        "attack_rating1": "345",
+        "attack_rating2": "95"
+    },
+    {
+        "radius": "36",
+        "attack_rating1": "360",
+        "attack_rating2": "100"
+    }
+]

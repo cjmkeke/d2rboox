@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dia_color">#D4C491</color>
+    <color name="dia_color_main">#BD880B</color>
+    <color name="dia_color_blue">#1E88E5</color>
+    <color name="dia_color_craft">#F4511E</color>
+    <color name="dia_color_none">#716A55</color>
+    <color name="dia_color_none1">#49390F</color>
+    <color name="dia_color_magic_item">#6E6EFF</color>
+    <color name="item_options_color">#6E6EFF</color>
+    <color name="item_change_options_color">#FFB300</color>
+    <color name="item_set">#3CD029</color>
+    <color name="color_defences">#6E6EFF</color>
+    <color name="dia_color_terror_zone">#CC00FF</color>
+    <color name="dia_color_progress1">#673AB7</color>
+    <color name="dia_color_progress2">#4C2690</color>
+    <color name="dia_color_progress3">#31116A</color>
+    <color name="dia_color_progress4">#20084B</color>
+    <color name="dia_color_progress5">#1D044A</color>
+    <color name="dia_color_skill_red">#A95750</color>
+
+    <color name="dia_color_red">#E62C2C</color>
+    <color name="dia_color_green">#3CD029</color>
+    <color name="dia_color_purple">#CC00FF</color>
+    <color name="dia_color_test_color">#48AE4A</color>
+</resources>

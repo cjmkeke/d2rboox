@@ -1,0 +1,31 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- 첫 번째 폰트를 사용하는 스타일 -->
+    <style name="nanum" parent="Base.Theme.DiabloRune">
+        <item name="android:fontFamily">@font/nanumregular</item>
+    </style>
+
+    <!-- 두 번째 폰트를 사용하는 스타일 -->
+    <style name="kodia" parent="Base.Theme.DiabloRune">
+        <item name="android:fontFamily">@font/kodia</item> <!-- 다른 폰트 경로 -->
+    </style>
+
+    <!-- styles.xml -->
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 스플래시 테마 -->
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="kodia16">
+        <item name="android:fontFamily">@font/kodia</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

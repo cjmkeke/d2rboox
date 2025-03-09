@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--로고-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/logo" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_modify"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="130dp"
+                android:src="@drawable/back_craft"
+                android:visibility="gone" />
+
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_ber_price"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icons_price_ber"/>
+
+            <TextView
+                android:id="@+id/tv_jah_price"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icons_price_jah"/>
+
+
+            <TextView
+                android:id="@+id/tv_price_write"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/dia_color"
+                android:visibility="gone"
+                android:text="글"/>
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icons_settings" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icons_login"/>
+
+            <ImageView
+                android:id="@+id/iv_point_p"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/p" />
+
+            <ImageView
+                android:id="@+id/iv_point_m"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_notices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/icons_right"/>
+
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dw_normal"
+                android:padding="8dp"
+                android:lines="1"
+                android:gravity="center"
+                android:textColor="@color/dia_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_horadric_cube"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_give_item"
+            android:gravity="center"
+            android:text="아이템 및 레저렉션 정보"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_character_development"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_give_item"
+            android:gravity="center"
+            android:text="케릭터 육성 정보"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_rune_mixture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/small_background"
+                android:gravity="center"
+                android:text="조합 가능한 룬워드"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_rune_clear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/small_background"
+                android:gravity="center"
+                android:text="룬 초기화"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:elevation="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/el_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/back_give_item"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_rune_el"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/el" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_el"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="엘 [El]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_el_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_el_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_el_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eld_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/eld" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_eld"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="엘드 [Eld]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_eld_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_eld_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+
+                    <TextView
+                        android:id="@+id/tv_eld_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tir_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/tir" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_tir"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="티르 [Tir]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tir_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tir_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+
+                    <TextView
+                        android:id="@+id/tv_tir_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nef_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/nef" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_nef"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="네프 [Nef]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nef_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_nef_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_nef_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eth_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/eth" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_eth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="에드 [Eth]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_eth_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_eth_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_eth_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ith_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ith" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ith"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="아이드 [Ith]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ith_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ith_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ith_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tal_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/tal" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_tal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="탈 [Tal]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tal_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tal_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_tal_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ral_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ral" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ral"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="랄 [Ral]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ral_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ral_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ral_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ort_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ort" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ort"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="오르트 [Ort]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ort_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ort_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ort_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thul_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/thul" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_thul"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="주울 [Thul]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_thul_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_thul_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_thul_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/amn_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/amn" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_amn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="앰 [Amn]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_amn_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_amn_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_amn_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sol_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/sol" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_sol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="솔 [Sol]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sol_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sol_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_sol_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shael_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/shael" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_shael"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="샤엘 [Shael]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_shael_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_shael_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_shael_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dol_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/dol" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_dol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="돌 [Dol]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_dol_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_dol_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_dol_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hel_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/hel" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_hel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="헬 [Hel]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hel_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hel_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_hel_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/io_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/io" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_io"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="이오 [Io]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_io_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_io_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_io_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lum_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/lum" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_lum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="룸 [Lum]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lum_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lum_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_lum_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ko_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ko" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ko"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="코 [Ko]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ko_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ko_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ko_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fal_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/fal" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_fal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="팔 [Fal]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fal_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fal_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_fal_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lem_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/lem" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_lem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="렘 [Lem]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lem_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lem_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_lem_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pul_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/pul" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_pul"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="풀 [Pul]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_pul_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_pul_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_pul_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/um_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/um" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_um"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="우움 [Um]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_um_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_um_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_um_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mal_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/mal" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_mal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="말 [Mal]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mal_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mal_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_mal_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ist_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ist" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="이스트 [Ist]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ist_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ist_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ist_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gul_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/gul" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_gul"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="굴 [Gul]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gul_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gul_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_gul_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vex_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/vex" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_vex"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="벡스 [Vex]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_vex_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_vex_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_vex_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ohm_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ohm" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ohm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="오움 [Ohm]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ohm_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ohm_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ohm_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/lo" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_lo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="로 [Lo]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lo_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lo_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_lo_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sur_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/sur" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_sur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="수르 [Sur]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sur_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sur_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_sur_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ber_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ber" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_ber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="베르 [Ber]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ber_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ber_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_ber_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jah_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/jah" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_jah"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="자 [Jah]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jah_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jah_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_jah_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cham_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/cham" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_cham"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="참 [Cham]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cham_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cham_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_cham_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zod_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/zod" />
+
+                    <TextView
+                        android:id="@+id/tv_rune_zod"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center_vertical"
+                        android:text="조드 [Zod]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_zod_update_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:gravity="center"
+                        android:text="[ 보유 수량 : 0 개 ]"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_zod_up"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_up_size"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_zod_down"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/icons_down_size"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

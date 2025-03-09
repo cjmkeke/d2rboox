@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ItemDatabaseDrawerLayout">
+
+    <!-- 상단 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/tv_open_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/back_give_item"
+            android:gravity="center"
+            android:text="메뉴 열기"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_write_button"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/dia_color"
+            android:text="글쓰기"
+            android:visibility="gone"
+            android:background="@drawable/back_sell"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+    <!-- 메인 콘텐츠 영역 및 DrawerLayout -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <!-- 메인 콘텐츠 (Fragment 교체될 영역) -->
+        <FrameLayout
+            android:id="@+id/fl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_item_database">
+
+        </FrameLayout>
+        <!-- Drawer 메뉴 -->
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:background="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/back_drawerlayout2"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_drawer_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:background="@drawable/logo"
+                    android:textColor="@color/dia_color"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Drawer 메뉴 항목들 -->
+
+
+                    <TextView
+                        android:id="@+id/tv_horadric_cube_cubing"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="호라드릭 큐브 조합"
+                        android:background="@drawable/back_drawble_top"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_menu_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="크래프트 조합"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rare_spfix"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="레어 아이템 접두사 / 접미사"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_magic_spfix"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="매직 아이템 접두사 / 접미사"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tv_options_amulet"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="아뮬렛 접두사 / 접미사"
+                        android:visibility="gone"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_options_ring"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="링 접두사 / 접미사"
+                        android:visibility="gone"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_armor_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="방어구 (방어력 및 소켓 정보)"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_shield"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="방패 (방어력 및 소켓 정보)"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_helm"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="헬름, 써클릿 (방어력 및 소켓 정보)"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textColor="@color/dia_color"
+                        android:visibility="visible"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weapons"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="무기 (공격력 및 소켓 정보)"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:visibility="visible"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_unique"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="유니크"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_set_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="세트 아이템"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_map_tc"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="TC 정보"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_terror_zone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="테러존 열기"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_uber_dia"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:text="우버디아 열기"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_middle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_back_handle_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="55dp"
+                        android:textColor="@color/dia_color"
+                        android:background="@drawable/back_drawble_bottom"
+                        android:text="나가기"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <!-- 하단 영역 (광고 또는 기타 내용) -->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_ads"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@color/black"-->
+<!--        android:orientation="vertical"/>-->
+
+
+</LinearLayout>

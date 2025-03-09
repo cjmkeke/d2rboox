@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_settings_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".settings.Settings">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="환경설정"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/dia_color"
+            android:textSize="16sp"
+            android:background="@drawable/dw_main_ethereal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_font_message"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp"
+                android:text="폰트 변경"
+                android:background="@drawable/dw_title"/>
+
+            <ToggleButton
+                android:id="@+id/tb_font_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textOn=""
+                android:textOff=""
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_terror_zone_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp"
+                tools:text="테러존 알람을 OFF 했습니다."
+                android:background="@drawable/dw_title"/>
+
+            <ToggleButton
+                android:id="@+id/tb_terror_zone_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textOn=""
+                android:textOff=""
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_uber_dia_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp"
+                tools:text="우버 디아블로 알람을 OFF 했습니다."
+                android:background="@drawable/dw_title"/>
+
+            <ToggleButton
+                android:id="@+id/tb_uber_dia_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textOn=""
+                android:textOff=""
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_main_terror_zone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_terror_zone_message"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/dia_color"
+                android:textSize="16sp"
+                android:text="테러존 알람 설정"
+                android:drawableStart="@drawable/icons_terror_on_size"
+                android:background="@drawable/dw_title"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icons_right_size"/>
+
+                <Spinner
+                    android:id="@+id/sp_terror_zone_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_terror_zone_text_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/dia_color"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/dia_color"
+                    android:text="진동 설정"
+                    android:textSize="16sp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/dw_title"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"/>
+
+                <ToggleButton
+                    android:id="@+id/tb_terror_zone_vibration"
+                    android:layout_width="40dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/dia_color"
+                    android:text="알람 소리 설정"
+                    android:textSize="16sp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/dw_title"
+                    android:layout_gravity="center"/>
+
+                <ToggleButton
+                    android:id="@+id/tb_terror_zone_alarm_sound"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_terror_zone_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/icons_question_size"
+                android:textColor="@color/dia_color_none"
+                android:textSize="14sp"
+                android:text="테러존(공포의 영역)이 무엇인가요 ?"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_main_uber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:background="@drawable/dw_title"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/icons_diablo_size"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icons_korea_size"/>
+
+                <TextView
+                    android:id="@+id/tv_uber_dia_message_asia"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/dia_color"
+                    android:textSize="16sp"
+                    android:text="아시아 우버 디아블로 알람 설정"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dw_title"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/icons_diablo_size"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icons_us_size"/>
+
+
+                <TextView
+                    android:id="@+id/tv_uber_dia_message_america"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/dia_color"
+                    android:textSize="16sp"
+                    android:text="아메리카 우버 디아블로 알람 설정"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/dw_title"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@drawable/icons_diablo_size"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icons_europe_size"/>
+
+                <TextView
+                    android:id="@+id/tv_uber_dia_message_europe"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/dia_color"
+                    android:textSize="16sp"
+                    android:text="유럽 우버 디아블로 알람 설정"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_uber_dia_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/icons_question_size"
+                android:textColor="@color/dia_color_none"
+                android:textSize="14sp"
+                android:text="우버디아가 무엇인가요 ?"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/dw_title"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/dia_color"
+                    android:textSize="16sp"
+                    android:text="버전 25.01.21"/>
+
+                <TextView
+                    android:id="@+id/tv_version_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/dia_color_none"
+                    android:drawableStart="@drawable/icons_new_size"
+                    android:textSize="14sp"
+                    tools:text="안내 메시지"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="14sp"
+                    android:text="test"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+

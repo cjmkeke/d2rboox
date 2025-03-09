@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".itemdatabase.CraftItemDatabase">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_craft"
+                android:id="@+id/view_craft"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--TODO 힛파워 계열-->
+                <TextView
+                    android:id="@+id/tv_hit_power_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_give_item"
+                    android:drawableStart="@drawable/dw_perfect_saphire"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛 파워 계열 열기" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_helmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 헬멧" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_boots"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 부츠" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_gloves"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 장갑" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_belt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 벨트" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_shield"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 쉴드" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_armor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 아머" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_amulet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 아뮬렛" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 링" />
+
+                <TextView
+                    android:id="@+id/tv_hit_power_weapon"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="힛파워 무기" />
+
+                <!--TODO 블러드 계열-->
+
+                <TextView
+                    android:id="@+id/tv_blood_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_give_item"
+                    android:drawableStart="@drawable/dw_perfect_ruby"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 계열 열기" />
+
+                <TextView
+                    android:id="@+id/tv_blood_helmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 헬멧" />
+
+                <TextView
+                    android:id="@+id/tv_blood_boots"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 부츠" />
+
+                <TextView
+                    android:id="@+id/tv_blood_gloves"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 장갑" />
+
+                <TextView
+                    android:id="@+id/tv_blood_belt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 벨트" />
+
+                <TextView
+                    android:id="@+id/tv_blood_shield"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 쉴드" />
+
+                <TextView
+                    android:id="@+id/tv_blood_armor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 아머" />
+
+                <TextView
+                    android:id="@+id/tv_blood_amulet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 아뮬렛" />
+
+                <TextView
+                    android:id="@+id/tv_blood_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 링" />
+
+                <TextView
+                    android:id="@+id/tv_blood_weapon"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="블러드 무기" />
+
+                <!--TODO 캐스터 계열-->
+
+                <TextView
+                    android:id="@+id/tv_caster_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_give_item"
+                    android:drawableStart="@drawable/dw_perfect_amethyst"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 계열 열기" />
+
+                <TextView
+                    android:id="@+id/tv_caster_helmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 헬멧" />
+
+                <TextView
+                    android:id="@+id/tv_caster_boots"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 부츠" />
+
+                <TextView
+                    android:id="@+id/tv_caster_gloves"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 장갑" />
+
+                <TextView
+                    android:id="@+id/tv_caster_belt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 벨트" />
+
+                <TextView
+                    android:id="@+id/tv_caster_shield"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 쉴드" />
+
+                <TextView
+                    android:id="@+id/tv_caster_armor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 아머" />
+
+                <TextView
+                    android:id="@+id/tv_caster_amulet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_red_color"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 아뮬렛" />
+
+                <TextView
+                    android:id="@+id/tv_caster_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 링" />
+
+                <TextView
+                    android:id="@+id/tv_caster_weapon"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="캐스터 무기" />
+
+
+                <!--TODO 세이프티 계열-->
+
+                <TextView
+                    android:id="@+id/tv_safety_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_give_item"
+                    android:drawableStart="@drawable/dw_perfect_emerald"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 계열 열기" />
+
+                <TextView
+                    android:id="@+id/tv_safety_helmet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 헬멧" />
+
+                <TextView
+                    android:id="@+id/tv_safety_boots"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 부츠" />
+
+                <TextView
+                    android:id="@+id/tv_safety_gloves"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 장갑" />
+
+                <TextView
+                    android:id="@+id/tv_safety_belt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 벨트" />
+
+                <TextView
+                    android:id="@+id/tv_safety_shield"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 쉴드" />
+
+                <TextView
+                    android:id="@+id/tv_safety_armor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 아머" />
+
+                <TextView
+                    android:id="@+id/tv_safety_amulet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 아뮬렛" />
+
+                <TextView
+                    android:id="@+id/tv_safety_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 링" />
+
+                <TextView
+                    android:id="@+id/tv_safety_weapon"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/back_none_item"
+                    android:visibility="gone"
+                    android:textColor="@color/dia_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="세이프티 무기" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
