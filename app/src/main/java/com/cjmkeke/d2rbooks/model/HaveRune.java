@@ -3,7 +3,6 @@ package com.cjmkeke.d2rbooks.model;
 import android.graphics.drawable.Drawable;
 
 public class HaveRune {
-
     private String name;
     private Drawable dw;
 

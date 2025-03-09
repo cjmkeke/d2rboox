@@ -21,7 +21,7 @@ public class Bow1 {
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillBow.bowSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillBow.bowSkill1_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
