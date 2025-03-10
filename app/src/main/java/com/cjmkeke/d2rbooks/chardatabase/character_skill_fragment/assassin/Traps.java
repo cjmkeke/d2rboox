@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.cjmkeke.d2rbooks.R;
-import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.shadow.SkillShadow;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.SkillTraps;
 import com.cjmkeke.d2rbooks.chardatabase.tools.CharacterSkillUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
@@ -28,7 +28,7 @@ public class Traps extends Fragment {
     private final String CHARACTER_NAME = "assassin";
     private final String SKILL_TABLE_NAME = "traps";
     private final String[] SKILL_TABLE_ARRAY_1 = {"traps_skill_1", "traps_skill_2", "traps_skill_3", "traps_skill_4", "traps_skill_5", "traps_skill_6", "traps_skill_7", "traps_skill_8", "traps_skill_9", "traps_skill_10"};
-    private final String[] SKILL_TABLE_ARRAY_2 = {"shadow_skill_1", "shadow_skill_2", "shadow_skill_3", "shadow_skill_4", "shadow_skill_5", "shadow_skill_6", "shadow_skill_7", "shadow_skill_8", "shadow_skill_9", "shadow_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_2 = {"traps_skill_1", "traps_skill_2", "traps_skill_3", "traps_skill_4", "traps_skill_5", "traps_skill_6", "traps_skill_7", "traps_skill_8", "traps_skill_9", "traps_skill_10"};
     private final String[] SKILL_TABLE_ARRAY_3 = {"martial_skill_1", "martial_skill_2", "martial_skill_3", "martial_skill_4", "martial_skill_5", "martial_skill_6", "martial_skill_7", "martial_skill_8", "martial_skill_9", "martial_skill_10"};
     private final String CHARACTER_SKILL_STRING = "traps_assassin";
     private final String SKILL_POINT_KEY = "skillPoint_assassin";
@@ -202,7 +202,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill1, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill1, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -212,7 +212,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill2, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill2, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -222,7 +222,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_3_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill3, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill3, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -232,7 +232,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_4_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill4, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill4, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -242,7 +242,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_5_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill5, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill5, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -252,7 +252,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_6_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill6, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill6, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -262,7 +262,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_7_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill7, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill7, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -272,7 +272,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_8_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill8, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill8, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -282,7 +282,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_9_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill9, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill9, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -292,7 +292,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_10_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill10, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill10, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
