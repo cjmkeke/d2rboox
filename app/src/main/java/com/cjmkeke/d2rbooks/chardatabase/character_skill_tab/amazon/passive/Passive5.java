@@ -21,13 +21,13 @@ public class Passive5 {
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillPassive.trapsSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillPassive.passiveSkill10_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(PassiveUpdate.trapsSkill10(
+                        spanned = Html.fromHtml(PassiveUpdate.passiveSkill10(
                                         String.valueOf(i),
                                         skill.get(i - 1).getOption1(),
                                         skill.get(i - 1).getOption2(),

@@ -16,23 +16,21 @@ public class Traps5 {
 
     public static void skillUpdate(int value, TextView textView, Context context){
         Type listType = new TypeToken<List<Traps5.TrapsModel10>>() {}.getType();
-        List<Traps5.TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat10.json", listType);
+        List<Traps5.TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "traps5.json", listType);
         Spanned spanned;
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillTraps.trapsSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillTraps.trapsSkill5_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(TrapsUpdate.trapsSkill10(
+                        spanned = Html.fromHtml(TrapsUpdate.trapsSkill5(
                                         String.valueOf(i),
                                         skill.get(i - 1).getOption1(),
-                                        skill.get(i - 1).getOption2(),
-                                        skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i).getOption1()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.

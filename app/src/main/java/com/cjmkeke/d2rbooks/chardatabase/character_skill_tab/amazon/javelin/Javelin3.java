@@ -16,18 +16,18 @@ public class Javelin3 {
 
     public static void skillUpdate(int value, TextView textView, Context context){
         Type listType = new TypeToken<List<CombatModel10>>() {}.getType();
-        List<CombatModel10> skill = JsonUtil.loadJSONFromAsset(context, "traps10.json", listType);
+        List<CombatModel10> skill = JsonUtil.loadJSONFromAsset(context, "javelin10.json", listType);
         Spanned spanned;
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillJavelin.trapsSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillJavelin.javelinSkill10_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(JavelinUpdate.trapsSkill10(
+                        spanned = Html.fromHtml(JavelinUpdate.javelinSkill10(
                                         String.valueOf(i),
                                         skill.get(i - 1).getOption1(),
                                         skill.get(i - 1).getOption2(),

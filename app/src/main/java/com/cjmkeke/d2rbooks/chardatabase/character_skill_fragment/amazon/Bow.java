@@ -60,7 +60,10 @@ public class Bow extends Fragment {
         String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
         getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
         mBinding = FragmentBowBinding.inflate(inflater, container, false);
-     
+
+        sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
         if (!sharedPreferences.contains(SKILL_POINT_KEY)) {
             editor.putInt(SKILL_POINT_KEY, 98);
         } else {

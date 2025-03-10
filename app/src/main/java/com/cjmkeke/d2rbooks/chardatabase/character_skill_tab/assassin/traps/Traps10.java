@@ -15,7 +15,7 @@ public class Traps10 {
 
     public static void skillUpdate(int value, TextView textView, Context context){
         Type listType = new TypeToken<List<Traps10.TrapsModel10>>() {}.getType();
-        List<Traps10.TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat10.json", listType);
+        List<Traps10.TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "traps10.json", listType);
         Spanned spanned;
 
         if (skill != null){
@@ -30,8 +30,10 @@ public class Traps10 {
                                         String.valueOf(i),
                                         skill.get(i - 1).getOption1(),
                                         skill.get(i - 1).getOption2(),
+                                        skill.get(i - 1).getOption3(),
                                         skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i).getOption2(),
+                                        skill.get(i).getOption3()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.

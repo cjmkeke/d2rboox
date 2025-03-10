@@ -1,107 +1,102 @@
 package com.cjmkeke.d2rbooks.chardatabase;
 
-import android.content.Context;
-import android.content.Intent;
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.cjmkeke.d2rbooks.R;
-import com.cjmkeke.d2rbooks.adapter.character.AdapterAmazone;
-import com.cjmkeke.d2rbooks.chardatabase.write.AmazoneWrite;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Bow;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Javelin;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Passive;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.assassin.Martial;
+import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentAmazonDatabaseBinding;
-import com.cjmkeke.d2rbooks.model.Character;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class AmazonDatabase extends Fragment {
 
     private static final String TAG = "AmazonDatabase";
-    private FragmentAmazonDatabaseBinding binding;
-    private RecyclerView recyclerView;
-    private AdapterAmazone adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Character> arrayList;
-    private DatabaseReference databaseReference;
-    private FirebaseDatabase firebaseDatabase;
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-
-        requireActivity().getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-
-            }
-        });
-
-    }
+    private FragmentAmazonDatabaseBinding mBinding;
+    private SharedPreferences fontSharedPreferences;
+    private boolean isTabButtonDefense = false;
+    private boolean isTabButtonAttack = false;
+    private boolean isTabButtonBattle = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentAmazonDatabaseBinding.inflate(inflater, container, false);
+        fontSharedPreferences = getContext().getSharedPreferences(SharedValue.FONT_PREFERENCES, MODE_PRIVATE);
+        String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
+        getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
+        mBinding = FragmentAmazonDatabaseBinding.inflate(inflater, container, false);
 
-        recyclerView = binding.getRoot().findViewById(R.id.recycler_view_amazon); // 프레그먼트에서 사용
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setHasFixedSize(true);
-        layoutManager.setItemPrefetchEnabled(false);
-        recyclerView.setLayoutManager(layoutManager);
-        arrayList = new ArrayList<>();
-        adapter = new AdapterAmazone(arrayList, getContext());
-        recyclerView.setAdapter(adapter);
+        int resIdSelect = getResources().getIdentifier("dw_act_select", "drawable", getContext().getPackageName());
+        int resIdNoneSelect = getResources().getIdentifier("dw_button", "drawable", getContext().getPackageName());
 
-        binding.tvAmazonWrite.setOnClickListener(new View.OnClickListener() {
+        Fragment fragment = null;
+        if (fragment == null) {
+            replaceFragment(new Martial());
+        }
+
+        mBinding.tvAmazoneTabJavelin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AmazoneWrite.class);
-                intent.putExtra(TAG, TAG);
-                startActivity(intent);
+
+                if (!isTabButtonDefense){
+                    mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdSelect);
+                    mBinding.tvAmazoneTabBow.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdNoneSelect);
+                    isTabButtonDefense = false;
+                }
+
+
+                replaceFragment(new Javelin());
             }
         });
 
-        binding.tvClose.setOnClickListener(new View.OnClickListener() {
+        mBinding.tvAmazoneTabPassive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().finish();
+
+                if (!isTabButtonAttack){
+                    mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdSelect);
+                    mBinding.tvAmazoneTabBow.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdNoneSelect);
+                    isTabButtonAttack = false;
+                }
+
+                replaceFragment(new Passive());
             }
         });
 
-        Character character = new Character();
-        character.setCharacterClass("매롱");
-        character.setStrength("12030");
+        mBinding.tvAmazoneTabBow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isTabButtonBattle){
+                    mBinding.tvAmazoneTabBow.setBackgroundResource(resIdSelect);
+                    mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdNoneSelect);
+                    isTabButtonBattle = false;
+                }
+                replaceFragment(new Bow());
+            }
+        });
 
-        arrayList.add(character);
-        adapter.notifyDataSetChanged();
+        return mBinding.getRoot();
 
-//        firebaseDatabase = FirebaseDatabase.getInstance();
-//        databaseReference = firebaseDatabase.getReference("위치").child("위치");
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                arrayList.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    Char item = dataSnapshot.getValue(Char.class);
-//                    arrayList.add(item);
-//                }
-//                adapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+    }
 
-        return binding.getRoot();
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fl_skill_change, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commitAllowingStateLoss();  // 상태 손실이 허용된 커밋 사용
     }
 }

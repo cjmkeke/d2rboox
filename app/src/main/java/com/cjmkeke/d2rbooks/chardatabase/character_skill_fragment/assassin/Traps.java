@@ -60,6 +60,7 @@ public class Traps extends Fragment {
         String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
         getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
         mBinding = FragmentTrapsBinding.inflate(inflater, container, false);
+
         sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
