@@ -149,7 +149,8 @@ public class ShadowUpdate {
 
     public static String shadowSkill10(String 레벨, String 현재생명력, String 현재명중률, String 현재모든저항, String 현재마나소모, String 다음생명력, String 다음명중률, String 다음모든저항, String 다음마나소모) {
         return
-                "<font color='#48AE4A'>자신의 강한 그림자를 소환하여<br>전투를 돕게합니다.</font>" +
+                "<font color='#48AE4A'>그림자 달인</font>" +
+                        "<br>자신의 강력한 그림자를 소환하여<br>전투를 돕게합니다." +
                         "<br>요구 레벨: 30" +
                         "<br><br>시전 지연 시간: 0.6초" +
                         "<br><br>현재 기술 레벨: "+레벨+

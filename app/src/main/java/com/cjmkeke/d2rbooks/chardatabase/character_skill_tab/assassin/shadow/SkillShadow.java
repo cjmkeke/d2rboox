@@ -89,7 +89,8 @@ public class SkillShadow {
                     "<br>지속시간: 120초";
 
     public static String shadowSkill10 =
-            "<font color='#48AE4A'>자신의 강한 그림자를 소환하여<br>전투를 돕게합니다.</font>" +
+            "<font color='#48AE4A'>그림자 달인</font>" +
+                    "<br>자신의 강력한 그림자를 소환하여<br>전투를 돕게합니다." +
                     "<br>요구 레벨: 30" +
                     "<br><br>시전 지연 시간: 0.6초" +
                     "<br><br>처음 레벨" +
@@ -189,7 +190,8 @@ public class SkillShadow {
                     "<br>지속시간: 348초";
 
     public static String shadowSkill10_end =
-            "<font color='#48AE4A'>자신의 강한 그림자를 소환하여<br>전투를 돕게합니다.</font>" +
+            "<font color='#48AE4A'>그림자 달인</font>" +
+                    "<br>자신의 강력한 그림자를 소환하여<br>전투를 돕게합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>시전 지연 시간: 0.6초" +
                     "<br><br>현재 기술 레벨: 20" +

@@ -16,6 +16,16 @@ import androidx.fragment.app.Fragment;
 
 import com.cjmkeke.d2rbooks.R;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.SkillTraps;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps1;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps10;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps2;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps3;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps4;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps5;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps6;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps7;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps8;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps.Traps9;
 import com.cjmkeke.d2rbooks.chardatabase.tools.CharacterSkillUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
@@ -26,9 +36,10 @@ public class Traps extends Fragment {
 
     private FragmentTrapsBinding mBinding;
     private final String CHARACTER_NAME = "assassin";
+    private final String CLASS_NAME = "trapsSkill";
     private final String SKILL_TABLE_NAME = "traps";
     private final String[] SKILL_TABLE_ARRAY_1 = {"traps_skill_1", "traps_skill_2", "traps_skill_3", "traps_skill_4", "traps_skill_5", "traps_skill_6", "traps_skill_7", "traps_skill_8", "traps_skill_9", "traps_skill_10"};
-    private final String[] SKILL_TABLE_ARRAY_2 = {"traps_skill_1", "traps_skill_2", "traps_skill_3", "traps_skill_4", "traps_skill_5", "traps_skill_6", "traps_skill_7", "traps_skill_8", "traps_skill_9", "traps_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_2 = {"shadow_skill_1", "shadow_skill_2", "shadow_skill_3", "shadow_skill_4", "shadow_skill_5", "shadow_skill_6", "shadow_skill_7", "shadow_skill_8", "shadow_skill_9", "shadow_skill_10"};
     private final String[] SKILL_TABLE_ARRAY_3 = {"martial_skill_1", "martial_skill_2", "martial_skill_3", "martial_skill_4", "martial_skill_5", "martial_skill_6", "martial_skill_7", "martial_skill_8", "martial_skill_9", "martial_skill_10"};
     private final String CHARACTER_SKILL_STRING = "traps_assassin";
     private final String SKILL_POINT_KEY = "skillPoint_assassin";
@@ -202,7 +213,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill1, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill3, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -212,7 +223,7 @@ public class Traps extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill2, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillTraps.trapsSkill3, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -300,53 +311,148 @@ public class Traps extends Fragment {
 
         mBinding.skillClear.setOnClickListener(v -> characterSkillUpdate.resetSkillPoint(SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
         mBinding.tvAllSkillReset.setOnClickListener(v -> characterSkillUpdate.resetAllSkillPoint(SKILL_TABLE_ARRAY_1, SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
-        mBinding.ivBtnSkillImage1.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1)));
-        mBinding.ivBtnSkillImage2.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2)));
-        mBinding.ivBtnSkillImage3.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3)));
-        mBinding.ivBtnSkillImage4.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4)));
-        mBinding.ivBtnSkillImage5.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5)));
-        mBinding.ivBtnSkillImage6.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6)));
-        mBinding.ivBtnSkillImage7.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7)));
-        mBinding.ivBtnSkillImage8.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8)));
-        mBinding.ivBtnSkillImage9.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9)));
-        mBinding.ivBtnSkillImage10.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10)));
-        mBinding.tvBtn1ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1)));
-        mBinding.tvBtn2ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2)));
-        mBinding.tvBtn3ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3)));
-        mBinding.tvBtn4ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4)));
-        mBinding.tvBtn5ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5)));
-        mBinding.tvBtn6ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6)));
-        mBinding.tvBtn7ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7)));
-        mBinding.tvBtn8ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8)));
-        mBinding.tvBtn9ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9)));
-        mBinding.tvBtn10ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10)));
+        mBinding.ivBtnSkillImage1.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1), SkillTraps.class, CLASS_NAME, Traps1.class));
+        mBinding.ivBtnSkillImage2.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2), SkillTraps.class, CLASS_NAME, Traps2.class));
+        mBinding.ivBtnSkillImage3.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3), SkillTraps.class, CLASS_NAME, Traps3.class));
+        mBinding.ivBtnSkillImage4.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4), SkillTraps.class, CLASS_NAME, Traps4.class));
+        mBinding.ivBtnSkillImage5.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5), SkillTraps.class, CLASS_NAME, Traps5.class));
+        mBinding.ivBtnSkillImage6.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6), SkillTraps.class, CLASS_NAME, Traps6.class));
+        mBinding.ivBtnSkillImage7.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7), SkillTraps.class, CLASS_NAME, Traps7.class));
+        mBinding.ivBtnSkillImage8.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8), SkillTraps.class, CLASS_NAME, Traps8.class));
+        mBinding.ivBtnSkillImage9.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9), SkillTraps.class, CLASS_NAME, Traps9.class));
+        mBinding.ivBtnSkillImage10.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10), SkillTraps.class, CLASS_NAME, Traps10.class));
+
+        mBinding.tvBtn1ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1), Traps1.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn2ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2), Traps2.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn3ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3), Traps3.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn4ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4), Traps4.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn5ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5), Traps5.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn6ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6), Traps6.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn7ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7), Traps7.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn8ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8), Traps8.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn9ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9), Traps9.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn10ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10), Traps10.class);
+                return true;
+            }
+        });
+
+//        mBinding.tvView1Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1), SkillTraps.class, CLASS_NAME, Traps1.class); return true; });
+//        mBinding.tvView2Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2), SkillTraps.class, CLASS_NAME, Traps2.class); return true; });
+//        mBinding.tvView3Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3), SkillTraps.class, CLASS_NAME, Traps3.class); return true; });
+//        mBinding.tvView4Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4), SkillTraps.class, CLASS_NAME, Traps4.class); return true; });
+//        mBinding.tvView5Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5), SkillTraps.class, CLASS_NAME, Traps5.class); return true; });
+//        mBinding.tvView6Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6), SkillTraps.class, CLASS_NAME, Traps6.class); return true; });
+//        mBinding.tvView7Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7), SkillTraps.class, CLASS_NAME, Traps7.class); return true; });
+//        mBinding.tvView8Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8), SkillTraps.class, CLASS_NAME, Traps8.class); return true; });
+//        mBinding.tvView9Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9), SkillTraps.class, CLASS_NAME, Traps9.class); return true; });
+//        mBinding.tvView10Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10), SkillTraps.class, CLASS_NAME, Traps10.class); return true; });
+
+        mBinding.tvBtn1ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1), Traps1.class));
+        mBinding.tvBtn2ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2), Traps2.class));
+        mBinding.tvBtn3ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3), Traps3.class));
+        mBinding.tvBtn4ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4), Traps4.class));
+        mBinding.tvBtn5ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5), Traps5.class));
+        mBinding.tvBtn6ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6), Traps6.class));
+        mBinding.tvBtn7ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7), Traps7.class));
+        mBinding.tvBtn8ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8), Traps8.class));
+        mBinding.tvBtn9ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9), Traps9.class));
+        mBinding.tvBtn10ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10), Traps10.class));
 
         return mBinding.getRoot();
     }
 
     private boolean checkSkillConditionsUp(ImageView imageView) {
-        return prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_2, skill_point_1)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_4, skill_point_2)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_4)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_9, skill_point_7)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_1)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_5)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_6, skill_point_3, skill_point_5)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_6)
+        return false;
+//        return prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_2, skill_point_1)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_4, skill_point_2)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_4)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_9, skill_point_7)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_1)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_5)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_6, skill_point_3, skill_point_5)
+//                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_6)
 
-                ;}
+                }
 
     private boolean checkSkillConditionsDown(ImageView imageView) {
-        return prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_4)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_3)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_3, skill_point_3, skill_point_6)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_7)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_7, skill_point_7, skill_point_10)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_2, skill_point_2, skill_point_5)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_8)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_10)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_6)
-
-                ;}
+        return false;
+//        return prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_4)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_3)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_3, skill_point_3, skill_point_6)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_7)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_7, skill_point_7, skill_point_10)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_2, skill_point_2, skill_point_5)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_8)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_10)
+//                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_6)
+//
+//                ;
+    }
 
 }

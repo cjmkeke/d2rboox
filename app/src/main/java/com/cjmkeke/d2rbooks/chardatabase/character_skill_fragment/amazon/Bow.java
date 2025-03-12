@@ -4,8 +4,6 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.cjmkeke.d2rbooks.R;
-import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.bow.SkillBow;
 import com.cjmkeke.d2rbooks.chardatabase.tools.CharacterSkillUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
@@ -26,6 +23,7 @@ public class Bow extends Fragment {
 
     private FragmentBowBinding mBinding;
     private final String CHARACTER_NAME = "amazon";
+    private final String CLASS_NAME = "bowSkill";
     private final String SKILL_TABLE_NAME = "bow";
     private final String[] SKILL_TABLE_ARRAY_1 = {"bow_skill_1", "bow_skill_2", "bow_skill_3", "bow_skill_4", "bow_skill_5", "bow_skill_6", "bow_skill_7", "bow_skill_8", "bow_skill_9", "bow_skill_10"};
     private final String[] SKILL_TABLE_ARRAY_2 = {"javelin_skill_1", "javelin_skill_2", "javelin_skill_3", "javelin_skill_4", "javelin_skill_5", "javelin_skill_6", "javelin_skill_7", "javelin_skill_8", "javelin_skill_9", "javelin_skill_10"};
@@ -198,128 +196,128 @@ public class Bow extends Fragment {
         ImageUpdate ImageUpdate = new ImageUpdate(getContext(), CHARACTER_SKILL_STRING, mBinding.ivBtnSkillImage1, mBinding.ivBtnSkillImage2, mBinding.ivBtnSkillImage3, mBinding.ivBtnSkillImage4, mBinding.ivBtnSkillImage5, mBinding.ivBtnSkillImage6, mBinding.ivBtnSkillImage7, mBinding.ivBtnSkillImage8, mBinding.ivBtnSkillImage9, mBinding.ivBtnSkillImage10);
         ImageUpdate.skillImageUpdate(sharedPreferences, SKILL_TABLE_NAME);
 
-        mBinding.ivBtnSkillImage1.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill1, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill2, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage3.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_3_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill3, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage4.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_4_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill4, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage5.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_5_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill5, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage6.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_6_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill6, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage7.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_7_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill7, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage8.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_8_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill8, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage9.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_9_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill9, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
-
-        mBinding.ivBtnSkillImage10.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_10_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillBow.bowSkill10, Html.FROM_HTML_MODE_LEGACY);
-                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
-                return true;
-            }
-        });
+//        mBinding.ivBtnSkillImage1.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill1, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage2.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill2, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage3.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_3_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill3, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage4.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_4_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill4, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage5.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_5_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill5, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage6.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_6_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill6, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage7.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_7_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill7, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage8.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_8_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill8, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage9.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_9_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill9, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
+//
+//        mBinding.ivBtnSkillImage10.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_10_2", "drawable", getContext().getPackageName());
+//                Spanned spanned = Html.fromHtml(SkillBow.bowSkill10, Html.FROM_HTML_MODE_LEGACY);
+//                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
+//                return true;
+//            }
+//        });
 
         mBinding.skillClear.setOnClickListener(v -> characterSkillUpdate.resetSkillPoint(SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
         mBinding.tvAllSkillReset.setOnClickListener(v -> characterSkillUpdate.resetAllSkillPoint(SKILL_TABLE_ARRAY_1, SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
-        mBinding.ivBtnSkillImage1.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1)));
-        mBinding.ivBtnSkillImage2.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2)));
-        mBinding.ivBtnSkillImage3.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3)));
-        mBinding.ivBtnSkillImage4.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4)));
-        mBinding.ivBtnSkillImage5.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5)));
-        mBinding.ivBtnSkillImage6.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6)));
-        mBinding.ivBtnSkillImage7.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7)));
-        mBinding.ivBtnSkillImage8.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8)));
-        mBinding.ivBtnSkillImage9.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9)));
-        mBinding.ivBtnSkillImage10.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10)));
-        mBinding.tvBtn1ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1)));
-        mBinding.tvBtn2ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2)));
-        mBinding.tvBtn3ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3)));
-        mBinding.tvBtn4ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4)));
-        mBinding.tvBtn5ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5)));
-        mBinding.tvBtn6ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6)));
-        mBinding.tvBtn7ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7)));
-        mBinding.tvBtn8ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8)));
-        mBinding.tvBtn9ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9)));
-        mBinding.tvBtn10ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10)));
+//        mBinding.ivBtnSkillImage1.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1)));
+//        mBinding.ivBtnSkillImage2.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2)));
+//        mBinding.ivBtnSkillImage3.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3)));
+//        mBinding.ivBtnSkillImage4.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4)));
+//        mBinding.ivBtnSkillImage5.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5)));
+//        mBinding.ivBtnSkillImage6.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6)));
+//        mBinding.ivBtnSkillImage7.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7)));
+//        mBinding.ivBtnSkillImage8.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8)));
+//        mBinding.ivBtnSkillImage9.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9)));
+//        mBinding.ivBtnSkillImage10.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10)));
+//        mBinding.tvBtn1ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1)));
+//        mBinding.tvBtn2ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2)));
+//        mBinding.tvBtn3ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3)));
+//        mBinding.tvBtn4ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4)));
+//        mBinding.tvBtn5ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5)));
+//        mBinding.tvBtn6ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6)));
+//        mBinding.tvBtn7ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7)));
+//        mBinding.tvBtn8ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8)));
+//        mBinding.tvBtn9ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9)));
+//        mBinding.tvBtn10ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10)));
 
         return mBinding.getRoot();
     }
