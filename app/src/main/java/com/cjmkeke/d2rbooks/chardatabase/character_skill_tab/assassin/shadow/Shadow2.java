@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.shadow;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -14,7 +15,7 @@ import java.util.List;
 public class Shadow2 {
 
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<Shadow2.ShadowModel10>>() {}.getType();
         List<Shadow2.ShadowModel10> skill = JsonUtil.loadJSONFromAsset(context, "shadow2.json", listType);
         Spanned spanned;

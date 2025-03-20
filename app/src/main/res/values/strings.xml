@@ -5,6 +5,7 @@
     <string name="client_id">789991158132-ao6osbdfub7glsmp9vbqafc7dl95kkm3.apps.googleusercontent.com</string>
     <string name="login_main_messages_login" translatable="false">디아블로2 레져렉션 백과사전에 오신 것을 환영합니다. 이제 더 많은 것을 경험 할 수 있습니다.</string>
     <string name="login_main_messages_logout">커뮤니티를 이용하려면 구글 로그인이 필요합니다. 로그인을 하시겠습니까?</string>
+    <string name="skill_messages">스킬을 선택해주세요.</string>
     <string name="admin_email">cjmkeke@gmail.com</string>
 
     <string name="prefix">접두사 / PREFIX</string>

@@ -6,43 +6,64 @@
     android:background="@drawable/back_char_recycler_background"
     tools:context=".chardatabase.NecromancerDatabase">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
             android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_necromancer_write"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:textColor="@color/dia_color"
-            android:gravity="center_vertical"
-            android:text="글쓰기"/>
 
-        <TextView
-            android:id="@+id/tv_close"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:textColor="@color/dia_color"
-            android:gravity="center_vertical"
-            android:text="나가기"/>
+            <TextView
+                android:id="@+id/tv_necromancer_tab_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dw_act_select"
+                android:gravity="center"
+                android:text="소환"
+                android:textColor="@color/dia_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_necromancer_tab_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dw_button"
+                android:gravity="center"
+                android:text="독과 뼈"
+                android:textColor="@color/dia_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_necromancer_tab_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dw_button"
+                android:gravity="center"
+                android:text="저주"
+                android:textColor="@color/dia_color"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_necromancer"
-            android:layout_marginTop="5dp"
+        <FrameLayout
+            android:id="@+id/fl_skill_change"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp">
+
+        </FrameLayout>
 
     </LinearLayout>
+
 </FrameLayout>

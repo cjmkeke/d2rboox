@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ import com.cjmkeke.d2rbooks.databinding.FragmentShadowBinding;
 
 public class Shadow extends Fragment {
 
+    private static final String TAG = "Shadow";
     private FragmentShadowBinding mBinding;
     private final String CHARACTER_NAME = "assassin";
     private final String CLASS_NAME = "shadowSkill";
@@ -70,6 +72,7 @@ public class Shadow extends Fragment {
         String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
         getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
         mBinding = FragmentShadowBinding.inflate(inflater, container, false);
+        Log.w(TAG, "");
 
         sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -212,7 +215,7 @@ public class Shadow extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill3, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill1, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -222,7 +225,7 @@ public class Shadow extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
-                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill3, Html.FROM_HTML_MODE_LEGACY);
+                Spanned spanned = Html.fromHtml(SkillShadow.shadowSkill2, Html.FROM_HTML_MODE_LEGACY);
                 ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
@@ -434,19 +437,21 @@ public class Shadow extends Fragment {
                 || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_4, skill_point_5)
                 || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_7)
                 || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_2)
-                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_5);
-    }
+                || prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_5)
+
+                ;}
 
     private boolean checkSkillConditionsDown(ImageView imageView) {
-        return prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_4)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_3)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_3, skill_point_3, skill_point_6)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_7)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_7, skill_point_7, skill_point_10)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_2, skill_point_2, skill_point_5)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_8)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_9)
-                || prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_7);
-    }
+        return prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_3) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_2, skill_point_2, skill_point_5) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_3, skill_point_3, skill_point_6) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_9) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_4) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_7) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_7, skill_point_7, skill_point_10) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_8) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_7)
+
+                ;}
 
 }

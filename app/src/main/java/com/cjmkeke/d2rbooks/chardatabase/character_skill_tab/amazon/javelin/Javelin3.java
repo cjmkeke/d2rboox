@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.javelin;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -14,25 +15,27 @@ import java.util.List;
 public class Javelin3 {
 
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<CombatModel10>>() {}.getType();
-        List<CombatModel10> skill = JsonUtil.loadJSONFromAsset(context, "javelin10.json", listType);
+        List<CombatModel10> skill = JsonUtil.loadJSONFromAsset(context, "javelin3.json", listType);
         Spanned spanned;
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillJavelin.javelinSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillJavelin.javelinSkill3_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(JavelinUpdate.javelinSkill10(
+                        spanned = Html.fromHtml(JavelinUpdate.javelinSkill3(
                                         String.valueOf(i),
-                                        skill.get(i - 1).getOption1(),
                                         skill.get(i - 1).getOption2(),
-                                        skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i - 1).getOption3(),
+                                        skill.get(i - 1).getOption1(),
+                                        skill.get(i).getOption2(),
+                                        skill.get(i).getOption3(),
+                                        skill.get(i).getOption1()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.

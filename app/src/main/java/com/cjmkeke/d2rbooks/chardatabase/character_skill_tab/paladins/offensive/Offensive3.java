@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class Offensive3 {
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<Offensive3.OffensiveModel3>>() {}.getType();
         List<Offensive3.OffensiveModel3> skill = JsonUtil.loadJSONFromAsset(context, "offensive3.json", listType);
         Spanned spanned;

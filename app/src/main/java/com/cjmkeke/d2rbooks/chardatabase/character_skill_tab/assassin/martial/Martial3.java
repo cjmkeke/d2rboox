@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.martial;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -14,7 +15,7 @@ import java.util.List;
 public class Martial3 {
 
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<Martial3.MartialModel10>>() {}.getType();
         List<Martial3.MartialModel10> skill = JsonUtil.loadJSONFromAsset(context, "martial3.json", listType);
         Spanned spanned;

@@ -55,6 +55,22 @@ public class ProhibitionButton {
      * @param skillDown 눌러지면 안되는 스탯의 아래 스킬
      * @apiNote iv_skill_image_view_1, skill_point_1, skill_point_4
      * **/
+    public boolean downButton(ImageView imageView, int skillId, int skillUp, int skillDown1, int skillDown2){
+        int id = imageView.getId();
+        boolean i = false;
+
+        // 눌러지면 안되는 버튼
+        if (id == skillId) {
+            // 밑에 스킬이 1이라도 있으면,    위에 스킬이 1 밑으로 안내려가게.
+            if (skillDown1 >= 1 && skillUp <= 1 && skillDown2 >= 1) {
+                i = true;
+            } else {
+                i = false;
+            }
+        }
+        return i;
+    }
+
     public boolean downButton(ImageView imageView, int skillId, int skillUp, int skillDown){
         int id = imageView.getId();
         boolean i = false;

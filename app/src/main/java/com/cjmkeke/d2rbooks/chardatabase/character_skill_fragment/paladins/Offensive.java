@@ -2,21 +2,15 @@ package com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.paladins;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -33,35 +27,46 @@ import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive.
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive.Offensive8;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive.Offensive9;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.offensive.SkillOffensive;
+import com.cjmkeke.d2rbooks.chardatabase.tools.CharacterSkillUpdate;
+import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
+import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
 import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentOffensiveBinding;
 
 
 public class Offensive extends Fragment {
 
-    private static final String TAG = "Attack";
+    private static final String TAG = "Offensive";
     private FragmentOffensiveBinding mBinding;
+    private final String CHARACTER_NAME = "paladins";
+    private final String CLASS_NAME = "offensiveSkill";
+    private final String SKILL_TABLE_NAME = "offensive";
+    private final String CHARACTER_SKILL_STRING = "offensive_paladins";
+    private final String SKILL_POINT_KEY = "skillPoint_paladins";
+    private final String SKILL_POINT_QUEST_COMPLETE_KEY = "skillQuestCompletePoint_paladins";
+
+    private final String[] SKILL_TABLE_ARRAY_1 = {"offensive_skill_1", "offensive_skill_2", "offensive_skill_3", "offensive_skill_4", "offensive_skill_5", "offensive_skill_6", "offensive_skill_7", "offensive_skill_8", "offensive_skill_9", "offensive_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_2 = {"combat_skill_1", "combat_skill_2", "combat_skill_3", "combat_skill_4", "combat_skill_5", "combat_skill_6", "combat_skill_7", "combat_skill_8", "combat_skill_9", "combat_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_3 = {"defense_skill_1", "defense_skill_2", "defense_skill_3", "defense_skill_4", "defense_skill_5", "defense_skill_6", "defense_skill_7", "defense_skill_8", "defense_skill_9", "defense_skill_10"};
+
     private SharedPreferences fontSharedPreferences;
-    private final String SKILL_POINT_KEY = "skillPoint_Paladins";
-    private final String SKILL_POINT_QUEST_COMPLETE_KEY = "skillQuestCompletePoint_Paladins";
+    private String messagePremiseSkill = "이 스킬을 사용하시려면 선행 스킬을 먼저 선택해주세요.";
     public int skillPoint;
-    private int skillQuestCompletePoint;
-    public int offensiveSkill_1;
-    public int offensiveSkill_2;
-    public int offensiveSkill_3;
-    public int offensiveSkill_4;
-    public int offensiveSkill_5;
-    public int offensiveSkill_6;
-    public int offensiveSkill_7;
-    public int offensiveSkill_8;
-    public int offensiveSkill_9;
-    public int offensiveSkill_10;
-    private String messagePremiseSkill = null;
+    public int skillQuestCompletePoint;
+    public int skill_point_1;
+    public int skill_point_2;
+    public int skill_point_3;
+    public int skill_point_4;
+    public int skill_point_5;
+    public int skill_point_6;
+    public int skill_point_7;
+    public int skill_point_8;
+    public int skill_point_9;
+    public int skill_point_10;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener;
-    private SharedPreferences skillSharedPreferences;
-    private SharedPreferences.Editor skillEditor;
+    private ProhibitionButton prohibitionButton = new ProhibitionButton();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,13 +74,10 @@ public class Offensive extends Fragment {
         String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
         getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
         mBinding = FragmentOffensiveBinding.inflate(inflater, container, false);
+        Log.w(TAG, "");
 
-        sharedPreferences = getContext().getSharedPreferences("paladins_point", MODE_PRIVATE);
+        sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
         editor = sharedPreferences.edit();
-
-        SkillPaladinsSharedPreferences.setPaladinSkillInitialValue(getContext());
-        skillSharedPreferences = getContext().getSharedPreferences(SkillPaladinsSharedPreferences.SKILL_TO_DEFENSE, MODE_PRIVATE);
-        skillEditor = skillSharedPreferences.edit();
 
         if (!sharedPreferences.contains(SKILL_POINT_KEY)) {
             editor.putInt(SKILL_POINT_KEY, 98);
@@ -89,63 +91,63 @@ public class Offensive extends Fragment {
             skillQuestCompletePoint = sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, 110);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_1")) {
-            editor.putInt("offensive_skill_1", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_1")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_1", 0);
         } else {
-            offensiveSkill_1 = sharedPreferences.getInt("offensive_skill_1", 0);
+            skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_2")) {
-            editor.putInt("offensive_skill_2", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_2")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_2", 0);
         } else {
-            offensiveSkill_2 = sharedPreferences.getInt("offensive_skill_2", 0);
+            skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_3")) {
-            editor.putInt("offensive_skill_3", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_3")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_3", 0);
         } else {
-            offensiveSkill_3 = sharedPreferences.getInt("offensive_skill_3", 0);
+            skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_4")) {
-            editor.putInt("offensive_skill_4", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_4")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_4", 0);
         } else {
-            offensiveSkill_4 = sharedPreferences.getInt("offensive_skill_4", 0);
+            skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_5")) {
-            editor.putInt("offensive_skill_5", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_5")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_5", 0);
         } else {
-            offensiveSkill_5 = sharedPreferences.getInt("offensive_skill_5", 0);
+            skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_6")) {
-            editor.putInt("offensive_skill_6", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_6")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_6", 0);
         } else {
-            offensiveSkill_6 = sharedPreferences.getInt("offensive_skill_6", 0);
+            skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_7")) {
-            editor.putInt("offensive_skill_7", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_7")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_7", 0);
         } else {
-            offensiveSkill_7 = sharedPreferences.getInt("offensive_skill_7", 0);
+            skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_8")) {
-            editor.putInt("offensive_skill_8", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_8")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_8", 0);
         } else {
-            offensiveSkill_8 = sharedPreferences.getInt("offensive_skill_8", 0);
+            skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", 0);
         }
-        if (!sharedPreferences.contains("offensive_skill_9")) {
-            editor.putInt("offensive_skill_9", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_9")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_9", 0);
         } else {
-            offensiveSkill_9 = sharedPreferences.getInt("offensive_skill_9", 0);
+            skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", 0);
         }
 
-        if (!sharedPreferences.contains("offensive_skill_10")) {
-            editor.putInt("offensive_skill_10", 0);
+        if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_10")) {
+            editor.putInt(SKILL_TABLE_NAME + "_skill_10", 0);
         } else {
-            offensiveSkill_10 = sharedPreferences.getInt("offensive_skill_10", 0);
+            skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", 0);
         }
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -157,945 +159,301 @@ public class Offensive extends Fragment {
                 if (SKILL_POINT_QUEST_COMPLETE_KEY.equals(key)) {
                     skillQuestCompletePoint = sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, 110);
                 }
-                if ("offensive_skill_1".equals(key)) {
-                    offensiveSkill_1 = sharedPreferences.getInt("offensive_skill_1", 0);
+                if (SKILL_TABLE_ARRAY_1[0].equals(key)) {
+                    skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", 0);
                 }
-                if ("offensive_skill_2".equals(key)) {
-                    offensiveSkill_2 = sharedPreferences.getInt("offensive_skill_2", 0);
+                if (SKILL_TABLE_ARRAY_1[1].equals(key)) {
+                    skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", 0);
                 }
-                if ("offensive_skill_3".equals(key)) {
-                    offensiveSkill_3 = sharedPreferences.getInt("offensive_skill_3", 0);
+                if (SKILL_TABLE_ARRAY_1[2].equals(key)) {
+                    skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", 0);
                 }
-                if ("offensive_skill_4".equals(key)) {
-                    offensiveSkill_4 = sharedPreferences.getInt("offensive_skill_4", 0);
+                if (SKILL_TABLE_ARRAY_1[3].equals(key)) {
+                    skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", 0);
                 }
-                if ("offensive_skill_5".equals(key)) {
-                    offensiveSkill_5 = sharedPreferences.getInt("offensive_skill_5", 0);
+                if (SKILL_TABLE_ARRAY_1[4].equals(key)) {
+                    skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", 0);
                 }
-                if ("offensive_skill_6".equals(key)) {
-                    offensiveSkill_6 = sharedPreferences.getInt("offensive_skill_6", 0);
+                if (SKILL_TABLE_ARRAY_1[5].equals(key)) {
+                    skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", 0);
                 }
-                if ("offensive_skill_7".equals(key)) {
-                    offensiveSkill_7 = sharedPreferences.getInt("offensive_skill_7", 0);
+                if (SKILL_TABLE_ARRAY_1[6].equals(key)) {
+                    skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", 0);
                 }
-                if ("offensive_skill_8".equals(key)) {
-                    offensiveSkill_8 = sharedPreferences.getInt("offensive_skill_8", 0);
+                if (SKILL_TABLE_ARRAY_1[7].equals(key)) {
+                    skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", 0);
                 }
-                if ("offensive_skill_9".equals(key)) {
-                    offensiveSkill_9 = sharedPreferences.getInt("offensive_skill_9", 0);
+                if (SKILL_TABLE_ARRAY_1[8].equals(key)) {
+                    skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", 0);
                 }
-                if ("offensive_skill_10".equals(key)) {
-                    offensiveSkill_10 = sharedPreferences.getInt("offensive_skill_10", 0);
+                if (SKILL_TABLE_ARRAY_1[9].equals(key)) {
+                    skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", 0);
                 }
 
             }
         });
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
-
         editor.apply();
-        offensiveValue();
-        skillImageUpdate();
 
-        mBinding.skillClear.setOnClickListener(v -> resetSkillPoint());
-        mBinding.tvAllSkillReset.setOnClickListener(v -> resetAllSkillPoint());
+        CharacterSkillUpdate characterSkillUpdate = new CharacterSkillUpdate(getContext(), sharedPreferences, editor, onSharedPreferenceChangeListener, mBinding.tvView1Value, mBinding.tvView2Value, mBinding.tvView3Value, mBinding.tvView4Value, mBinding.tvView5Value, mBinding.tvView6Value, mBinding.tvView7Value, mBinding.tvView8Value, mBinding.tvView9Value, mBinding.tvView10Value);
+        characterSkillUpdate.setSkillQuestCompletePoint(skillQuestCompletePoint);
+        characterSkillUpdate.setSkillPoint(skillPoint, skill_point_1, skill_point_2, skill_point_3, skill_point_4, skill_point_5, skill_point_6, skill_point_7, skill_point_8, skill_point_9, skill_point_10);
+        characterSkillUpdate.setSkillImageUpdate(mBinding.ivBtnSkillImage1, mBinding.ivBtnSkillImage2, mBinding.ivBtnSkillImage3, mBinding.ivBtnSkillImage4, mBinding.ivBtnSkillImage5, mBinding.ivBtnSkillImage6, mBinding.ivBtnSkillImage7, mBinding.ivBtnSkillImage8, mBinding.ivBtnSkillImage9, mBinding.ivBtnSkillImage10);
+        characterSkillUpdate.setCHARACTER_SKILL_STRING(CHARACTER_SKILL_STRING);
+        characterSkillUpdate.setSKILL_TABLE_NAME(SKILL_TABLE_NAME);
+        characterSkillUpdate.setSKILL_POINT_KEY(SKILL_POINT_KEY);
+        characterSkillUpdate.setSKILL_POINT_QUEST_COMPLETE_KEY(SKILL_POINT_QUEST_COMPLETE_KEY);
+        characterSkillUpdate.setMessagePremiseSkill(messagePremiseSkill);
+        characterSkillUpdate.setSkillValues(mBinding.tvPointValueView);
+        characterSkillUpdate.setSkillValuesQuest(mBinding.tvQuestPointView);
+        characterSkillUpdate.setSkillUpdate(mBinding.skillUpdate);
+        characterSkillUpdate.skillPointView();
 
-        mBinding.skillOffensivePaladins1.setOnLongClickListener(new View.OnLongClickListener() {
+        ImageUpdate ImageUpdate = new ImageUpdate(getContext(), CHARACTER_SKILL_STRING, mBinding.ivBtnSkillImage1, mBinding.ivBtnSkillImage2, mBinding.ivBtnSkillImage3, mBinding.ivBtnSkillImage4, mBinding.ivBtnSkillImage5, mBinding.ivBtnSkillImage6, mBinding.ivBtnSkillImage7, mBinding.ivBtnSkillImage8, mBinding.ivBtnSkillImage9, mBinding.ivBtnSkillImage10);
+        ImageUpdate.skillImageUpdate(sharedPreferences, SKILL_TABLE_NAME);
+
+        mBinding.ivBtnSkillImage1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_1_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_1_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill1, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins2.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage2.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_2_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_2_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill2, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins3.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage3.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_3_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_3_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill3, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins4.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage4.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_4_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_4_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill4, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins5.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage5.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_5_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_5_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill5, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins6.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage6.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_6_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_6_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill6, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins7.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage7.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_7_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_7_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill7, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins8.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage8.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_8_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_8_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill8, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins9.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage9.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_9_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_9_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill9, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins10.setOnLongClickListener(new View.OnLongClickListener() {
+        mBinding.ivBtnSkillImage10.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                int id = getResources().getIdentifier("skill_offensive_paladins_10_2", "drawable", getContext().getPackageName());
+                int id = getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_10_2", "drawable", getContext().getPackageName());
                 Spanned spanned = Html.fromHtml(SkillOffensive.offensiveSkill10, Html.FROM_HTML_MODE_LEGACY);
-                skillPreviewDialog(spanned, id);
+                ImageUpdate.skillPreviewDialog(getContext(), spanned, id);
                 return true;
             }
         });
 
-        mBinding.skillOffensivePaladins1.setOnClickListener(v -> hasSkillUp("1", mBinding.skillOffensivePaladins1, mBinding.skillOffensivePaladins1Value));
-        mBinding.skillOffensivePaladins2.setOnClickListener(v -> hasSkillUp("2", mBinding.skillOffensivePaladins2, mBinding.skillOffensivePaladins2Value));
-        mBinding.skillOffensivePaladins3.setOnClickListener(v -> hasSkillUp("3", mBinding.skillOffensivePaladins3, mBinding.skillOffensivePaladins3Value));
-        mBinding.skillOffensivePaladins4.setOnClickListener(v -> hasSkillUp("4", mBinding.skillOffensivePaladins4, mBinding.skillOffensivePaladins4Value));
-        mBinding.skillOffensivePaladins5.setOnClickListener(v -> hasSkillUp("5", mBinding.skillOffensivePaladins5, mBinding.skillOffensivePaladins5Value));
-        mBinding.skillOffensivePaladins6.setOnClickListener(v -> hasSkillUp("6", mBinding.skillOffensivePaladins6, mBinding.skillOffensivePaladins6Value));
-        mBinding.skillOffensivePaladins7.setOnClickListener(v -> hasSkillUp("7", mBinding.skillOffensivePaladins7, mBinding.skillOffensivePaladins7Value));
-        mBinding.skillOffensivePaladins8.setOnClickListener(v -> hasSkillUp("8", mBinding.skillOffensivePaladins8, mBinding.skillOffensivePaladins8Value));
-        mBinding.skillOffensivePaladins9.setOnClickListener(v -> hasSkillUp("9", mBinding.skillOffensivePaladins9, mBinding.skillOffensivePaladins9Value));
-        mBinding.skillOffensivePaladins10.setOnClickListener(v -> hasSkillUp("10", mBinding.skillOffensivePaladins10, mBinding.skillOffensivePaladins10Value));
+        mBinding.skillClear.setOnClickListener(v -> characterSkillUpdate.resetSkillPoint(SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
+        mBinding.tvAllSkillReset.setOnClickListener(v -> characterSkillUpdate.resetAllSkillPoint(SKILL_TABLE_ARRAY_1, SKILL_TABLE_ARRAY_2, SKILL_TABLE_ARRAY_3));
+        mBinding.ivBtnSkillImage1.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1), SkillOffensive.class, CLASS_NAME, Offensive1.class));
+        mBinding.ivBtnSkillImage2.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2), SkillOffensive.class, CLASS_NAME, Offensive2.class));
+        mBinding.ivBtnSkillImage3.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3), SkillOffensive.class, CLASS_NAME, Offensive3.class));
+        mBinding.ivBtnSkillImage4.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4), SkillOffensive.class, CLASS_NAME, Offensive4.class));
+        mBinding.ivBtnSkillImage5.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5), SkillOffensive.class, CLASS_NAME, Offensive5.class));
+        mBinding.ivBtnSkillImage6.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6), SkillOffensive.class, CLASS_NAME, Offensive6.class));
+        mBinding.ivBtnSkillImage7.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7), SkillOffensive.class, CLASS_NAME, Offensive7.class));
+        mBinding.ivBtnSkillImage8.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8), SkillOffensive.class, CLASS_NAME, Offensive8.class));
+        mBinding.ivBtnSkillImage9.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9), SkillOffensive.class, CLASS_NAME, Offensive9.class));
+        mBinding.ivBtnSkillImage10.setOnClickListener(v -> characterSkillUpdate.hasSkillUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10), SkillOffensive.class, CLASS_NAME, Offensive10.class));
 
-        mBinding.skillOffensivePaladins1ValueMinus.setOnClickListener(v -> hasSkillDown("1", mBinding.skillOffensivePaladins1, mBinding.skillOffensivePaladins1ValueMinus, mBinding.skillOffensivePaladins1Value));
-        mBinding.skillOffensivePaladins2ValueMinus.setOnClickListener(v -> hasSkillDown("2", mBinding.skillOffensivePaladins2, mBinding.skillOffensivePaladins2ValueMinus, mBinding.skillOffensivePaladins2Value));
-        mBinding.skillOffensivePaladins3ValueMinus.setOnClickListener(v -> hasSkillDown("3", mBinding.skillOffensivePaladins3, mBinding.skillOffensivePaladins3ValueMinus, mBinding.skillOffensivePaladins3Value));
-        mBinding.skillOffensivePaladins4ValueMinus.setOnClickListener(v -> hasSkillDown("4", mBinding.skillOffensivePaladins4, mBinding.skillOffensivePaladins4ValueMinus, mBinding.skillOffensivePaladins4Value));
-        mBinding.skillOffensivePaladins5ValueMinus.setOnClickListener(v -> hasSkillDown("5", mBinding.skillOffensivePaladins5, mBinding.skillOffensivePaladins5ValueMinus, mBinding.skillOffensivePaladins5Value));
-        mBinding.skillOffensivePaladins6ValueMinus.setOnClickListener(v -> hasSkillDown("6", mBinding.skillOffensivePaladins6, mBinding.skillOffensivePaladins6ValueMinus, mBinding.skillOffensivePaladins6Value));
-        mBinding.skillOffensivePaladins7ValueMinus.setOnClickListener(v -> hasSkillDown("7", mBinding.skillOffensivePaladins7, mBinding.skillOffensivePaladins7ValueMinus, mBinding.skillOffensivePaladins7Value));
-        mBinding.skillOffensivePaladins8ValueMinus.setOnClickListener(v -> hasSkillDown("8", mBinding.skillOffensivePaladins8, mBinding.skillOffensivePaladins8ValueMinus, mBinding.skillOffensivePaladins8Value));
-        mBinding.skillOffensivePaladins9ValueMinus.setOnClickListener(v -> hasSkillDown("9", mBinding.skillOffensivePaladins9, mBinding.skillOffensivePaladins9ValueMinus, mBinding.skillOffensivePaladins9Value));
-        mBinding.skillOffensivePaladins10ValueMinus.setOnClickListener(v -> hasSkillDown("10", mBinding.skillOffensivePaladins10, mBinding.skillOffensivePaladins10ValueMinus, mBinding.skillOffensivePaladins10Value));
+        mBinding.tvBtn1ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1), Offensive1.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn2ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2), Offensive2.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn3ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3), Offensive3.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn4ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4), Offensive4.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn5ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5), Offensive5.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn6ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6), Offensive6.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn7ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7), Offensive7.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn8ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8), Offensive8.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn9ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9), Offensive9.class);
+                return true;
+            }
+        });
+
+        mBinding.tvBtn10ValueMinus.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                characterSkillUpdate.hasSkillLongClickDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10), Offensive10.class);
+                return true;
+            }
+        });
+
+//        mBinding.tvView1Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("1", mBinding.ivBtnSkillImage1, mBinding.tvView1Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage1), SkillOffensive.class, CLASS_NAME, Offensive1.class); return true; });
+//        mBinding.tvView2Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("2", mBinding.ivBtnSkillImage2, mBinding.tvView2Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage2), SkillOffensive.class, CLASS_NAME, Offensive2.class); return true; });
+//        mBinding.tvView3Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("3", mBinding.ivBtnSkillImage3, mBinding.tvView3Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage3), SkillOffensive.class, CLASS_NAME, Offensive3.class); return true; });
+//        mBinding.tvView4Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("4", mBinding.ivBtnSkillImage4, mBinding.tvView4Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage4), SkillOffensive.class, CLASS_NAME, Offensive4.class); return true; });
+//        mBinding.tvView5Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("5", mBinding.ivBtnSkillImage5, mBinding.tvView5Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage5), SkillOffensive.class, CLASS_NAME, Offensive5.class); return true; });
+//        mBinding.tvView6Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("6", mBinding.ivBtnSkillImage6, mBinding.tvView6Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage6), SkillOffensive.class, CLASS_NAME, Offensive6.class); return true; });
+//        mBinding.tvView7Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("7", mBinding.ivBtnSkillImage7, mBinding.tvView7Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage7), SkillOffensive.class, CLASS_NAME, Offensive7.class); return true; });
+//        mBinding.tvView8Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("8", mBinding.ivBtnSkillImage8, mBinding.tvView8Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage8), SkillOffensive.class, CLASS_NAME, Offensive8.class); return true; });
+//        mBinding.tvView9Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("9", mBinding.ivBtnSkillImage9, mBinding.tvView9Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage9), SkillOffensive.class, CLASS_NAME, Offensive9.class); return true; });
+//        mBinding.tvView10Value.setOnLongClickListener(v -> {characterSkillUpdate.hasSkillLongClickUp("10", mBinding.ivBtnSkillImage10, mBinding.tvView10Value, checkSkillConditionsUp(mBinding.ivBtnSkillImage10), SkillOffensive.class, CLASS_NAME, Offensive10.class); return true; });
+
+        mBinding.tvBtn1ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("1", mBinding.ivBtnSkillImage1, mBinding.tvBtn1ValueMinus, mBinding.tvView1Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage1), Offensive1.class));
+        mBinding.tvBtn2ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("2", mBinding.ivBtnSkillImage2, mBinding.tvBtn2ValueMinus, mBinding.tvView2Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage2), Offensive2.class));
+        mBinding.tvBtn3ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("3", mBinding.ivBtnSkillImage3, mBinding.tvBtn3ValueMinus, mBinding.tvView3Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage3), Offensive3.class));
+        mBinding.tvBtn4ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("4", mBinding.ivBtnSkillImage4, mBinding.tvBtn4ValueMinus, mBinding.tvView4Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage4), Offensive4.class));
+        mBinding.tvBtn5ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("5", mBinding.ivBtnSkillImage5, mBinding.tvBtn5ValueMinus, mBinding.tvView5Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage5), Offensive5.class));
+        mBinding.tvBtn6ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("6", mBinding.ivBtnSkillImage6, mBinding.tvBtn6ValueMinus, mBinding.tvView6Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage6), Offensive6.class));
+        mBinding.tvBtn7ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("7", mBinding.ivBtnSkillImage7, mBinding.tvBtn7ValueMinus, mBinding.tvView7Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage7), Offensive7.class));
+        mBinding.tvBtn8ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("8", mBinding.ivBtnSkillImage8, mBinding.tvBtn8ValueMinus, mBinding.tvView8Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage8), Offensive8.class));
+        mBinding.tvBtn9ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("9", mBinding.ivBtnSkillImage9, mBinding.tvBtn9ValueMinus, mBinding.tvView9Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage9), Offensive9.class));
+        mBinding.tvBtn10ValueMinus.setOnClickListener(v -> characterSkillUpdate.hasSkillDown("10", mBinding.ivBtnSkillImage10, mBinding.tvBtn10ValueMinus, mBinding.tvView10Value, checkSkillConditionsDown(mBinding.ivBtnSkillImage10), Offensive10.class));
 
         return mBinding.getRoot();
     }
 
-
-    private void hasSkillUp(String imagesSkillNumber, ImageView imagesImageView, TextView valueTextView) {
-
-        Spanned spanned;
-        int resId = getResources().getIdentifier("skill_offensive_paladins_" + imagesSkillNumber + "_2", "drawable", getContext().getPackageName());
-        int clickId = imagesImageView.getId();
-
-        if (skillPoint == 0) {
-            System.out.println("스킬 포인트를 다 썼습니다.");
-            return;
-        }
-
-        if (isPremiseSkillUpButton(imagesImageView)) {
-            if (messagePremiseSkill != null) {
-                mBinding.skillUpdate.setText(messagePremiseSkill);
-                messagePremiseSkill = null;
-            }
-            return;
-        }
-
-        if (offensiveSkill_1 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_1) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill1_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-                return;
-            }
-        }
-
-        if (offensiveSkill_1 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_1) {
-                skillPoint--;
-                offensiveSkill_1++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_1));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_1", offensiveSkill_1);
-                editor.apply();
-                Offensive1.skillUpdate(offensiveSkill_1, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_2 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_2) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill2_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-                return;
-            }
-        }
-
-        if (offensiveSkill_2 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_2) {
-                skillPoint--;
-                offensiveSkill_2++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_2));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_2", offensiveSkill_2);
-                editor.apply();
-                Offensive2.skillUpdate(offensiveSkill_2, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_3 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_3) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill3_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_3 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_3) {
-                skillPoint--;
-                offensiveSkill_3++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_3));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_3", offensiveSkill_3);
-                editor.apply();
-                Offensive3.skillUpdate(offensiveSkill_3, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_4 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_4) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill4_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_4 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_4) {
-                skillPoint--;
-                offensiveSkill_4++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_4));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_4", offensiveSkill_4);
-                editor.apply();
-                Offensive4.skillUpdate(offensiveSkill_4, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_5 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_5) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill5_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_5 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_5) {
-                skillPoint--;
-                offensiveSkill_5++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_5));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_5", offensiveSkill_5);
-                editor.apply();
-                Offensive5.skillUpdate(offensiveSkill_5, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_6 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_6) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill6_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_6 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_6) {
-                skillPoint--;
-                offensiveSkill_6++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_6));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_6", offensiveSkill_6);
-                editor.apply();
-                Offensive6.skillUpdate(offensiveSkill_6, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_7 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_7) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill7_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_7 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_7) {
-                skillPoint--;
-                offensiveSkill_7++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_7));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_7", offensiveSkill_7);
-                editor.apply();
-                if (messagePremiseSkill == null) {
-                    mBinding.skillUpdate.setText(SkillOffensive.offensiveSkill7);
-                }
-                Offensive7.skillUpdate(offensiveSkill_7, mBinding.skillUpdate, getContext());
-            }
-        }
-
-
-        if (offensiveSkill_8 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_8) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill8_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_8 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_8) {
-                skillPoint--;
-                offensiveSkill_8++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_8));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_8", offensiveSkill_8);
-                editor.apply();
-                Offensive8.skillUpdate(offensiveSkill_8, mBinding.skillUpdate, getContext());
-            }
-        }
-
-        if (offensiveSkill_9 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_9) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill9_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_9 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_9) {
-                skillPoint--;
-                offensiveSkill_9++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_9));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_9", offensiveSkill_9);
-                editor.apply();
-                Offensive9.skillUpdate(offensiveSkill_9, mBinding.skillUpdate, getContext());
-            }
-        }
-
-
-        if (offensiveSkill_10 == 20) {
-            if (clickId == R.id.skill_offensive_paladins_10) {
-                spanned = Html.fromHtml(SkillOffensive.offensiveSkill10_end, Html.FROM_HTML_MODE_LEGACY);
-                mBinding.skillUpdate.setText(spanned);
-            }
-        }
-
-        if (offensiveSkill_10 < 20) {
-            if (clickId == R.id.skill_offensive_paladins_10) {
-                skillPoint--;
-                offensiveSkill_10++;
-                imagesImageView.setImageResource(resId);
-                valueTextView.setText(String.valueOf(offensiveSkill_10));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_10", offensiveSkill_10);
-                editor.apply();
-                Offensive10.skillUpdate(offensiveSkill_10, mBinding.skillUpdate, getContext());
-            }
-        }
-        offensiveValue();
-    }
-
-    private void hasSkillDown(String imagesSkillNumber, ImageView imagesImageView, TextView minusButton, TextView valueTextView) {
-        String skillMessage = "스킬 업데이트를 해주세요";
-        int resId = getResources().getIdentifier("skill_offensive_paladins_" + imagesSkillNumber + "_1", "drawable", getContext().getPackageName());
-        int clickId = minusButton.getId();
-
-        if (isPremiseSkillDownButton(imagesImageView)) {
-            return;
-        }
-
-        if (offensiveSkill_1 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_1_value_minus) {
-                skillPoint++;
-                offensiveSkill_1--;
-                valueTextView.setText(String.valueOf(offensiveSkill_1));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_1", offensiveSkill_1);
-                editor.apply();
-                if (offensiveSkill_1 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive1.skillUpdate(offensiveSkill_1, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_2 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_2_value_minus) {
-                skillPoint++;
-                offensiveSkill_2--;
-                valueTextView.setText(String.valueOf(offensiveSkill_2));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_2", offensiveSkill_2);
-                editor.apply();
-                if (offensiveSkill_2 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive2.skillUpdate(offensiveSkill_2, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_3 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_3_value_minus) {
-                skillPoint++;
-                offensiveSkill_3--;
-                valueTextView.setText(String.valueOf(offensiveSkill_3));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_3", offensiveSkill_3);
-                editor.apply();
-                if (offensiveSkill_3 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive3.skillUpdate(offensiveSkill_3, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_4 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_4_value_minus) {
-                skillPoint++;
-                offensiveSkill_4--;
-                valueTextView.setText(String.valueOf(offensiveSkill_4));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_4", offensiveSkill_4);
-                editor.apply();
-                if (offensiveSkill_4 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive4.skillUpdate(offensiveSkill_4, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_5 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_5_value_minus) {
-                skillPoint++;
-                offensiveSkill_5--;
-                valueTextView.setText(String.valueOf(offensiveSkill_5));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_5", offensiveSkill_5);
-                editor.apply();
-                if (offensiveSkill_5 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive5.skillUpdate(offensiveSkill_5, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_6 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_6_value_minus) {
-                skillPoint++;
-                offensiveSkill_6--;
-                valueTextView.setText(String.valueOf(offensiveSkill_6));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_6", offensiveSkill_6);
-                editor.apply();
-                if (offensiveSkill_6 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive6.skillUpdate(offensiveSkill_6, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_7 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_7_value_minus) {
-                skillPoint++;
-                offensiveSkill_7--;
-                valueTextView.setText(String.valueOf(offensiveSkill_7));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_7", offensiveSkill_7);
-                editor.apply();
-                if (offensiveSkill_7 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive7.skillUpdate(offensiveSkill_7, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_8 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_8_value_minus) {
-                skillPoint++;
-                offensiveSkill_8--;
-                valueTextView.setText(String.valueOf(offensiveSkill_8));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_8", offensiveSkill_8);
-                editor.apply();
-                if (offensiveSkill_8 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive8.skillUpdate(offensiveSkill_8, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_9 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_9_value_minus) {
-                skillPoint++;
-                offensiveSkill_9--;
-                valueTextView.setText(String.valueOf(offensiveSkill_9));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_9", offensiveSkill_9);
-                editor.apply();
-                if (offensiveSkill_9 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive9.skillUpdate(offensiveSkill_9, mBinding.skillUpdate, getContext());
-            }
-        }
-        if (offensiveSkill_10 != 0) {
-            if (clickId == R.id.skill_offensive_paladins_10_value_minus) {
-                skillPoint++;
-                offensiveSkill_10--;
-                valueTextView.setText(String.valueOf(offensiveSkill_10));
-                editor.putInt(SKILL_POINT_KEY, skillPoint);
-                editor.putInt("offensive_skill_10", offensiveSkill_10);
-                editor.apply();
-                if (offensiveSkill_10 == 0) {
-                    imagesImageView.setImageResource(resId);
-                    mBinding.skillUpdate.setText(skillMessage);
-                }
-                Offensive10.skillUpdate(offensiveSkill_10, mBinding.skillUpdate, getContext());
-            }
-        }
-        offensiveValue();
-    }
-
-    // 모든 스킬의 스킬 초기화
-    private void resetAllSkillPoint() {
-        skillPoint = 98 ;
-        offensiveSkill_1 = 0;
-        offensiveSkill_2 = 0;
-        offensiveSkill_3 = 0;
-        offensiveSkill_4 = 0;
-        offensiveSkill_5 = 0;
-        offensiveSkill_6 = 0;
-        offensiveSkill_7 = 0;
-        offensiveSkill_8 = 0;
-        offensiveSkill_9 = 0;
-        offensiveSkill_10 = 0;
-        editor.putInt(SKILL_POINT_KEY, skillPoint);
-        editor.putInt("defense_skill_1", 0);
-        editor.putInt("defense_skill_2", 0);
-        editor.putInt("defense_skill_3", 0);
-        editor.putInt("defense_skill_4", 0);
-        editor.putInt("defense_skill_5", 0);
-        editor.putInt("defense_skill_6", 0);
-        editor.putInt("defense_skill_7", 0);
-        editor.putInt("defense_skill_8", 0);
-        editor.putInt("defense_skill_9", 0);
-        editor.putInt("defense_skill_10", 0);
-        editor.putInt("combat_skill_1", 0);
-        editor.putInt("combat_skill_2", 0);
-        editor.putInt("combat_skill_3", 0);
-        editor.putInt("combat_skill_4", 0);
-        editor.putInt("combat_skill_5", 0);
-        editor.putInt("combat_skill_6", 0);
-        editor.putInt("combat_skill_7", 0);
-        editor.putInt("combat_skill_8", 0);
-        editor.putInt("combat_skill_9", 0);
-        editor.putInt("combat_skill_10", 0);
-        editor.putInt("offensive_skill_1", 0);
-        editor.putInt("offensive_skill_2", 0);
-        editor.putInt("offensive_skill_3", 0);
-        editor.putInt("offensive_skill_4", 0);
-        editor.putInt("offensive_skill_5", 0);
-        editor.putInt("offensive_skill_6", 0);
-        editor.putInt("offensive_skill_7", 0);
-        editor.putInt("offensive_skill_8", 0);
-        editor.putInt("offensive_skill_9", 0);
-        editor.putInt("offensive_skill_10", 0);
-        editor.commit();
-        skillEditor.clear();
-
-        mBinding.skillOffensivePaladins1.setImageResource(R.drawable.skill_offensive_paladins_1_1);
-        mBinding.skillOffensivePaladins2.setImageResource(R.drawable.skill_offensive_paladins_2_1);
-        mBinding.skillOffensivePaladins3.setImageResource(R.drawable.skill_offensive_paladins_3_1);
-        mBinding.skillOffensivePaladins4.setImageResource(R.drawable.skill_offensive_paladins_4_1);
-        mBinding.skillOffensivePaladins5.setImageResource(R.drawable.skill_offensive_paladins_5_1);
-        mBinding.skillOffensivePaladins6.setImageResource(R.drawable.skill_offensive_paladins_6_1);
-        mBinding.skillOffensivePaladins7.setImageResource(R.drawable.skill_offensive_paladins_7_1);
-        mBinding.skillOffensivePaladins8.setImageResource(R.drawable.skill_offensive_paladins_8_1);
-        mBinding.skillOffensivePaladins9.setImageResource(R.drawable.skill_offensive_paladins_9_1);
-        mBinding.skillOffensivePaladins10.setImageResource(R.drawable.skill_offensive_paladins_10_1);
-        mBinding.skillOffensivePaladins1Value.setText("0");
-        mBinding.skillOffensivePaladins2Value.setText("0");
-        mBinding.skillOffensivePaladins3Value.setText("0");
-        mBinding.skillOffensivePaladins4Value.setText("0");
-        mBinding.skillOffensivePaladins5Value.setText("0");
-        mBinding.skillOffensivePaladins6Value.setText("0");
-        mBinding.skillOffensivePaladins7Value.setText("0");
-        mBinding.skillOffensivePaladins8Value.setText("0");
-        mBinding.skillOffensivePaladins9Value.setText("0");
-        mBinding.skillOffensivePaladins10Value.setText("0");
-        offensiveValue();
-    }
-
-    public void resetSkillPoint() {
-        int v1 = sharedPreferences.getInt("defense_skill_1", 0);
-        int v2 = sharedPreferences.getInt("defense_skill_2", 0);
-        int v3 = sharedPreferences.getInt("defense_skill_3", 0);
-        int v4 = sharedPreferences.getInt("defense_skill_4", 0);
-        int v5 = sharedPreferences.getInt("defense_skill_5", 0);
-        int v6 = sharedPreferences.getInt("defense_skill_6", 0);
-        int v7 = sharedPreferences.getInt("defense_skill_7", 0);
-        int v8 = sharedPreferences.getInt("defense_skill_8", 0);
-        int v9 = sharedPreferences.getInt("defense_skill_9", 0);
-        int v10 = sharedPreferences.getInt("defense_skill_10", 0);
-
-        int b1 = sharedPreferences.getInt("combat_skill_1", 0);
-        int b2 = sharedPreferences.getInt("combat_skill_2", 0);
-        int b3 = sharedPreferences.getInt("combat_skill_3", 0);
-        int b4 = sharedPreferences.getInt("combat_skill_4", 0);
-        int b5 = sharedPreferences.getInt("combat_skill_5", 0);
-        int b6 = sharedPreferences.getInt("combat_skill_6", 0);
-        int b7 = sharedPreferences.getInt("combat_skill_7", 0);
-        int b8 = sharedPreferences.getInt("combat_skill_8", 0);
-        int b9 = sharedPreferences.getInt("combat_skill_9", 0);
-        int b10 = sharedPreferences.getInt("combat_skill_10", 0);
-
-        int value1 = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10;
-        int value2 = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10;
-
-        System.out.println(value2);
-        System.out.println(value1);
-
-        int skill = 98;
-        int totalValue = value1 + value2;
-
-        skillPoint = skill - totalValue;
-
-        offensiveSkill_1 = 0;
-        offensiveSkill_2 = 0;
-        offensiveSkill_3 = 0;
-        offensiveSkill_4 = 0;
-        offensiveSkill_5 = 0;
-        offensiveSkill_6 = 0;
-        offensiveSkill_7 = 0;
-        offensiveSkill_8 = 0;
-        offensiveSkill_9 = 0;
-        offensiveSkill_10 = 0;
-
-        editor.putInt(SKILL_POINT_KEY, skillPoint);
-        editor.putInt("offensive_skill_1", 0);
-        editor.putInt("offensive_skill_2", 0);
-        editor.putInt("offensive_skill_3", 0);
-        editor.putInt("offensive_skill_4", 0);
-        editor.putInt("offensive_skill_5", 0);
-        editor.putInt("offensive_skill_6", 0);
-        editor.putInt("offensive_skill_7", 0);
-        editor.putInt("offensive_skill_8", 0);
-        editor.putInt("offensive_skill_9", 0);
-        editor.putInt("offensive_skill_10", 0);
-        editor.apply();
-        skillEditor.clear();
-
-        mBinding.skillOffensivePaladins1.setImageResource(R.drawable.skill_offensive_paladins_1_1);
-        mBinding.skillOffensivePaladins2.setImageResource(R.drawable.skill_offensive_paladins_2_1);
-        mBinding.skillOffensivePaladins3.setImageResource(R.drawable.skill_offensive_paladins_3_1);
-        mBinding.skillOffensivePaladins4.setImageResource(R.drawable.skill_offensive_paladins_4_1);
-        mBinding.skillOffensivePaladins5.setImageResource(R.drawable.skill_offensive_paladins_5_1);
-        mBinding.skillOffensivePaladins6.setImageResource(R.drawable.skill_offensive_paladins_6_1);
-        mBinding.skillOffensivePaladins7.setImageResource(R.drawable.skill_offensive_paladins_7_1);
-        mBinding.skillOffensivePaladins8.setImageResource(R.drawable.skill_offensive_paladins_8_1);
-        mBinding.skillOffensivePaladins9.setImageResource(R.drawable.skill_offensive_paladins_9_1);
-        mBinding.skillOffensivePaladins10.setImageResource(R.drawable.skill_offensive_paladins_10_1);
-        mBinding.skillOffensivePaladins1Value.setText("0");
-        mBinding.skillOffensivePaladins2Value.setText("0");
-        mBinding.skillOffensivePaladins3Value.setText("0");
-        mBinding.skillOffensivePaladins4Value.setText("0");
-        mBinding.skillOffensivePaladins5Value.setText("0");
-        mBinding.skillOffensivePaladins6Value.setText("0");
-        mBinding.skillOffensivePaladins7Value.setText("0");
-        mBinding.skillOffensivePaladins8Value.setText("0");
-        mBinding.skillOffensivePaladins9Value.setText("0");
-        mBinding.skillOffensivePaladins10Value.setText("0");
-        offensiveValue();
-    }
-
-    private void offensiveValue() {
-        mBinding.tvOffensiveValueView.setText("스킬 포인트 : " + sharedPreferences.getInt(SKILL_POINT_KEY, 98));
-        mBinding.tvOffensiveQuest.setText("퀘스트 포인트 : " + sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, 98));
-        mBinding.skillOffensivePaladins1Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_1", 0)));
-        mBinding.skillOffensivePaladins2Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_2", 0)));
-        mBinding.skillOffensivePaladins3Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_3", 0)));
-        mBinding.skillOffensivePaladins4Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_4", 0)));
-        mBinding.skillOffensivePaladins5Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_5", 0)));
-        mBinding.skillOffensivePaladins6Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_6", 0)));
-        mBinding.skillOffensivePaladins7Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_7", 0)));
-        mBinding.skillOffensivePaladins8Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_8", 0)));
-        mBinding.skillOffensivePaladins9Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_9", 0)));
-        mBinding.skillOffensivePaladins10Value.setText(String.valueOf(sharedPreferences.getInt("offensive_skill_10", 0)));
-    }
-
-    private void skillImageUpdate() {
-
-        if (sharedPreferences.getInt("offensive_skill_1", 0) != 0) {
-            mBinding.skillOffensivePaladins1.setImageResource(R.drawable.skill_offensive_paladins_1_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_2", 0) != 0) {
-            mBinding.skillOffensivePaladins2.setImageResource(R.drawable.skill_offensive_paladins_2_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_3", 0) != 0) {
-            mBinding.skillOffensivePaladins3.setImageResource(R.drawable.skill_offensive_paladins_3_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_4", 0) != 0) {
-            mBinding.skillOffensivePaladins4.setImageResource(R.drawable.skill_offensive_paladins_4_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_5", 0) != 0) {
-            mBinding.skillOffensivePaladins5.setImageResource(R.drawable.skill_offensive_paladins_5_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_6", 0) != 0) {
-            mBinding.skillOffensivePaladins6.setImageResource(R.drawable.skill_offensive_paladins_6_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_7", 0) != 0) {
-            mBinding.skillOffensivePaladins7.setImageResource(R.drawable.skill_offensive_paladins_7_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_8", 0) != 0) {
-            mBinding.skillOffensivePaladins8.setImageResource(R.drawable.skill_offensive_paladins_8_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_9", 0) != 0) {
-            mBinding.skillOffensivePaladins9.setImageResource(R.drawable.skill_offensive_paladins_9_2);
-        }
-
-        if (sharedPreferences.getInt("offensive_skill_10", 0) != 0) {
-            mBinding.skillOffensivePaladins10.setImageResource(R.drawable.skill_offensive_paladins_10_2);
-        }
-    }
-
-    private boolean isPremiseSkillUpButton(ImageView skillUp) {
-        int id = skillUp.getId();
-        String str1 = "위세";
-        String str2 = "위세, 신성한 불꽃";
-        String str3 = "위세, 신성한 불꽃, 신성한 충격";
-        String str4 = "위세, 축복밭은 조준";
-        String str5 = "위세, 축복밭은 조준, 집중";
-        String str6 = "위세, 신성한 불꽃, 신성한 빙결, 가시";
-        String str7 = "위세, 신성한 불꽃, 신성한 빙결, 가시, 성역";
-
-        if (id == R.id.skill_offensive_paladins_8) {
-            if (offensiveSkill_3 != 0 && offensiveSkill_1 != 0 && offensiveSkill_2 != 0 && offensiveSkill_6 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str6);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_10) {
-            if (offensiveSkill_3 != 0 && offensiveSkill_1 != 0 && offensiveSkill_2 != 0 && offensiveSkill_6 != 0 && offensiveSkill_8 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str7);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_9) {
-            if (offensiveSkill_1 != 0 && offensiveSkill_4 != 0 && offensiveSkill_5 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str5);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_4 || id == R.id.skill_offensive_paladins_2) {
-            if (offensiveSkill_1 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str1);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_5) {
-            if (offensiveSkill_1 != 0 && offensiveSkill_4 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str4);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_6) {
-            if (offensiveSkill_1 != 0 && offensiveSkill_2 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str2);
-                return true;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_7) {
-            if (offensiveSkill_1 != 0 && offensiveSkill_2 != 0 && offensiveSkill_6 != 0) {
-                return false;
-            } else {
-                messagePremiseSkill = getSkillName(str3);
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private boolean isPremiseSkillDownButton(ImageView skillDown) {
-        int id = skillDown.getId();
-
-        if (id == R.id.skill_offensive_paladins_1) {
-            if (offensiveSkill_4 >= 1 && offensiveSkill_1 <= 1 || offensiveSkill_2 >= 1 && offensiveSkill_1 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_2) {
-            if (offensiveSkill_6 >= 1 && offensiveSkill_2 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_3) {
-            if (offensiveSkill_8 >= 1 && offensiveSkill_3 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-
-        if (id == R.id.skill_offensive_paladins_4) {
-            if (offensiveSkill_5 >= 1 && offensiveSkill_4 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_5) {
-            if (offensiveSkill_9 >= 1 && offensiveSkill_5 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        if (id == R.id.skill_offensive_paladins_6) {
-            if (offensiveSkill_8 >= 1 && offensiveSkill_6 <= 1 || offensiveSkill_7 >= 1 && offensiveSkill_6 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        // 눌러지면 안되는 버튼
-        if (id == R.id.skill_offensive_paladins_8) {
-            // 밑에 스킬이 1이라도 있으면,    위에 스킬이 1 밑으로 안내려가게.
-            if (offensiveSkill_10 >= 1 && offensiveSkill_8 <= 1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-
-
-        return false;
-    }
-
-    private String getSkillName(String str) {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("이 스킬을 사용하시려면 ").append(str).append(" 스킬이 필요합니다.");
-        return stringBuilder.toString();
-    }
-
-    /** 스킬을 LONG 클릭 했을때 나오는 화면 **/
-    private void skillPreviewDialog(Spanned spanned, int id) {
-        Dialog dialog = new Dialog(getContext());
-        dialog.setContentView(R.layout.skill_preview_paladins_defense);
-        TextView skillPreview = dialog.findViewById(R.id.tv_preview);
-        ImageView imageView = dialog.findViewById(R.id.iv_skill_preview);
-        imageView.setBackgroundResource(id);
-        skillPreview.setText(spanned);
-
-        // 다이얼로그 크기 조정
-        Window window = dialog.getWindow();
-        if (window != null) {
-            DisplayMetrics displayMetrics = new DisplayMetrics();
-            ((WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(displayMetrics);
-            int width = displayMetrics.widthPixels;
-
-            window.setLayout((int) (width * 0.9), WindowManager.LayoutParams.WRAP_CONTENT); // 화면 폭의 90% 사용
-            window.setGravity(Gravity.CENTER);
-        }
-
-        dialog.show();
-    }
+    private boolean checkSkillConditionsUp(ImageView imageView) {
+        return prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_2, skill_point_1) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_4, skill_point_1) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_4) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_9, skill_point_5) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_6, skill_point_2) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_6) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_3, skill_point_6) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_8)
+
+                ;}
+
+    private boolean checkSkillConditionsDown(ImageView imageView) {
+        return prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_4) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_2, skill_point_2, skill_point_6) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_5) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_5, skill_point_5, skill_point_9) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_1, skill_point_1, skill_point_2) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_7) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_6, skill_point_6, skill_point_8) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_3, skill_point_3, skill_point_8) ||
+                prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_8, skill_point_8, skill_point_10)
+
+                ;}
 
 }

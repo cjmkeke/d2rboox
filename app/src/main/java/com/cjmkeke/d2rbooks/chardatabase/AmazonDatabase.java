@@ -16,7 +16,6 @@ import com.cjmkeke.d2rbooks.R;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Bow;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Javelin;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.amazon.Passive;
-import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.assassin.Martial;
 import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentAmazonDatabaseBinding;
 
@@ -41,14 +40,14 @@ public class AmazonDatabase extends Fragment {
 
         Fragment fragment = null;
         if (fragment == null) {
-            replaceFragment(new Martial());
+            replaceFragment(new Javelin());
         }
 
         mBinding.tvAmazoneTabJavelin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (!isTabButtonDefense){
+                if (!isTabButtonDefense) {
                     mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdSelect);
                     mBinding.tvAmazoneTabBow.setBackgroundResource(resIdNoneSelect);
                     mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdNoneSelect);
@@ -64,7 +63,7 @@ public class AmazonDatabase extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (!isTabButtonAttack){
+                if (!isTabButtonAttack) {
                     mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdSelect);
                     mBinding.tvAmazoneTabBow.setBackgroundResource(resIdNoneSelect);
                     mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdNoneSelect);
@@ -78,7 +77,7 @@ public class AmazonDatabase extends Fragment {
         mBinding.tvAmazoneTabBow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isTabButtonBattle){
+                if (!isTabButtonBattle) {
                     mBinding.tvAmazoneTabBow.setBackgroundResource(resIdSelect);
                     mBinding.tvAmazoneTabPassive.setBackgroundResource(resIdNoneSelect);
                     mBinding.tvAmazoneTabJavelin.setBackgroundResource(resIdNoneSelect);

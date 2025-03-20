@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.assassin.traps;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -14,7 +15,7 @@ import java.util.List;
 public class Traps4 {
 
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<Traps4.TrapsModel10>>() {}.getType();
         List<Traps4.TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "traps4.json", listType);
         Spanned spanned;

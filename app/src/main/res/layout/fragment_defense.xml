@@ -28,122 +28,144 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="18dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_1"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:src="@drawable/skill_defense_paladins_1_1" />
-
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_1"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_1_1" />
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_1_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_1_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_btn_1_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
 
+                            <TextView
+                                android:id="@+id/tv_view_1_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
-
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_1_1"
-                        android:visibility="invisible" />
-
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <ImageView
+
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_1_1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
 
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_2"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_2_1" />
-
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_2"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_2_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_2_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_2_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_btn_2_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
 
+                            <TextView
+                                android:id="@+id/tv_view_2_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -151,607 +173,714 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="27dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:visibility="invisible" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_3"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_3_1" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_3_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_3_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_4"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_4_1" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_4_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_4_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="24dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_5"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:src="@drawable/skill_defense_paladins_5_1" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_5_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_5_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_1_1"
-                        android:visibility="invisible" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_6"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_6_1" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_6_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_6_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginTop="26dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:src="@drawable/skill_defense_paladins_5_1"
-                        android:visibility="invisible" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+                        <ImageView
+
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_3_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_3"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_3_1"/>
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_btn_3_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
 
+                            <TextView
+                                android:id="@+id/tv_view_3_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_7"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_7_1" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_4"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_4_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_7_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_7_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_btn_4_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
 
+                            <TextView
+                                android:id="@+id/tv_view_4_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_6_1"
-                        android:visibility="invisible" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="26dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_8"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:src="@drawable/skill_defense_paladins_8_1" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_8_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_8_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_7_1"
-                        android:visibility="invisible" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_6_1"
-                        android:visibility="invisible" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
-
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_marginLeft="2dp"
                     android:layout_marginTop="24dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="41dp"
-                        android:src="@drawable/skill_defense_paladins_8_1"
-                        android:visibility="invisible" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_5"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_5_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_btn_5_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:id="@+id/tv_view_5_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical"
-                        android:visibility="invisible">
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
+                        <ImageView
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_5_1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
 
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_9"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="24.5dp"
-                        android:src="@drawable/skill_defense_paladins_9_1" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_6"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_6_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_9_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_9_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
+                                android:id="@+id/tv_btn_6_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
 
+                            <TextView
+                                android:id="@+id/tv_view_6_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/skill_defense_paladins_10"
-                        android:layout_width="53dp"
-                        android:layout_height="60dp"
-                        android:scaleType="fitXY"
-                        android:layout_marginLeft="23.5dp"
-                        android:src="@drawable/skill_defense_paladins_10_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+                        <ImageView
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_10_value_minus"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_6_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/m"
-                            android:textColor="@color/dia_color" />
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/skill_defense_paladins_10_value"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/back_skill_point"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="@color/dia_color"
-                            android:textSize="11sp" />
+                            <TextView
 
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_7"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_7_1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_btn_7_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:id="@+id/tv_view_7_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_7_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_8"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_8_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_btn_8_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:id="@+id/tv_view_8_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
+                        <ImageView
+
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_8_1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_9_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:orientation="horizontal">
+                        <ImageView
+
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="41dp"
+                            android:src="@drawable/skill_defense_paladins_10_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1.5dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_9"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="24.5dp"
+                            android:src="@drawable/skill_defense_paladins_9_1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_btn_9_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:id="@+id/tv_view_9_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_btn_skill_image_10"
+                            android:layout_width="53dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/skill_defense_paladins_10_1"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="23.5dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="7.5dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_btn_10_value_minus"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/m"
+                                android:textColor="@color/dia_color" />
+
+                            <TextView
+                                android:id="@+id/tv_view_10_value"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:paddingTop="15dp"
+                                android:layout_gravity="bottom"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/dia_color"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -771,106 +900,110 @@
                     android:layout_gravity="center"
                     android:background="@drawable/dw_main_ethereal"
                     android:gravity="center"
-                    android:text="DEFENSE"
+                    android:text="@string/skill_messages"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/icons_skill_reset" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
 
-                <TextView
-                    android:id="@+id/tv_all_skill_reset"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/dia_color"
-                    android:textSize="12sp"
-                    android:text="모든 스킬 초기화" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icons_skill_reset" />
+
+                    <TextView
+                        android:id="@+id/tv_all_skill_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/dia_color"
+                        android:textSize="12sp"
+                        android:text="모든 스킬 초기화" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/dw_tab_table"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icons_skill_off" />
+
+                    <TextView
+                        android:id="@+id/tv_point_value_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/dia_color"
+                        android:textSize="12sp"
+                        tools:text="현재 스킬 포인트" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icons_skill_quest_off" />
+
+                    <TextView
+                        android:id="@+id/tv_quest_point_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/dia_color"
+                        android:textSize="12sp"
+                        tools:text="퀘스트 완료 포인트" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icons_skill_reset" />
+
+                    <TextView
+                        android:id="@+id/skill_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/dia_color"
+                        android:textSize="12sp"
+                        android:text="스킬 초기화" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/dw_tab_table"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/icons_skill_off" />
-
-                <TextView
-                    android:id="@+id/tv_defense_value_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/dia_color"
-                    android:textSize="12sp"
-                    tools:text="현재 스킬 포인트" />
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/icons_skill_quest_off" />
-
-                <TextView
-                    android:id="@+id/tv_defense_quest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/dia_color"
-                    android:textSize="12sp"
-                    tools:text="퀘스트 완료 포인트" />
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/icons_skill_reset" />
-
-                <TextView
-                    android:id="@+id/skill_clear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/dia_color"
-                    android:textSize="12sp"
-                    android:text="현재 초기화" />
-
-            </LinearLayout>
-
-
-
 
         </LinearLayout>
 

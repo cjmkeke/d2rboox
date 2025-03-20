@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.passive;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -13,9 +14,9 @@ import java.util.List;
 
 public class Passive10 {
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<TrapsModel10>>() {}.getType();
-        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat10.json", listType);
+        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "passive10.json", listType);
         Spanned spanned;
 
         if (skill != null){
@@ -29,9 +30,7 @@ public class Passive10 {
                         spanned = Html.fromHtml(PassiveUpdate.passiveSkill10(
                                         String.valueOf(i),
                                         skill.get(i - 1).getOption1(),
-                                        skill.get(i - 1).getOption2(),
-                                        skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i).getOption1()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.

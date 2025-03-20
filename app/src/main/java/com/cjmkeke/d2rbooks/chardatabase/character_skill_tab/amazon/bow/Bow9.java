@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.bow;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -13,25 +14,31 @@ import java.util.List;
 
 public class Bow9 {
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<TrapsModel10>>() {}.getType();
-        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat10.json", listType);
+        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "bow9.json", listType);
         Spanned spanned;
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(SkillBow.bowSkill10_end, Html.FROM_HTML_MODE_LEGACY);
+                spanned = Html.fromHtml(SkillBow.bowSkill9_end, Html.FROM_HTML_MODE_LEGACY);
                 textView.setText(spanned);
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(BowUpdate.bowSkill10(
+                        spanned = Html.fromHtml(BowUpdate.bowSkill9(
                                         String.valueOf(i),
-                                        skill.get(i - 1).getOption1(),
-                                        skill.get(i - 1).getOption2(),
-                                        skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i - 1).getOption4(), // 명중
+                                        skill.get(i - 1).getOption2(), // 2번
+                                        skill.get(i - 1).getOption3(), // 3번
+                                        "4", // 4번
+                                        skill.get(i - 1).getOption1(), // 마나
+                                        skill.get(i).getOption4(),
+                                        skill.get(i).getOption2(),
+                                        skill.get(i).getOption3(),
+                                        "4",
+                                        skill.get(i).getOption1()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.
@@ -47,6 +54,7 @@ public class Bow9 {
         private String option2;
         private String option3;
         private String option4;
+        private String option5;
 
 
         public String getOption1() {
@@ -63,6 +71,9 @@ public class Bow9 {
 
         public String getOption4() {
             return option4;
+        }
+        public String getOption5() {
+            return option5;
         }
     }
 

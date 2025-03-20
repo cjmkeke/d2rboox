@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.bow;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -14,9 +15,9 @@ import java.util.List;
 public class Bow2 {
 
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<TrapsModel10>>() {}.getType();
-        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "bow10.json", listType);
+        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "bow2.json", listType);
         Spanned spanned;
 
         if (skill != null){
@@ -27,12 +28,16 @@ public class Bow2 {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
-                        spanned = Html.fromHtml(BowUpdate.bowSkill10(
+                        spanned = Html.fromHtml(BowUpdate.bowSkill2(
                                         String.valueOf(i),
-                                        skill.get(i - 1).getOption1(),
-                                        skill.get(i - 1).getOption2(),
+                                        skill.get(i - 1).getOption2(), // 피해
+                                        skill.get(i - 1).getOption3(), // 명중
+                                        skill.get(i - 1).getOption1(), // 화염피해
+                                        "3",
+                                        skill.get(i).getOption2(),
+                                        skill.get(i).getOption3(),
                                         skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        "3"),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.

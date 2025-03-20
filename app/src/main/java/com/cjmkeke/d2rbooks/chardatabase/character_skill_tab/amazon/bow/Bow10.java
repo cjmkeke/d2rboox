@@ -1,6 +1,7 @@
 package com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.amazon.bow;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
@@ -13,9 +14,9 @@ import java.util.List;
 
 public class Bow10 {
 
-    public static void skillUpdate(int value, TextView textView, Context context){
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
         Type listType = new TypeToken<List<TrapsModel10>>() {}.getType();
-        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat10.json", listType);
+        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "bow10.json", listType);
         Spanned spanned;
 
         if (skill != null){
@@ -28,10 +29,14 @@ public class Bow10 {
                     if (value == i) {
                         spanned = Html.fromHtml(BowUpdate.bowSkill10(
                                         String.valueOf(i),
-                                        skill.get(i - 1).getOption1(),
-                                        skill.get(i - 1).getOption2(),
-                                        skill.get(i).getOption1(),
-                                        skill.get(i).getOption2()),
+                                        skill.get(i - 1).getOption3(), // 1번명중
+                                        skill.get(i - 1).getOption2(), // 2번냅둬
+                                        "2.2", //  공격
+                                        skill.get(i - 1).getOption1(), // 3번마나
+                                        skill.get(i).getOption3(),
+                                        skill.get(i).getOption2(),
+                                        "2.2",
+                                        skill.get(i).getOption1()),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
                         break;  // Exit loop after handling the correct value.
