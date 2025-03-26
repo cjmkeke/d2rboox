@@ -1,0 +1,122 @@
+[
+    {
+        "option4": "25",
+        "option3": "7-20",
+        "option2": "86",
+        "option1": "201"
+    },
+    {
+        "option4": "28",
+        "option3": "10-31",
+        "option2": "95",
+        "option1": "241"
+    },
+    {
+        "option4": "31",
+        "option3": "14-42",
+        "option2": "102",
+        "option1": "281"
+    },
+    {
+        "option4": "34",
+        "option3": "18-53",
+        "option2": "108",
+        "option1": "321"
+    },
+    {
+        "option4": "37",
+        "option3": "22-64",
+        "option2": "112",
+        "option1": "361"
+    },
+    {
+        "option4": "40",
+        "option3": "26-75",
+        "option2": "116",
+        "option1": "402"
+    },
+    {
+        "option4": "43",
+        "option3": "30-86",
+        "option2": "119",
+        "option1": "442"
+    },
+    {
+        "option4": "46",
+        "option3": "33-97",
+        "option2": "121",
+        "option1": "482"
+    },
+    {
+        "option4": "49",
+        "option3": "37-108",
+        "option2": "124",
+        "option1": "522"
+    },
+    {
+        "option4": "52",
+        "option3": "41-119",
+        "option2": "126",
+        "option1": "562"
+    },
+    {
+        "option4": "55",
+        "option3": "45-130",
+        "option2": "128",
+        "option1": "603"
+    },
+    {
+        "option4": "58",
+        "option3": "49-141",
+        "option2": "129",
+        "option1": "643"
+    },
+    {
+        "option4": "61",
+        "option3": "53-152",
+        "option2": "131",
+        "option1": "683"
+    },
+    {
+        "option4": "64",
+        "option3": "57-163",
+        "option2": "132",
+        "option1": "723"
+    },
+    {
+        "option4": "67",
+        "option3": "60-174",
+        "option2": "133",
+        "option1": "763"
+    },
+    {
+        "option4": "70",
+        "option3": "64-185",
+        "option2": "135",
+        "option1": "804"
+    },
+    {
+        "option4": "73",
+        "option3": "68-196",
+        "option2": "135",
+        "option1": "844"
+    },
+    {
+        "option4": "76",
+        "option3": "72-207",
+        "option2": "136",
+        "option1": "884"
+    },
+    {
+        "option4": "79",
+        "option3": "76-218",
+        "option2": "137",
+        "option1": "924"
+    },
+    {
+        "option4": "82",
+        "option3": "80-229",
+        "option2": "138",
+        "option1": "964"
+    }
+]

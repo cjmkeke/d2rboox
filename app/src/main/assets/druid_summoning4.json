@@ -1,0 +1,142 @@
+[
+    {
+        "option3": "1",
+        "option2": "2-6",
+        "option4": "50",
+        "option5": "50",
+        "option1": "143"
+    },
+    {
+        "option3": "2",
+        "option2": "3-8",
+        "option4": "75",
+        "option5": "60",
+        "option1": "156"
+    },
+    {
+        "option3": "3",
+        "option2": "4-9",
+        "option4": "100",
+        "option5": "70",
+        "option1": "169"
+    },
+    {
+        "option3": "4",
+        "option2": "5-10",
+        "option4": "125",
+        "option5": "80",
+        "option1": "182"
+    },
+    {
+        "option3": "5",
+        "option2": "6-11",
+        "option4": "150",
+        "option5": "90",
+        "option1": "195"
+    },
+    {
+        "option3": "5",
+        "option2": "8-12",
+        "option4": "175",
+        "option5": "100",
+        "option1": "208"
+    },
+    {
+        "option3": "5",
+        "option2": "9-13",
+        "option4": "200",
+        "option5": "110",
+        "option1": "221"
+    },
+    {
+        "option3": "5",
+        "option2": "10-14",
+        "option4": "225",
+        "option5": "120",
+        "option1": "234"
+    },
+    {
+        "option3": "5",
+        "option2": "13-18",
+        "option4": "250",
+        "option5": "130",
+        "option1": "247"
+    },
+    {
+        "option3": "5",
+        "option2": "17-21",
+        "option4": "275",
+        "option5": "140",
+        "option1": "260"
+    },
+    {
+        "option3": "5",
+        "option2": "20-25",
+        "option4": "300",
+        "option5": "150",
+        "option1": "273"
+    },
+    {
+        "option3": "5",
+        "option2": "24-28",
+        "option4": "325",
+        "option5": "160",
+        "option1": "286"
+    },
+    {
+        "option3": "5",
+        "option2": "27-32",
+        "option4": "350",
+        "option5": "170",
+        "option1": "299"
+    },
+    {
+        "option3": "5",
+        "option2": "31-35",
+        "option4": "375",
+        "option5": "180",
+        "option1": "312"
+    },
+    {
+        "option3": "5",
+        "option2": "34-39",
+        "option4": "400",
+        "option5": "190",
+        "option1": "325"
+    },
+    {
+        "option3": "5",
+        "option2": "37-42",
+        "option4": "425",
+        "option5": "200",
+        "option1": "338"
+    },
+    {
+        "option3": "5",
+        "option2": "42-47",
+        "option4": "450",
+        "option5": "210",
+        "option1": "351"
+    },
+    {
+        "option3": "5",
+        "option2": "47-51",
+        "option4": "475",
+        "option5": "220",
+        "option1": "364"
+    },
+    {
+        "option3": "5",
+        "option2": "51-56",
+        "option4": "500",
+        "option5": "230",
+        "option1": "377"
+    },
+    {
+        "option3": "5",
+        "option2": "56-60",
+        "option4": "525",
+        "option5": "240",
+        "option1": "390"
+    }
+]

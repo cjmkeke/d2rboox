@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.cjmkeke.d2rbooks.R;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.necromancer.Poison;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.necromancer.Curses;
-import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.necromancer.Summoning;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.necromancer.NecromancerSummoning;
 import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentNecromancerDatabaseBinding;
 
@@ -40,7 +40,7 @@ public class NecromancerDatabase extends Fragment {
 
         Fragment fragment = null;
         if (fragment == null) {
-            replaceFragment(new Summoning());
+            replaceFragment(new NecromancerSummoning());
         }
 
         mBinding.tvNecromancerTab1.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +55,7 @@ public class NecromancerDatabase extends Fragment {
                 }
 
 
-                replaceFragment(new Summoning());
+                replaceFragment(new NecromancerSummoning());
             }
         });
 

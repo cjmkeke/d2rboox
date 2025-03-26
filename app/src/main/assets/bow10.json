@@ -1,0 +1,102 @@
+[
+    {
+        "option1": "9",
+        "option2": "40-50",
+        "option3": "40"
+    },
+    {
+        "option1": "9.2",
+        "option2": "50-60",
+        "option3": "49"
+    },
+    {
+        "option1": "9.5",
+        "option2": "60-70",
+        "option3": "58"
+    },
+    {
+        "option1": "9.7",
+        "option2": "70-80",
+        "option3": "67"
+    },
+    {
+        "option1": "10",
+        "option2": "80-90",
+        "option3": "76"
+    },
+    {
+        "option1": "10.2",
+        "option2": "90-100",
+        "option3": "85"
+    },
+    {
+        "option1": "10.5",
+        "option2": "100-110",
+        "option3": "94"
+    },
+    {
+        "option1": "10.7",
+        "option2": "110-120",
+        "option3": "103"
+    },
+    {
+        "option1": "11",
+        "option2": "125-135",
+        "option3": "112"
+    },
+    {
+        "option1": "11.2",
+        "option2": "140-150",
+        "option3": "121"
+    },
+    {
+        "option1": "11.5",
+        "option2": "155-165",
+        "option3": "130"
+    },
+    {
+        "option1": "11.7",
+        "option2": "170-180",
+        "option3": "139"
+    },
+    {
+        "option1": "12",
+        "option2": "185-195",
+        "option3": "148"
+    },
+    {
+        "option1": "12.2",
+        "option2": "200-210",
+        "option3": "157"
+    },
+    {
+        "option1": "12.5",
+        "option2": "215-225",
+        "option3": "166"
+    },
+    {
+        "option1": "12.7",
+        "option2": "230-240",
+        "option3": "175"
+    },
+    {
+        "option1": "13",
+        "option2": "250-260",
+        "option3": "184"
+    },
+    {
+        "option1": "13.2",
+        "option2": "270-280",
+        "option3": "193"
+    },
+    {
+        "option1": "13.5",
+        "option2": "290-300",
+        "option3": "202"
+    },
+    {
+        "option1": "13.7",
+        "option2": "310-320",
+        "option3": "211"
+    }
+]

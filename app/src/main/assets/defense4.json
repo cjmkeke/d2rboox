@@ -1,0 +1,122 @@
+[
+    {
+        "option1": "10.6",
+        "option2": "52",
+        "option3": "1",
+        "option4": "0.5"
+    },
+    {
+        "option1": "12",
+        "option2": "66",
+        "option3": "2",
+        "option4": "1"
+    },
+    {
+        "option1": "13.3",
+        "option2": "76",
+        "option3": "3",
+        "option4": "1.5"
+    },
+    {
+        "option1": "14.6",
+        "option2": "85",
+        "option3": "4",
+        "option4": "2"
+    },
+    {
+        "option1": "16",
+        "option2": "92",
+        "option3": "5",
+        "option4": "2.5"
+    },
+    {
+        "option1": "17.3",
+        "option2": "98",
+        "option3": "6",
+        "option4": "3"
+    },
+    {
+        "option1": "18.6",
+        "option2": "102",
+        "option3": "7",
+        "option4": "3.5"
+    },
+    {
+        "option1": "20",
+        "option2": "106",
+        "option3": "8",
+        "option4": "4"
+    },
+    {
+        "option1": "21.3",
+        "option2": "110",
+        "option3": "9",
+        "option4": "4.5"
+    },
+    {
+        "option1": "22.6",
+        "option2": "113",
+        "option3": "10",
+        "option4": "5"
+    },
+    {
+        "option1": "24",
+        "option2": "116",
+        "option3": "11",
+        "option4": "5.5"
+    },
+    {
+        "option1": "25.3",
+        "option2": "118",
+        "option3": "12",
+        "option4": "6"
+    },
+    {
+        "option1": "26.6",
+        "option2": "121",
+        "option3": "13",
+        "option4": "6.5"
+    },
+    {
+        "option1": "28",
+        "option2": "123",
+        "option3": "14",
+        "option4": "7"
+    },
+    {
+        "option1": "29.3",
+        "option2": "124",
+        "option3": "15",
+        "option4": "7.5"
+    },
+    {
+        "option1": "30.6",
+        "option2": "127",
+        "option3": "16",
+        "option4": "8"
+    },
+    {
+        "option1": "32",
+        "option2": "128",
+        "option3": "17",
+        "option4": "8.5"
+    },
+    {
+        "option1": "33.3",
+        "option2": "129",
+        "option3": "18",
+        "option4": "9"
+    },
+    {
+        "option1": "34.6",
+        "option2": "130",
+        "option3": "19",
+        "option4": "9.5"
+    },
+    {
+        "option1": "36",
+        "option2": "131",
+        "option3": "20",
+        "option4": "10"
+    }
+]

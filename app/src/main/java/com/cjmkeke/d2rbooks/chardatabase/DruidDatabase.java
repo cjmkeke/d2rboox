@@ -1,84 +1,104 @@
 package com.cjmkeke.d2rbooks.chardatabase;
 
-import android.content.Context;
-import android.content.Intent;
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.cjmkeke.d2rbooks.R;
-import com.cjmkeke.d2rbooks.adapter.character.AdapterDruid;
-import com.cjmkeke.d2rbooks.chardatabase.write.DruidWrite;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.druid.DruidSummoning;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.druid.Elemental;
+import com.cjmkeke.d2rbooks.chardatabase.character_skill_fragment.druid.Shape;
+import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentDruidDatabaseBinding;
-import com.cjmkeke.d2rbooks.model.Character;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class DruidDatabase extends Fragment {
 
     private static final String TAG = "DruidDatabase";
-    private FragmentDruidDatabaseBinding binding;
-    private RecyclerView recyclerView;
-    private AdapterDruid adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Character> arrayList;
-    private DatabaseReference databaseReference;
-    private FirebaseDatabase firebaseDatabase;
+    private FragmentDruidDatabaseBinding mBinding;
+    private SharedPreferences fontSharedPreferences;
+    private boolean isTabButton1 = false;
+    private boolean isTabButton2 = false;
+    private boolean isTabButton3 = false;
 
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-
-        requireActivity().getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-
-            }
-        });
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentDruidDatabaseBinding.inflate(inflater, container, false);
+        fontSharedPreferences = getContext().getSharedPreferences(SharedValue.FONT_PREFERENCES, MODE_PRIVATE);
+        String currentFont = fontSharedPreferences.getString("selectedFont", "nanum"); // 기본값은 nanum
+        getContext().setTheme(currentFont.equals("kodia") ? R.style.kodia : R.style.nanum);
+        mBinding = FragmentDruidDatabaseBinding.inflate(inflater, container, false);
 
-        recyclerView = binding.getRoot().findViewById(R.id.recycler_view_druid); // 프레그먼트에서 사용
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setHasFixedSize(true);
-        layoutManager.setItemPrefetchEnabled(false);
-        recyclerView.setLayoutManager(layoutManager);
-        arrayList = new ArrayList<>();
-        adapter = new AdapterDruid(arrayList, getContext());
-        recyclerView.setAdapter(adapter);
+        int resIdSelect = getResources().getIdentifier("dw_act_select", "drawable", getContext().getPackageName());
+        int resIdNoneSelect = getResources().getIdentifier("dw_button", "drawable", getContext().getPackageName());
 
-        binding.tvClose.setOnClickListener(new View.OnClickListener() {
+        Fragment fragment = null;
+        if (fragment == null) {
+            replaceFragment(new Elemental());
+        }
+
+        mBinding.tvDruidTab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().finish();
+
+                if (!isTabButton1) {
+                    mBinding.tvDruidTab1.setBackgroundResource(resIdSelect);
+                    mBinding.tvDruidTab2.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvDruidTab3.setBackgroundResource(resIdNoneSelect);
+                    isTabButton1 = false;
+                }
+
+
+                replaceFragment(new Elemental());
             }
         });
 
-        binding.tvDruidWrite.setOnClickListener(new View.OnClickListener() {
+        mBinding.tvDruidTab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DruidWrite.class);
-                intent.putExtra(TAG, TAG);
-                startActivity(intent);
+                if (!isTabButton3) {
+                    mBinding.tvDruidTab2.setBackgroundResource(resIdSelect);
+                    mBinding.tvDruidTab3.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvDruidTab1.setBackgroundResource(resIdNoneSelect);
+                    isTabButton3 = false;
+                }
+                replaceFragment(new Shape());
+            }
+        });
+
+        mBinding.tvDruidTab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isTabButton2) {
+                    mBinding.tvDruidTab3.setBackgroundResource(resIdSelect);
+                    mBinding.tvDruidTab2.setBackgroundResource(resIdNoneSelect);
+                    mBinding.tvDruidTab1.setBackgroundResource(resIdNoneSelect);
+                    isTabButton2 = false;
+                }
+
+                replaceFragment(new DruidSummoning());
             }
         });
 
 
 
-        return binding.getRoot();
+        return mBinding.getRoot();
+
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fl_skill_change, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commitAllowingStateLoss();  // 상태 손실이 허용된 커밋 사용
     }
 }

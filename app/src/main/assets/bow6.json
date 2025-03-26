@@ -1,0 +1,122 @@
+[
+    {
+        "option1": "4",
+        "option2": "2",
+        "option3": "6-10",
+        "option4": "20"
+    },
+    {
+        "option1": "4.2",
+        "option2": "2.2",
+        "option3": "12-16",
+        "option4": "29"
+    },
+    {
+        "option1": "4.5",
+        "option2": "2.4",
+        "option3": "18-22",
+        "option4": "38"
+    },
+    {
+        "option1": "4.7",
+        "option2": "2.6",
+        "option3": "24-28",
+        "option4": "47"
+    },
+    {
+        "option1": "5",
+        "option2": "2.8",
+        "option3": "30-34",
+        "option4": "56"
+    },
+    {
+        "option1": "5.2",
+        "option2": "3",
+        "option3": "36-40",
+        "option4": "65"
+    },
+    {
+        "option1": "5.5",
+        "option2": "3.2",
+        "option3": "42-46",
+        "option4": "74"
+    },
+    {
+        "option1": "5.7",
+        "option2": "3.4",
+        "option3": "48-52",
+        "option4": "83"
+    },
+    {
+        "option1": "6",
+        "option2": "3.6",
+        "option3": "60-65",
+        "option4": "92"
+    },
+    {
+        "option1": "6.2",
+        "option2": "3.8",
+        "option3": "72-78",
+        "option4": "101"
+    },
+    {
+        "option1": "6.5",
+        "option2": "4",
+        "option3": "84-91",
+        "option4": "110"
+    },
+    {
+        "option1": "6.7",
+        "option2": "4.2",
+        "option3": "96-104",
+        "option4": "119"
+    },
+    {
+        "option1": "7",
+        "option2": "4.4",
+        "option3": "108-117",
+        "option4": "128"
+    },
+    {
+        "option1": "7.2",
+        "option2": "4.6",
+        "option3": "120-130",
+        "option4": "137"
+    },
+    {
+        "option1": "7.5",
+        "option2": "4.8",
+        "option3": "132-143",
+        "option4": "146"
+    },
+    {
+        "option1": "7.7",
+        "option2": "5",
+        "option3": "144-156",
+        "option4": "155"
+    },
+    {
+        "option1": "8",
+        "option2": "5.2",
+        "option3": "162-175",
+        "option4": "164"
+    },
+    {
+        "option1": "8.2",
+        "option2": "5.4",
+        "option3": "180-194",
+        "option4": "173"
+    },
+    {
+        "option1": "8.5",
+        "option2": "5.6",
+        "option3": "198-213",
+        "option4": "182"
+    },
+    {
+        "option1": "8.7",
+        "option2": "5.8",
+        "option3": "216-232",
+        "option4": "191"
+    }
+]
