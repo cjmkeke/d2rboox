@@ -17,29 +17,44 @@ public class DruidSummoning1 {
     static final String JSON_FILE_NAME = "druid_summoning1.json";
 
 
-    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-        Type listType = new TypeToken<List<Models>>() {}.getType();
+    public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences) {
+        Type listType = new TypeToken<List<Models>>() {
+        }.getType();
         List<Models> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
 
-        if (skill != null){
+        if (skill != null) {
             if (value == 20) {
-                spanned = Html.fromHtml(DruidSkillSummoning.druidSummoningSkill1_end, Html.FROM_HTML_MODE_LEGACY);
-                textView.setText(spanned);
+                if (value == 20) {
+                    spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill1_end(
+                            skill.get(19).getOption1(),
+                            skill.get(19).getOption2(),
+                            skill.get(19).getOption3(),
+                            skill.get(19).getOption4(),
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                            ),
+                    Html.FROM_HTML_MODE_LEGACY);
+                    textView.setText(spanned);
+                }
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {
                     if (value == i) {
                         spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill_1(
-                                String.valueOf(i),
-                                skill.get(i - 1).getOption1(),
-                                skill.get(i - 1).getOption2(),
-                                skill.get(i - 1).getOption3(),
-                                skill.get(i - 1).getOption4(),
-                                skill.get(i).getOption1(),
-                                skill.get(i).getOption2(),
-                                skill.get(i).getOption3(),
-                                skill.get(i).getOption4()
+                                        String.valueOf(i),
+                                        skill.get(i - 1).getOption1(),
+                                        skill.get(i - 1).getOption2(),
+                                        skill.get(i - 1).getOption3(),
+                                        skill.get(i - 1).getOption4(),
+                                        skill.get(i).getOption1(),
+                                        skill.get(i).getOption2(),
+                                        skill.get(i).getOption3(),
+                                        skill.get(i).getOption4()
                                 ),
                                 Html.FROM_HTML_MODE_LEGACY);
                         textView.setText(spanned);
@@ -51,7 +66,7 @@ public class DruidSummoning1 {
 
     }
 
-    public class Models{
+    public class Models {
         private String option1;
         private String option2;
         private String option3;
@@ -83,18 +98,23 @@ public class DruidSummoning1 {
         public String getOption5() {
             return option5;
         }
+
         public String getOption6() {
             return option6;
         }
+
         public String getOption7() {
             return option7;
         }
+
         public String getOption8() {
             return option8;
         }
+
         public String getOption9() {
             return option9;
         }
+
         public String getOption10() {
             return option10;
         }

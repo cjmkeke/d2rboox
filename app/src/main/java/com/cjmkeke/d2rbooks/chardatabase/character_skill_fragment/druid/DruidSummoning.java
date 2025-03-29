@@ -27,7 +27,7 @@ import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.druid.druidsummonin
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.druid.druidsummoning.DruidSummoning8;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.druid.druidsummoning.DruidSummoning9;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
-import com.cjmkeke.d2rbooks.chardatabase.tools.CharacterSkillUpdate;
+import com.cjmkeke.d2rbooks.chardatabase.tools.NewCharacterSkillUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
 import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentDruidSummoningBinding;
@@ -35,22 +35,18 @@ import com.cjmkeke.d2rbooks.databinding.FragmentDruidSummoningBinding;
 public class DruidSummoning extends Fragment {
 
     private FragmentDruidSummoningBinding mBinding;
+    
     private final String CHARACTER_NAME = "druid";
-    private final String CHARACTER_SKILL_NAME = "Summoning";
+    private final String CLASS_NAME = "summoningSkill";
+    private final String SKILL_TABLE_NAME = "summoning";
+    private final String CHARACTER_SKILL_STRING = "summoning_druid";
 
-    public final String CHARACTER_SKILL_NAME_SMALL_SIZE = "summoning";
-    private final String SKILL_NAME_1 = "druidSummoning";
-    private final String SKILL_NAME_2 = "elemental";
-    private final String SKILL_NAME_3 = "shape";
+    private final String[] SKILL_TABLE_ARRAY_1 = {"summoning_skill_1", "summoning_skill_2", "summoning_skill_3", "summoning_skill_4", "summoning_skill_5", "summoning_skill_6", "summoning_skill_7", "summoning_skill_8", "summoning_skill_9", "summoning_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_2 = {"elemental_skill_1", "elemental_skill_2", "elemental_skill_3", "elemental_skill_4", "elemental_skill_5", "elemental_skill_6", "elemental_skill_7", "elemental_skill_8", "elemental_skill_9", "elemental_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_3 = {"shape_skill_1", "shape_skill_2", "shape_skill_3", "shape_skill_4", "shape_skill_5", "shape_skill_6", "shape_skill_7", "shape_skill_8", "shape_skill_9", "shape_skill_10"};
 
-    private final String CLASS_NAME = CHARACTER_NAME + CHARACTER_SKILL_NAME + "Skill";
-    private final String SKILL_TABLE_NAME = CHARACTER_NAME + CHARACTER_SKILL_NAME;
-    private final String SKILL_POINT_KEY = "skillPoint_" + CHARACTER_NAME;
-    private final String SKILL_POINT_QUEST_COMPLETE_KEY = "skillQuestCompletePoint_" + CHARACTER_NAME;
-    private final String[] SKILL_TABLE_ARRAY_1 = {SKILL_NAME_1 + "_skill_1", SKILL_NAME_1 + "_skill_2", SKILL_NAME_1 + "_skill_3", SKILL_NAME_1 + "_skill_4", SKILL_NAME_1 + "_skill_5", SKILL_NAME_1 + "_skill_6", SKILL_NAME_1 + "_skill_7", SKILL_NAME_1 + "_skill_8", SKILL_NAME_1 + "_skill_9", SKILL_NAME_1 + "_skill_10"};
-    private final String[] SKILL_TABLE_ARRAY_2 = {SKILL_NAME_2 + "_skill_1", SKILL_NAME_2 + "_skill_2", SKILL_NAME_2 + "_skill_3", SKILL_NAME_2 + "_skill_4", SKILL_NAME_2 + "_skill_5", SKILL_NAME_2 + "_skill_6", SKILL_NAME_2 + "_skill_7", SKILL_NAME_2 + "_skill_8", SKILL_NAME_2 + "_skill_9", SKILL_NAME_2 + "_skill_10"};
-    private final String[] SKILL_TABLE_ARRAY_3 = {SKILL_NAME_3 + "_skill_1", SKILL_NAME_3 + "_skill_2", SKILL_NAME_3 + "_skill_3", SKILL_NAME_3 + "_skill_4", SKILL_NAME_3 + "_skill_5", SKILL_NAME_3 + "_skill_6", SKILL_NAME_3 + "_skill_7", SKILL_NAME_3 + "_skill_8", SKILL_NAME_3 + "_skill_9", SKILL_NAME_3 + "_skill_10"};
-    private final String CHARACTER_SKILL_STRING = CHARACTER_SKILL_NAME_SMALL_SIZE + "_" + CHARACTER_NAME;
+    private final String SKILL_POINT_KEY = "skillPoint_druid";
+    private final String SKILL_POINT_QUEST_COMPLETE_KEY = "skillQuestCompletePoint_druid";
 
     private SharedPreferences fontSharedPreferences;
     private String messagePremiseSkill = "이 스킬을 사용하시려면 선행 스킬을 먼저 선택해주세요.";
@@ -81,7 +77,6 @@ public class DruidSummoning extends Fragment {
 
         sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
         editor = sharedPreferences.edit();
-
 
         if (!sharedPreferences.contains(SKILL_POINT_KEY)) {
             editor.putInt(SKILL_POINT_KEY, 98);
@@ -200,7 +195,7 @@ public class DruidSummoning extends Fragment {
         sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
         editor.apply();
 
-        CharacterSkillUpdate characterSkillUpdate = new CharacterSkillUpdate(getContext(), sharedPreferences, editor, onSharedPreferenceChangeListener, mBinding.tvView1Value, mBinding.tvView2Value, mBinding.tvView3Value, mBinding.tvView4Value, mBinding.tvView5Value, mBinding.tvView6Value, mBinding.tvView7Value, mBinding.tvView8Value, mBinding.tvView9Value, mBinding.tvView10Value);
+        NewCharacterSkillUpdate characterSkillUpdate = new NewCharacterSkillUpdate(getContext(), sharedPreferences, editor, onSharedPreferenceChangeListener, mBinding.tvView1Value, mBinding.tvView2Value, mBinding.tvView3Value, mBinding.tvView4Value, mBinding.tvView5Value, mBinding.tvView6Value, mBinding.tvView7Value, mBinding.tvView8Value, mBinding.tvView9Value, mBinding.tvView10Value);
         characterSkillUpdate.setSkillQuestCompletePoint(skillQuestCompletePoint);
         characterSkillUpdate.setSkillPoint(skillPoint, skill_point_1, skill_point_2, skill_point_3, skill_point_4, skill_point_5, skill_point_6, skill_point_7, skill_point_8, skill_point_9, skill_point_10);
         characterSkillUpdate.setSkillImageUpdate(mBinding.ivBtnSkillImage1, mBinding.ivBtnSkillImage2, mBinding.ivBtnSkillImage3, mBinding.ivBtnSkillImage4, mBinding.ivBtnSkillImage5, mBinding.ivBtnSkillImage6, mBinding.ivBtnSkillImage7, mBinding.ivBtnSkillImage8, mBinding.ivBtnSkillImage9, mBinding.ivBtnSkillImage10);
@@ -431,16 +426,15 @@ public class DruidSummoning extends Fragment {
      * iv_btn_skill_image_6 버튼을 클릭하려면 skill_point_3 이 1 이상이어야함
      **/
     private boolean checkSkillConditionsUp(ImageView imageView) {
-        return false
-//                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_1, skill_point_2) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_2) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_4, skill_point_3) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_4) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_6, skill_point_3) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_6) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_9, skill_point_8) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_5) ||
-//                        prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_8)
+        return
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_4, skill_point_1) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_4) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_7, skill_point_3) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_10, skill_point_7) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_6, skill_point_3) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_9, skill_point_6) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_5, skill_point_2) ||
+                prohibitionButton.upButton(imageView, R.id.iv_btn_skill_image_8, skill_point_5)
 
                 ;
     }
@@ -460,7 +454,6 @@ public class DruidSummoning extends Fragment {
 //                        prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_8, skill_point_8, skill_point_9) ||
 //                        prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_8, skill_point_8, skill_point_10) ||
 //                        prohibitionButton.downButton(imageView, R.id.iv_btn_skill_image_4, skill_point_4, skill_point_7)
-
 
                 ;
     }

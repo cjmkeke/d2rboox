@@ -23,8 +23,22 @@ public class DruidSummoning5 {
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(DruidSkillSummoning.druidSummoningSkill5_end, Html.FROM_HTML_MODE_LEGACY);
-                textView.setText(spanned);
+                if (value == 20) {
+                    spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill5_end(
+                                    skill.get(19).getOption1(),
+                                    skill.get(19).getOption2(),
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                            ),
+                            Html.FROM_HTML_MODE_LEGACY);
+                    textView.setText(spanned);
+                }
             } else if (value >= 1 && value < 21) {
                 // Loop through values 0 to 19
                 for (int i = 0; i < 21; i++) {

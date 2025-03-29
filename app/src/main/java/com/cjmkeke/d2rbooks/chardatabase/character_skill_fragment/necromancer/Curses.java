@@ -32,7 +32,6 @@ import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
 import com.cjmkeke.d2rbooks.constants.SharedValue;
 import com.cjmkeke.d2rbooks.databinding.FragmentCursesBinding;
 
-// 저주
 public class Curses extends Fragment {
 
     private FragmentCursesBinding mBinding;
@@ -41,9 +40,10 @@ public class Curses extends Fragment {
     private final String SKILL_TABLE_NAME = "curses";
     private final String CHARACTER_SKILL_STRING = "curses_necromancer";
 
-    private final String[] SKILL_TABLE_ARRAY_3 = {"poison_skill_1", "poison_skill_2", "poison_skill_3", "poison_skill_4", "poison_skill_5", "poison_skill_6", "poison_skill_7", "poison_skill_8", "poison_skill_9", "poison_skill_10"};
-    private final String[] SKILL_TABLE_ARRAY_2 = {"necromancerSummoning_skill_1", "necromancerSummoning_skill_2", "necromancerSummoning_skill_3", "necromancerSummoning_skill_4", "necromancerSummoning_skill_5", "necromancerSummoning_skill_6", "necromancerSummoning_skill_7", "necromancerSummoning_skill_8", "necromancerSummoning_skill_9", "necromancerSummoning_skill_10"};
     private final String[] SKILL_TABLE_ARRAY_1 = {"curses_skill_1", "curses_skill_2", "curses_skill_3", "curses_skill_4", "curses_skill_5", "curses_skill_6", "curses_skill_7", "curses_skill_8", "curses_skill_9", "curses_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_2 = {"necromancerSummoning_skill_1", "necromancerSummoning_skill_2", "necromancerSummoning_skill_3", "necromancerSummoning_skill_4", "necromancerSummoning_skill_5", "necromancerSummoning_skill_6", "necromancerSummoning_skill_7", "necromancerSummoning_skill_8", "necromancerSummoning_skill_9", "necromancerSummoning_skill_10"};
+    private final String[] SKILL_TABLE_ARRAY_3 = {"poison_skill_1", "poison_skill_2", "poison_skill_3", "poison_skill_4", "poison_skill_5", "poison_skill_6", "poison_skill_7", "poison_skill_8", "poison_skill_9", "poison_skill_10"};
+
     private final String SKILL_POINT_KEY = "skillPoint_necromancer";
     private final String SKILL_POINT_QUEST_COMPLETE_KEY = "skillQuestCompletePoint_necromancer";
 

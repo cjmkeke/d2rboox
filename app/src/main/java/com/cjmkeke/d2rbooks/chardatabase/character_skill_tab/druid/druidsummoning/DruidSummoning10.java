@@ -23,30 +23,24 @@ public class DruidSummoning10 {
 
         if (skill != null){
             if (value == 20) {
-                spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill10_end(
-                                String.valueOf("20"),
-                                skill.get(19).getOption1(),
-                                skill.get(19).getOption2(),
-                                skill.get(19).getOption3())
-                        ,
-                        Html.FROM_HTML_MODE_LEGACY);
-                textView.setText(spanned);
+                if (value == 20) {
+                    spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill10_end(
+                                    skill.get(19).getOption1(),
+                                    skill.get(19).getOption2(),
+                                    skill.get(19).getOption3(),
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                            ),
+                            Html.FROM_HTML_MODE_LEGACY);
+                    textView.setText(spanned);
+                }
             } else if (value >= 1 && value < 21) {
                 for (int i = 0; i < 21; i++) {
-
-                    if (value == 20) {
-                        spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill10_end(
-                                        String.valueOf(i),
-                                        skill.get(19).getOption1(),
-                                        skill.get(19).getOption2(),
-                                        skill.get(19).getOption3())
-                                ,
-                                Html.FROM_HTML_MODE_LEGACY);
-                        textView.setText(spanned);
-                        break;  // Exit loop after handling the correct value.
-                    }
-
-
                     if (value == i) {
                         spanned = Html.fromHtml(DruidSummoningUpdate.druidSummoningSkill10(
                                         String.valueOf(i),
