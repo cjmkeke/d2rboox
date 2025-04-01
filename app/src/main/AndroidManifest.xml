@@ -21,6 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/nanum"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8520803415160703~6847231563"/>
+
         <activity
             android:name=".dialog.SkillExplanation"
             android:exported="false" />

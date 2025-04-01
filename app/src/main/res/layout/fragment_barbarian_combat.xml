@@ -171,7 +171,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="41dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_3_1" />
+                            android:src="@drawable/skill_combat_barbarian_2_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -251,7 +251,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="23.5dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_2_1" />
+                            android:src="@drawable/skill_combat_barbarian_3_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -339,7 +339,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="24.5dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_5_1" />
+                            android:src="@drawable/skill_combat_barbarian_4_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -380,7 +380,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="23.5dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_6_1" />
+                            android:src="@drawable/skill_combat_barbarian_5_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -429,7 +429,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="41dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_7_1" />
+                            android:src="@drawable/skill_combat_barbarian_6_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -470,7 +470,7 @@
                             android:layout_height="60dp"
                             android:layout_marginLeft="24.5dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/skill_combat_barbarian_8_1" />
+                            android:src="@drawable/skill_combat_barbarian_7_1" />
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"

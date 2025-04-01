@@ -84,14 +84,6 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-//        DatabaseReference databaseReference1 = firebaseDatabase.getReference("error_log");
-//        mBinding.tvTest.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-
         boolean isVibrationEnabled = toggleButtonSharedPreferences.getBoolean("toggle_button_vibration", false);
         // ToggleSwitch 초기화
         mBinding.tbTerrorZoneVibration.setOnCheckedChangeListener(null); // 리스너 비활성화

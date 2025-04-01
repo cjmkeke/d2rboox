@@ -167,7 +167,7 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/back_give_item"
             android:gravity="center"
-            android:text="케릭터 육성 정보"
+            android:text="케릭터 육성 정보 (BETA VERSION)"
             android:textColor="@color/dia_color"
             android:textSize="16sp" />
 

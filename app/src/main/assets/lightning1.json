@@ -1,0 +1,102 @@
+[
+    {
+        "option3": "3",
+        "option2": "2-4",
+        "option1": "3"
+    },
+    {
+        "option3": "3.5",
+        "option2": "2-4",
+        "option1": "4"
+    },
+    {
+        "option3": "4",
+        "option2": "3-5",
+        "option1": "5"
+    },
+    {
+        "option3": "4.5",
+        "option2": "3-5",
+        "option1": "6"
+    },
+    {
+        "option3": "5",
+        "option2": "4-6",
+        "option1": "7"
+    },
+    {
+        "option3": "5.5",
+        "option2": "4-6",
+        "option1": "8"
+    },
+    {
+        "option3": "6",
+        "option2": "5-7",
+        "option1": "9"
+    },
+    {
+        "option3": "6.5",
+        "option2": "5-7",
+        "option1": "10"
+    },
+    {
+        "option3": "7",
+        "option2": "6-8",
+        "option1": "11"
+    },
+    {
+        "option3": "7.5",
+        "option2": "6-8",
+        "option1": "12"
+    },
+    {
+        "option3": "8",
+        "option2": "7-9",
+        "option1": "13"
+    },
+    {
+        "option3": "8.5",
+        "option2": "7-9",
+        "option1": "14"
+    },
+    {
+        "option3": "9",
+        "option2": "8-10",
+        "option1": "15"
+    },
+    {
+        "option3": "9.5",
+        "option2": "8-10",
+        "option1": "16"
+    },
+    {
+        "option3": "10",
+        "option2": "9-11",
+        "option1": "17"
+    },
+    {
+        "option3": "10.5",
+        "option2": "9-11",
+        "option1": "18"
+    },
+    {
+        "option3": "11",
+        "option2": "10-12",
+        "option1": "19"
+    },
+    {
+        "option3": "11.5",
+        "option2": "11-13",
+        "option1": "20"
+    },
+    {
+        "option3": "12",
+        "option2": "12-14",
+        "option1": "21"
+    },
+    {
+        "option3": "12",
+        "option2": "13-15",
+        "option1": "22"
+    }
+]
