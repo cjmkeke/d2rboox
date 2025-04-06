@@ -6,6 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -16,8 +17,8 @@ public class Shadow4 {
 
 
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-        Type listType = new TypeToken<List<Shadow4.ShadowModel10>>() {}.getType();
-        List<Shadow4.ShadowModel10> skill = JsonUtil.loadJSONFromAsset(context, "shadow4.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, "shadow4.json", listType);
         Spanned spanned;
 
         if (skill != null){
@@ -42,28 +43,5 @@ public class Shadow4 {
 
     }
 
-    public class ShadowModel10{
-        private String option1;
-        private String option2;
-        private String option3;
-        private String option4;
-
-
-        public String getOption1() {
-            return option1;
-        }
-
-        public String getOption2() {
-            return option2;
-        }
-
-        public String getOption3() {
-            return option3;
-        }
-
-        public String getOption4() {
-            return option4;
-        }
-    }
 
 }

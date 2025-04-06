@@ -26,6 +26,7 @@ import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.sorceress.fire.Fire
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.sorceress.fire.Fire8;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.sorceress.fire.Fire9;
 import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.sorceress.fire.SkillFire;
+import com.cjmkeke.d2rbooks.chardatabase.tools.CollectionValues;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ImageUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.NewCharacterSkillUpdate;
 import com.cjmkeke.d2rbooks.chardatabase.tools.ProhibitionButton;
@@ -77,11 +78,10 @@ public class Fire extends Fragment {
         sharedPreferences = getContext().getSharedPreferences(CHARACTER_NAME + "_point", MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-
         if (!sharedPreferences.contains(SKILL_POINT_KEY)) {
-            editor.putInt(SKILL_POINT_KEY, 98);
+            editor.putInt(SKILL_POINT_KEY, CollectionValues.DEFAULT_SKILL_VALUE);
         } else {
-            skillPoint = sharedPreferences.getInt(SKILL_POINT_KEY, 98);
+            skillPoint = sharedPreferences.getInt(SKILL_POINT_KEY, CollectionValues.DEFAULT_SKILL_VALUE);
         }
 
         if (!sharedPreferences.contains(SKILL_POINT_QUEST_COMPLETE_KEY)) {
@@ -91,102 +91,102 @@ public class Fire extends Fragment {
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_1")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_1", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_1", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", 0);
+            skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_2")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_2", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_2", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", 0);
+            skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_3")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_3", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_3", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", 0);
+            skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_4")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_4", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_4", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", 0);
+            skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_5")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_5", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_5", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", 0);
+            skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_6")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_6", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_6", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", 0);
+            skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_7")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_7", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_7", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", 0);
+            skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_8")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_8", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_8", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", 0);
+            skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", CollectionValues.DEFAULT_SKILL_POINT);
         }
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_9")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_9", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_9", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", 0);
+            skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         if (!sharedPreferences.contains(SKILL_TABLE_NAME + "_skill_10")) {
-            editor.putInt(SKILL_TABLE_NAME + "_skill_10", 0);
+            editor.putInt(SKILL_TABLE_NAME + "_skill_10", CollectionValues.DEFAULT_SKILL_POINT);
         } else {
-            skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", 0);
+            skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", CollectionValues.DEFAULT_SKILL_POINT);
         }
 
         sharedPreferences.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, @Nullable String key) {
                 if (SKILL_POINT_KEY.equals(key)) {
-                    skillPoint = sharedPreferences.getInt(SKILL_POINT_KEY, 98);
+                    skillPoint = sharedPreferences.getInt(SKILL_POINT_KEY, CollectionValues.DEFAULT_SKILL_VALUE);
                 }
                 if (SKILL_POINT_QUEST_COMPLETE_KEY.equals(key)) {
                     skillQuestCompletePoint = sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, 110);
                 }
                 if (SKILL_TABLE_ARRAY_1[0].equals(key)) {
-                    skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", 0);
+                    skill_point_1 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[1].equals(key)) {
-                    skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", 0);
+                    skill_point_2 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[2].equals(key)) {
-                    skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", 0);
+                    skill_point_3 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[3].equals(key)) {
-                    skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", 0);
+                    skill_point_4 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_4", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[4].equals(key)) {
-                    skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", 0);
+                    skill_point_5 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_5", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[5].equals(key)) {
-                    skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", 0);
+                    skill_point_6 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_6", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[6].equals(key)) {
-                    skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", 0);
+                    skill_point_7 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_7", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[7].equals(key)) {
-                    skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", 0);
+                    skill_point_8 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_8", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[8].equals(key)) {
-                    skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", 0);
+                    skill_point_9 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_9", CollectionValues.DEFAULT_SKILL_POINT);
                 }
                 if (SKILL_TABLE_ARRAY_1[9].equals(key)) {
-                    skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", 0);
+                    skill_point_10 = sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_10", CollectionValues.DEFAULT_SKILL_POINT);
                 }
 
             }

@@ -6,6 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -14,11 +15,10 @@ import java.util.List;
 
 public class NecromancerSummoning2 {
 
-
+    static final String JSON_FILE_NAME = "summoning2.json";
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences) {
-        Type listType = new TypeToken<List<TrapsModel10>>() {
-        }.getType();
-        List<TrapsModel10> skill = JsonUtil.loadJSONFromAsset(context, "summoning2.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
 
         if (skill != null) {
@@ -89,43 +89,5 @@ public class NecromancerSummoning2 {
         }
     }
 
-    public class TrapsModel10 {
-        private String option1;
-        private String option2;
-        private String option3;
-        private String option4;
-        private String option5;
-        private String option6;
-        private String option7;
-
-
-        public String getOption1() {
-            return option1;
-        }
-
-        public String getOption2() {
-            return option2;
-        }
-
-        public String getOption3() {
-            return option3;
-        }
-
-        public String getOption4() {
-            return option4;
-        }
-
-        public String getOption5() {
-            return option5;
-        }
-
-        public String getOption6() {
-            return option6;
-        }
-
-        public String getOption7() {
-            return option7;
-        }
-    }
 
 }

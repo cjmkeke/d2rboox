@@ -138,7 +138,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill1_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>칼 숙련</font>" +
-                "<br>지속 효과 - 검 및 단도 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 검 및 단도 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -148,7 +148,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill2_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>도끼 숙련</font>" +
-                "<br>지속 효과 - 도끼 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 도끼 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -158,7 +158,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill3_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>철퇴 숙련</font>" +
-                "<br>지속 효과 - 철퇴 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 철퇴 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -168,7 +168,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill4_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>미늘창 숙련</font>" +
-                "<br>지속 효과 - 미늘창 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 미늘창 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -178,7 +178,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill5_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>투척 숙련</font>" +
-                "<br>지속 효과 - 투척 무기 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 투척 무기 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -191,7 +191,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill6_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>창 숙련</font>" +
-                "<br>지속 효과 - 창 전투 숙련도가 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 창 전투 숙련도가 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>명중률: +" + c1 + "%" +
@@ -201,7 +201,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill7_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>지구력 증가</font>" +
-                "<br>지속 효과 - 지구력이 증가합니다." +
+                "<br><font color='#A95750'>지속 효과 - 지구력이 증가합니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>최대 지구력: +" + c1 + "%";
@@ -209,7 +209,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill8_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>철갑 피부</font>" +
-                "<br>지속 효과 - 방어력이 향상됩니다." +
+                "<br><font color='#A95750'>지속 효과 - 방어력이 향상됩니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>방어력: +" + c1 + "%";
@@ -217,7 +217,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill9_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>속도 증가</font>" +
-                "<br>지속 효과 - 걷거나 달리는 속도가 증가합니다." +
+                "<br><font color='#A95750'>지속 효과 - 걷거나 달리는 속도가 증가합니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>걷기/달리기 속도: +" + c1 + "%";
@@ -225,7 +225,7 @@ public class MasteriesUpdate {
 
     public static String masteriesSkill10_end(String lv, String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8, String c9) {
         return "<font color='#48AE4A'>타고난 저항</font>" +
-                "<br>지속 효과 - 원소 및 독 피해에 대한<br>타고난 저항이 증가합니다." +
+                "<br><font color='#A95750'>지속 효과 - 원소 및 독 피해에 대한<br>타고난 저항이 증가합니다." +
                 "<br>최고 레벨 도달" +
                 "<br><br>현재 기술 레벨: " + lv +
                 "<br>모든 저항: +" + c1 + "%";

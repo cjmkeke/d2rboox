@@ -6,6 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -13,11 +14,12 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class Offensive6 {
-
+    static final String JSON_FILE_NAME = "offensive6.json";
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-        Type listType = new TypeToken<List<Offensive6.OffensiveModel6>>() {}.getType();
-        List<Offensive6.OffensiveModel6> skill = JsonUtil.loadJSONFromAsset(context, "offensive6.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
+
         if (skill != null){
             if (value == 20) {
                 spanned = Html.fromHtml(SkillOffensive.offensiveSkill6_end, Html.FROM_HTML_MODE_LEGACY);
@@ -44,30 +46,6 @@ public class Offensive6 {
                     }
                 }
             }        }
-    }
-
-    public class OffensiveModel6{
-
-        private String radius;
-        private String aura_cold_damage;
-        private String cold_damage_added_to_player;
-        private String ememies_slowed;
-
-        public String getRadius() {
-            return radius;
-        }
-
-        public String getAura_cold_damage() {
-            return aura_cold_damage;
-        }
-
-        public String getCold_damage_added_to_player() {
-            return cold_damage_added_to_player;
-        }
-
-        public String getEmemies_slowed() {
-            return ememies_slowed;
-        }
     }
 
 }

@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences settingsSharedPreferences;
     private boolean isAlarmPermissionGranted = false;
     private boolean isBatteryOptimizationDisabled = false;
-
     private SharedPreferences toggleButtonSharedPreferences;
 
     @Override

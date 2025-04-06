@@ -6,6 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -13,11 +14,11 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class Combat1 {
+    static final String JSON_FILE_NAME = "combat1.json";
 
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-
-        Type listType = new TypeToken<List<Combat1.CombatModel10>>() {}.getType();
-        List<Combat1.CombatModel10> skill = JsonUtil.loadJSONFromAsset(context, "combat1.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
 
         if (skill != null){

@@ -100,7 +100,7 @@ public class SkillCurses {
 
     public static String cursesSkill1_end =
             "<font color='#48AE4A'>피해 증폭</font>" +
-                    "<br>적 무리에 저주를 걸어 대상이<br>받는 비마법 피해를 증가시킵니다." +
+                    "<br><font color='#A95750'>적 무리에 저주를 걸어 대상이<br>받는 비마법 피해를 증가시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>받는 피해: +100%" +
                     "<br>마나 소모: 4" +
@@ -110,7 +110,7 @@ public class SkillCurses {
 
     public static String cursesSkill2_end =
             "<font color='#48AE4A'>시야 흐리기</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>대상의 시야 범위를 감소시킵니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>대상의 시야 범위를 감소시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>마나 소모: 9" +
                     "<br><br>현재 기술 레벨: 20" +
@@ -119,7 +119,7 @@ public class SkillCurses {
 
     public static String cursesSkill3_end =
             "<font color='#48AE4A'>약화</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>대상이 주는 피해량을 감소시킵니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>대상이 주는 피해량을 감소시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>마나 소모: 4" +
                     "<br><br>현재 기술 레벨: 20" +
@@ -129,7 +129,7 @@ public class SkillCurses {
 
     public static String cursesSkill4_end =
             "<font color='#48AE4A'>가시 박힌 철관</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>대상이 근접 공격으로 피해를 줄 때<br>자신도 피해를 입게 합니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>대상이 근접 공격으로 피해를 줄 때<br>자신도 피해를 입게 합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>반경: 4.6미터" +
                     "<br>마나 소모: 5" +
@@ -139,7 +139,7 @@ public class SkillCurses {
 
     public static String cursesSkill5_end =
             "<font color='#48AE4A'>공포</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>공포에 질려 달아나게 합니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>공포에 질려 달아나게 합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>반경: 2.6미터" +
                     "<br>마나 소모: 7" +
@@ -148,7 +148,7 @@ public class SkillCurses {
 
     public static String cursesSkill6_end =
             "<font color='#48AE4A'>혼란</font>" +
-                    "<br>괴물 무리에 저주를 걸어 무작위 대상을 공격하게 합니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어 무작위 대상을 공격하게 합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>마나 소모: 13" +
                     "<br><br>현재 기술 레벨: 20" +
@@ -157,7 +157,7 @@ public class SkillCurses {
 
     public static String cursesSkill7_end =
             "<font color='#48AE4A'>생명력 추출</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>대상을 공격하면 공격자가 생명력을 회복하게 합니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>대상을 공격하면 공격자가 생명력을 회복하게 합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>치유: 공격 피해의 50%" +
                     "<br>마나 소모: 9" +
@@ -167,7 +167,7 @@ public class SkillCurses {
 
     public static String cursesSkill8_end =
             "<font color='#48AE4A'>유혹</font>" +
-                    "<br>괴물 무리에 저주를 걸어 주위 모든 괴물의<br>공격 대상이 되게 합니다.<br>이 저주는 다른 저주에 무효화될 수 없습니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어 주위 모든 괴물의<br>공격 대상이 되게 합니다.<br>이 저주는 다른 저주에 무효화될 수 없습니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>반경: 6미터" +
                     "<br>마나 소모: 17" +
@@ -176,7 +176,7 @@ public class SkillCurses {
 
     public static String cursesSkill9_end =
             "<font color='#48AE4A'>노화</font>" +
-                    "<br>괴물 무리에 저주를 걸어<br>대상의 이동 속도를 감소시키고,<br>약화시켜 받는 피해를 증가시킵니다." +
+                    "<br><font color='#A95750'>괴물 무리에 저주를 걸어<br>대상의 이동 속도를 감소시키고,<br>약화시켜 받는 피해를 증가시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>적 공격력: -50%" +
                     "<br>공격 속도: -50%" +
@@ -188,7 +188,7 @@ public class SkillCurses {
 
     public static String cursesSkill10_end =
             "<font color='#48AE4A'>저항 감소</font>" +
-                    "<br>적에 저주를 걸어 모든 마법 공격으로 받는 피해를 증가시킵니다.<br>괴물들의 저항을 감소시킵니다.<br>적대적 플레이어의 최대 저항을 감시시킵니다." +
+                    "<br><font color='#A95750'>적에 저주를 걸어 모든 마법 공격으로 받는 피해를 증가시킵니다.<br>괴물들의 저항을 감소시킵니다.<br>적대적 플레이어의 최대 저항을 감시시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>마나 소모: 22" +
                     "<br><br>현재 기술 레벨: 20" +

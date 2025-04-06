@@ -6,7 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
-import com.cjmkeke.d2rbooks.chardatabase.character_skill_tab.paladins.defense.SkillDefense;
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -15,10 +15,13 @@ import java.util.List;
 
 public class Offensive2 {
 
+    static final String JSON_FILE_NAME = "offensive2.json";
+
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-        Type listType = new TypeToken<List<Offensive2.OffensiveModel2>>() {}.getType();
-        List<Offensive2.OffensiveModel2> skill = JsonUtil.loadJSONFromAsset(context, "offensive2.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
+
         if (skill != null){
             switch (value){
                 case 1:
@@ -98,30 +101,12 @@ public class Offensive2 {
                     textView.setText(spanned);
                     break;
                 case 20:
-                    spanned = Html.fromHtml(SkillDefense.defenseSkill8_end, Html.FROM_HTML_MODE_LEGACY);
+                    spanned = Html.fromHtml(SkillOffensive.offensiveSkill2_end, Html.FROM_HTML_MODE_LEGACY);
                     textView.setText(spanned);
                     break;
 
 
             }
-        }
-    }
-
-    public class OffensiveModel2{
-       private String radius;
-       private String damage1;
-       private String damage2;
-
-        public String getRadius() {
-            return radius;
-        }
-
-        public String getDamage1() {
-            return damage1;
-        }
-
-        public String getDamage2() {
-            return damage2;
         }
     }
 

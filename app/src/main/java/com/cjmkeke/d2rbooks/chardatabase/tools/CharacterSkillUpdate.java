@@ -17,6 +17,7 @@ import java.lang.reflect.Method;
 
 public class CharacterSkillUpdate {
 
+    private static final String SKILL_POINT_MESSAGE_0 = "스킬 포인트가 없습니다.";
     private static final String TAG = "CharacterSkillUpdate";
     private Context context;
     private int skillPoint;
@@ -89,11 +90,6 @@ public class CharacterSkillUpdate {
         int resId = context.getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_" + imagesSkillNumber + "_2", "drawable", context.getPackageName());
         int clickId = imagesImageView.getId();
 
-        if (skillPoint == 0) {
-            Toast.makeText(context, "스킬 포인트가 없습니다.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         if (conditionProvider) {
             skillUpdate.setText(messagePremiseSkill);
             return;
@@ -109,6 +105,112 @@ public class CharacterSkillUpdate {
         int skillId8 = context.getResources().getIdentifier("iv_btn_skill_image_8", "id", context.getPackageName());
         int skillId9 = context.getResources().getIdentifier("iv_btn_skill_image_9", "id", context.getPackageName());
         int skillId10 = context.getResources().getIdentifier("iv_btn_skill_image_10", "id", context.getPackageName());
+
+        if (skillPoint == 0) {
+            Log.w(TAG, "");
+            // 스킬 포인트가 0 인데, 1번을 눌렀으면 1번의 현재 스킬 포인트의 내용을 skillUpdate에 표시해줌
+            if (clickId == skillId1){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_1, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId2){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_2, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId3){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_3, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId4){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_4, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId5){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_5, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId6){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_6, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId7){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_7, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId8){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_8, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId9){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_9, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (clickId == skillId10){
+                try {
+                    Method method = targetActivity2.getDeclaredMethod("skillUpdate", int.class, TextView.class, Context.class, SharedPreferences.class);
+                    method.invoke(null, skill_point_10, skillUpdate, context, sharedPreferences);
+                } catch (NoSuchMethodException | IllegalAccessException |
+                         InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return;
+        }
 
         if (skill_point_1 == 20) {
             if (skillId1 != 0) {
@@ -158,6 +260,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -196,6 +299,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -235,6 +339,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -273,6 +378,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -311,6 +417,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -348,6 +455,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -388,6 +496,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -425,6 +534,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -462,6 +572,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1118,11 +1229,6 @@ public class CharacterSkillUpdate {
         int resId = context.getResources().getIdentifier("skill_" + CHARACTER_SKILL_STRING + "_" + imagesSkillNumber + "_2", "drawable", context.getPackageName());
         int clickId = imagesImageView.getId();
 
-        if (skillPoint == 0) {
-            Toast.makeText(context, "스킬 포인트가 없습니다.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         if (conditionProvider) {
             skillUpdate.setText(messagePremiseSkill);
             return;
@@ -1160,7 +1266,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "1번 스킬");
                 if (clickId == skillId1) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_1 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_1;
@@ -1227,6 +1333,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1239,7 +1346,7 @@ public class CharacterSkillUpdate {
                 if (clickId == skillId2) {
                     Log.w(TAG, "2번 스킬");
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_2 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_2;
@@ -1282,6 +1389,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1295,7 +1403,7 @@ public class CharacterSkillUpdate {
                 if (clickId == skillId3) {
                     Log.w(TAG, "3번 스킬");
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_3 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_3;
@@ -1338,6 +1446,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1351,7 +1460,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "4번 스킬");
                 if (clickId == skillId4) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_4 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_4;
@@ -1393,6 +1502,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1406,7 +1516,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "5번 스킬");
                 if (clickId == skillId5) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_5 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_5;
@@ -1448,6 +1558,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1460,7 +1571,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "6번 스킬");
                 if (clickId == skillId6) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_6 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_6;
@@ -1502,6 +1613,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1514,7 +1626,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "7번 스킬");
                 if (clickId == skillId7) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_7 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_7;
@@ -1559,6 +1671,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1571,7 +1684,7 @@ public class CharacterSkillUpdate {
                 System.out.println("8 번 스킬");
                 if (clickId == skillId8) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_8 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_8;
@@ -1613,6 +1726,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1625,7 +1739,7 @@ public class CharacterSkillUpdate {
                 Log.w(TAG, "9번 스킬");
                 if (clickId == skillId9) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_9 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_9;
@@ -1667,6 +1781,7 @@ public class CharacterSkillUpdate {
                         String skillText = (String) field.get(null); // static 필드이므로 null 사용
                         spanned = Html.fromHtml(skillText, Html.FROM_HTML_MODE_LEGACY);
                         skillUpdate.setText(spanned);
+                        Log.w(TAG, skillText);
                     } catch (Exception e) {
                         Log.w(TAG, e.getMessage());
                     }
@@ -1679,7 +1794,7 @@ public class CharacterSkillUpdate {
                 System.out.println("10 번 스킬");
                 if (clickId == skillId10) {
 
-                    if (skillPoint < 98) {
+                    if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
                         int result1 = skill_point_10 - maxValue; // 20
                         int result2 = Math.abs(result1); // 15
                         int value = result2 + skill_point_10;
@@ -2041,7 +2156,7 @@ public class CharacterSkillUpdate {
     }
 
     public void resetAllSkillPoint(String[] array1, String[] array2, String[] array3) {
-        skillPoint = 98;
+        skillPoint = CollectionValues.DEFAULT_SKILL_VALUE;
         skill_point_1 = 0;
         skill_point_2 = 0;
         skill_point_3 = 0;
@@ -2159,7 +2274,7 @@ public class CharacterSkillUpdate {
         int value1 = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10;
         int value2 = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10;
 
-        int skill = 98;
+        int skill = CollectionValues.DEFAULT_SKILL_VALUE;
         int totalValue = value1 + value2;
 
         skillPoint = skill - totalValue;
@@ -2212,8 +2327,8 @@ public class CharacterSkillUpdate {
     }
 
     public void skillPointView() {
-        skillValues.setText("스킬 포인트 : " + sharedPreferences.getInt(SKILL_POINT_KEY, 98));
-        skillValuesQuest.setText("퀘스트 포인트 : " + sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, 98));
+        skillValues.setText("스킬 포인트 : " + sharedPreferences.getInt(SKILL_POINT_KEY, CollectionValues.DEFAULT_SKILL_VALUE));
+        skillValuesQuest.setText("퀘스트 포인트 : " + sharedPreferences.getInt(SKILL_POINT_QUEST_COMPLETE_KEY, CollectionValues.DEFAULT_SKILL_VALUE));
         skillLossedValue1.setText(String.valueOf(sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_1", 0)));
         skillLossedValue2.setText(String.valueOf(sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_2", 0)));
         skillLossedValue3.setText(String.valueOf(sharedPreferences.getInt(SKILL_TABLE_NAME + "_skill_3", 0)));
@@ -2227,7 +2342,7 @@ public class CharacterSkillUpdate {
     }
 
     private void setSkillPoint(int skillPoint, int skill_point) {
-        if (skillPoint < 98) {
+        if (skillPoint < CollectionValues.DEFAULT_SKILL_VALUE) {
             skill_point += skillPoint;
             skillPoint = 0;
             System.out.println("step1 : " + skillPoint);

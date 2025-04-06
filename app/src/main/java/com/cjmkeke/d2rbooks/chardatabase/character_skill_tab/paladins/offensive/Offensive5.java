@@ -6,6 +6,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.widget.TextView;
 
+import com.cjmkeke.d2rbooks.chardatabase.tools.JsonModels;
 import com.cjmkeke.d2rbooks.chardatabase.tools.JsonUtil;
 import com.google.gson.reflect.TypeToken;
 
@@ -13,11 +14,12 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class Offensive5 {
-
+    static final String JSON_FILE_NAME = "offensive5.json";
     public static void skillUpdate(int value, TextView textView, Context context, SharedPreferences sharedPreferences){
-        Type listType = new TypeToken<List<Offensive5.OffensiveModel5>>() {}.getType();
-        List<Offensive5.OffensiveModel5> skill = JsonUtil.loadJSONFromAsset(context, "offensive5.json", listType);
+        Type listType = TypeToken.getParameterized(List.class, JsonModels.class).getType();
+        List<JsonModels> skill = JsonUtil.loadJSONFromAsset(context, JSON_FILE_NAME, listType);
         Spanned spanned;
+
         if (skill != null){
             if (value == 20) {
                 spanned = Html.fromHtml(SkillOffensive.offensiveSkill5_end, Html.FROM_HTML_MODE_LEGACY);
@@ -41,18 +43,5 @@ public class Offensive5 {
             }        }
     }
 
-    public class OffensiveModel5{
-
-        private String radius;
-        private String damage1;
-
-        public String getRadius() {
-            return radius;
-        }
-
-        public String getDamage1() {
-            return damage1;
-        }
-    }
 
 }

@@ -91,7 +91,7 @@ public class SkillPassive {
 
     public static String passiveSkill1_end =
             "<font color='#48AE4A'>내면의 시야</font>" +
-                    "<br>주위의 적에게 빛을 비춰 자신과 파티원의<br>적중률을 향상시킵니다." +
+                    "<br><font color='#A95750'>주위의 적에게 빛을 비춰 자신과 파티원의<br>적중률을 향상시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>반경: 18미터" +
                     "<br>마나 소모: 5" +
@@ -101,21 +101,21 @@ public class SkillPassive {
 
     public static String passiveSkill2_end =
             "<font color='#48AE4A'>치명타</font>" +
-                    "<br>지속 효과 - 공격할 때 일정 확률로 2배의 피해를 줍니다." +
+                    "<br><font color='#A95750'>지속 효과 - 공격할 때 일정 확률로 2배의 피해를 줍니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>68% 확률";
 
     public static String passiveSkill3_end =
             "<font color='#48AE4A'>흘리기</font>" +
-                    "<br>지속 효과 - 공격하거나 가만히 서 있을때<br>일정 확룰로 근접 공격을 흘려 냅니다." +
+                    "<br><font color='#A95750'>지속 효과 - 공격하거나 가만히 서 있을때<br>일정 확룰로 근접 공격을 흘려 냅니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>56% 확률";
 
     public static String passiveSkill4_end =
             "<font color='#48AE4A'>투사체 감속</font>" +
-                    "<br>주위의 적에게 빛을 비추고 대상의 투사체 속도를 감소시킵니다." +
+                    "<br><font color='#A95750'>주위의 적에게 빛을 비추고 대상의 투사체 속도를 감소시킵니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>반경: 18미터" +
                     "<br>마나 소모: 5" +
@@ -126,21 +126,21 @@ public class SkillPassive {
 
     public static String passiveSkill5_end =
             "<font color='#48AE4A'>회피</font>" +
-                    "<br>지속 효과 - 공격하거나 가만히 서 있을때<br>일정 확률로 적의 투사체를 회피합니다." +
+                    "<br><font color='#A95750'>지속 효과 - 공격하거나 가만히 서 있을때<br>일정 확률로 적의 투사체를 회피합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>65% 확률";
 
     public static String passiveSkill6_end =
             "<font color='#48AE4A'>간파</font>" +
-                    "<br>지속 효과 - 명중률이 증가합니다." +
+                    "<br><font color='#A95750'>지속 효과 - 명중률이 증가합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>명중률: +225%";
 
     public static String passiveSkill7_end =
             "<font color='#48AE4A'>미끼</font>" +
-                    "<br>자신의 복제물을 만들어<br>적의 공격을 유도합니다." +
+                    "<br><font color='#A95750'>자신의 복제물을 만들어<br>적의 공격을 유도합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>생명력: +200%" +
@@ -149,14 +149,14 @@ public class SkillPassive {
 
     public static String passiveSkill8_end =
             "<font color='#48AE4A'>피하기</font>" +
-                    "<br>지속 효과 - 걷거나 뛰고 있을 때<br>일정 확률로 근접 또는 투사체 공격을 회피합니다." +
+                    "<br><font color='#A95750'>지속 효과 - 걷거나 뛰고 있을 때<br>일정 확률로 근접 또는 투사체 공격을 회피합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>56% 확률";
 
     public static String passiveSkill9_end =
             "<font color='#48AE4A'>발키리</font>" +
-                    "<br>강력한 발키리 동료를 소환합니다." +
+                    "<br><font color='#A95750'>강력한 발키리 동료를 소환합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>시전 지연 시간: 0.6초" +
                     "<br><br>현재 기술 레벨 : 20" +
@@ -164,9 +164,9 @@ public class SkillPassive {
                     "<br>명중률: +800%" +
                     "<br>공격력: +475%" +
                     "<br>방어력: +190%" +
-                    "<br>마나 소모: 44" +
+                    "<br>마나 소모: 44</font>" +
                     "<br><br><font color='#48AE4A'>발키리에 보너스 적용:</font>" +
-                    "<br>미끼: 레벨당 생명력 +20%"+
+                    "<br><font color='#A95750'>미끼: 레벨당 생명력 +20%"+
                     "<br>간파: 레벨당 생명력 +40%"+
                     "<br>치명타"+
                     "<br>흘리기"+
@@ -175,7 +175,7 @@ public class SkillPassive {
 
     public static String passiveSkill10_end =
             "<font color='#48AE4A'>관통</font>" +
-                    "<br>지속 효과 - 투사체가 일정 확률로<br>적중한 적을 관통합니다." +
+                    "<br><font color='#A95750'>지속 효과 - 투사체가 일정 확률로<br>적중한 적을 관통합니다." +
                     "<br>최대 레벨 도달" +
                     "<br><br>현재 기술 레벨 : 20" +
                     "<br>85% 확률";
